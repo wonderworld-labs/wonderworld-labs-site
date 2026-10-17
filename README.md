@@ -5,7 +5,9 @@ A responsive static site for free GitHub Pages hosting. No build step or paid Sq
 ## Pages
 
 - `/`: Wonderworld Labs homepage.
-- `/privacy-policy.html`: Melody Garden Android privacy policy, with support at contact@wonderworldlabs.com. App disclosures match the current ad-free, offline Android release. Website-hosting information is disclosed separately on the page.
+- `/privacy/`: directory of policies for Wonderworld Labs apps and games.
+- `/privacy/melody-garden/`: primary Melody Garden Android privacy policy.
+- `/privacy-policy.html`: working legacy address for the same Melody Garden policy, with support at contact@wonderworldlabs.com. App disclosures match the current ad-free, offline Android release. Website-hosting information is disclosed separately on the page.
 
 ## Publish
 
@@ -14,7 +16,7 @@ A responsive static site for free GitHub Pages hosting. No build step or paid Sq
 3. Pages → Custom domain: set `wonderworldlabs.com`, matching CNAME. Verify domain ownership in GitHub; GitHub supplies the unique verification TXT record.
 4. In Squarespace Domains → wonderworldlabs.com → DNS settings, set four A records for `@`: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153. For `www`, use CNAME `wonderworld-labs.github.io`. Resolve conflicts for these web-host records without changing email MX/TXT records.
 5. Wait for DNS and HTTPS certificate provisioning, then enable Enforce HTTPS. Public DNS returned NXDOMAIN on 16 October 2026; confirm the domain is active and its nameservers are correct in Squarespace if that persists.
-6. Confirm `https://wonderworldlabs.com/privacy-policy.html` opens signed out before entering it in Play Console. The URL is a deployment target, not evidence that publication has succeeded.
+6. Confirm `https://wonderworldlabs.com/privacy/melody-garden/` opens signed out before entering it in Play Console. The URL is a deployment target, not evidence that publication has succeeded.
 
 ## Closed testing
 
@@ -28,3 +30,9 @@ The homepage links to the policy; support links use contact@wonderworldlabs.com.
 
 - https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 - https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+## Adding future products
+
+Create `privacy/<app-slug>/index.html` for each real app, add it to `privacy/index.html`, and put that exact app-specific URL in its Play Console listing. Describe its actual permissions, SDKs, advertising, accounts, data sharing, retention, deletion and children’s use. Do not copy Melody Garden’s no-ads/no-upload claims into a game that uses ads or analytics. A shared policy is possible when it clearly identifies every covered app and accurately distinguishes their practices; separate product pages are the structure used here. No policies have been invented for unreleased or unspecified products.
+
+The old `/privacy-policy.html` remains usable with a canonical link to Melody Garden’s dedicated page. Keep it available for previous links. The site icon sources and raster exports are in assets/, with usage notes in assets/BRAND.md.
