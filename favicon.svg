@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-<title id="title">Wonderworld Labs</title><desc id="desc">An original W monogram inside an orbiting world, with a golden moon.</desc>
-<rect width="256" height="256" rx="60" fill="#0c2428"/>
-<circle cx="128" cy="128" r="82" fill="#163d41" stroke="#8fe2ca" stroke-width="5"/>
-<ellipse cx="128" cy="128" rx="111" ry="38" transform="rotate(-29 128 128)" fill="none" stroke="#67aaa6" stroke-width="5"/>
-<path d="M65 98 88 157 126 105 163 157 190 91" fill="none" stroke="#ecf7f2" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="201" cy="70" r="10" fill="#f4c66a"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc"><title id="title">Wonderworld Labs</title><desc id="desc">Sunrise W: a rounded cream and mint W with a golden sun on deep teal.</desc><rect width="256" height="256" rx="61" fill="#12383C"/><circle cx="181" cy="65" r="21" fill="#F7C66D"/><path d="M48 95 90 181 128 115 166 181 209 104" fill="none" stroke="#95E2C2" stroke-width="29" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 95 90 181 128 115" fill="none" stroke="#F3F3DE" stroke-width="29" stroke-linecap="round" stroke-linejoin="round"/></svg>
