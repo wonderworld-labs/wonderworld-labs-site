@@ -4,6 +4,17 @@ A responsive static site for free GitHub Pages hosting. No build step or paid Sq
 
 ## Pages
 
+### App discovery (October 2026)
+
+- `/apps/`: app directory with category comparison and download access.
+- `/apps/melody-garden/`, `/apps/arrow-unleashed/`, `/apps/whispering-diary/`: dedicated app pages with supported features, FAQs, and download access sections.
+- `/categories/music-learning/`, `/categories/puzzle-games/`, `/categories/ai-character-conversations/`: category entry pages linking to the relevant app.
+- `sitemap.xml` lists canonical pages; `robots.txt` allows crawling. HTML contains canonical metadata, social previews, and structured data without requiring JavaScript.
+
+The three package-based Google Play listing URLs returned HTTP 404 during verification on 26 October 2026. App pages explicitly mark public availability as unconfirmed and offer support for access. Replace the access wording and URLs when production or closed-test links are confirmed. Do not add prices, ratings, or availability claims without verification.
+
+Run `python check_site.py` to verify internal links, anchors, structured data, sitemap coverage, and preservation of existing policy paragraphs. Privacy URLs and the legacy `/privacy-policy.html` remain unchanged. Submit the sitemap in your search engine webmaster accounts if available; publication does not guarantee indexing or AI recommendations.
+
 - `/`: Wonderworld Labs homepage.
 - `/privacy/`: directory of policies for Wonderworld Labs apps and games.
 - `/privacy/melody-garden/`: primary Melody Garden Android privacy policy.
