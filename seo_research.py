@@ -18,9 +18,9 @@ ROOT = Path(__file__).resolve().parent
 PRIVATE = ROOT.parent / 'seo-private'
 IST = timezone(timedelta(hours=5, minutes=30))
 SEEDS = {
-    'melody-garden': ['offline piano learning app', 'learn guitar offline', 'piano app without microphone', 'piano guitar learning app android'],
-    'arrow-unleashed': ['offline arrow puzzle game', 'arrow puzzle hints', 'daily arrow puzzle', 'arrow puzzle no ads'],
-    'whispering-diary': ['offline ai chat android', 'offline ai character chat', 'private ai diary', 'local ai chat without internet'],
+    'melody-garden': ['offline piano learning app', 'learn guitar offline', 'piano app without microphone', 'piano guitar learning app android', 'piano app not detecting notes'],
+    'arrow-unleashed': ['offline arrow puzzle game', 'arrow puzzle hints', 'daily arrow puzzle', 'arrow puzzle no ads', 'puzzle game lost progress'],
+    'whispering-diary': ['offline ai chat android', 'offline ai character chat', 'private ai diary', 'local ai chat without internet', 'export ai chat history'],
 }
 
 def request(url, body=None, token=None):

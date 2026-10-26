@@ -37,6 +37,8 @@ for g in guides:
             body+='<ol>'+''.join('<li>'+esc(v)+'</li>' for v in s['steps'])+'</ol>'
         body+=''.join('<p>'+esc(p)+'</p>' for p in s.get('paragraphs',[]))+'</section>'
     body+='<section class="faq"><h2>Questions and answers</h2>'+''.join('<h3>'+esc(q)+'</h3><p>'+esc(a)+'</p>' for q,a in g['faq'])+'</section>'
+    if g.get('sources'):
+        body+='<section class="faq"><h2>Further reading</h2><ul>'+''.join('<li><a href="'+esc(s['url'],quote=True)+'">'+esc(s['title'])+'</a></li>' for s in g['sources'])+'</ul></section>'
     body+=f'<section class="notice"><h2>Explore {esc(g["name"])}</h2><p>See the app features and current download access. Availability may depend on release or testing access.</p><a class="button" href="/apps/{g["app"]}/#download">{esc(g["name"])} download options</a><p>App details in this guide are based on the <a href="/privacy/{g["app"]}/">current {esc(g["name"])} privacy policy</a>. Suggested routines and checks are editorial guidance.</p></section></article>'
     graph=[{'@type':'Article','@id':BASE+path+'#article','headline':g['title'],'description':g['description'],'datePublished':g['date'],'dateModified':g.get('updated',g['date']),'mainEntityOfPage':BASE+path,'author':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'publisher':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'about':{'@type':'SoftwareApplication','name':g['name'],'url':BASE+'/apps/'+g['app']+'/','operatingSystem':'Android'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Guides','item':BASE+'/guides/'},{'@type':'ListItem','position':2,'name':g['title'],'item':BASE+path}]}]
     page(path,g['title'],g['description'],body,graph)
