@@ -56,7 +56,8 @@ for p, page in pages.items():
             assert u.fragment in pages[target].ids, (p, link)
 
 urls = ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')
-assert len(urls) == 12
+assert len(urls) == len({url.text for url in urls}), 'Duplicate sitemap URL'
+assert {url.text for url in urls} == {page.canonical[0] for page in pages.values()}, 'Sitemap coverage differs from canonical pages'
 for url in urls:
     target = ROOT / urlsplit(url.text).path.lstrip('/') / 'index.html'
     assert target in pages and pages[target].canonical == [url.text], url.text
@@ -70,4 +71,4 @@ for slug in ['melody-garden', 'arrow-unleashed', 'whispering-diary']:
         assert paragraph in current, (slug, paragraph)
 assert (ROOT / 'privacy-policy.html').read_bytes() == subprocess.check_output(
     ['git', 'show', '21b16ef:privacy-policy.html'], cwd=ROOT)
-print(f'PASS: {len(pages)} pages; internal links and anchors; JSON-LD; 12 sitemap URLs; original privacy copy and legacy policy preserved.')
+print(f'PASS: {len(pages)} pages; internal links and anchors; JSON-LD; {len(urls)} sitemap URLs; original privacy copy and legacy policy preserved.')

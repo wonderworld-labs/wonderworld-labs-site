@@ -4,6 +4,10 @@ A responsive static site for free GitHub Pages hosting. No build step or paid Sq
 
 ## Pages
 
+## Daily guide workflow
+
+Three initial guides are linked from `/guides/` and their respective app pages. Reviewed source content is in `content/guides.json`; run `python build_guides.py` after edits, then `python check_site.py`. See `SEO-RUNBOOK.md` for public research, measurement limits, publication, and the daily target. Research outputs and the owner setup guide live outside this public repository.
+
 ### App discovery (October 2026)
 
 - `/apps/`: app directory with category comparison and download access.
