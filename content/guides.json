@@ -387,5 +387,182 @@
       ]
     ],
     "sources": []
+  },
+  {
+    "app": "melody-garden",
+    "name": "Melody Garden",
+    "slug": "learn-piano-online-or-android-beginner",
+    "title": "Learn piano: start with an online keyboard or an Android app",
+    "description": "Find your first notes, practise a short pattern, and choose between a virtual piano and offline Android practice. Understand what each option can teach.",
+    "answer": "To start learning piano, find a group of two black keys and the white key immediately to its left: C. Practise a short C–D–E pattern slowly before adding more notes. An online piano offers a quick browser start; an offline Android app can help you keep a practice routine without a connection. Neither replaces the feel of a physical keyboard.",
+    "sections": [
+      {
+        "heading": "Choose the tool for your first session",
+        "paragraphs": [
+          "If you want to play piano online without installing an app, choose a browser instrument that makes sound when you tap its keys. Check whether it labels musical notes, which computer keys it maps to notes, and whether it works on your phone. A computer-keyboard letter is an input shortcut and may not be the musical note being played.",
+          "If you want lessons and practice available without a connection, Melody Garden provides piano and guitar learning on Android, including on-screen practice and local progress. Wonderworld Labs plans a web version; there is no released web player promised by this guide. Features, pricing, and a launch date for that version have not been announced."
+        ]
+      },
+      {
+        "heading": "Find C, then play a small pattern",
+        "paragraphs": [
+          "Black keys repeat in groups of two and three. The white key just before a group of two is C. Moving right from C, the next white keys are D and E. Use that repeating shape to find another C elsewhere on a keyboard.",
+          "Try C–D–E–D–C as a simple exercise, not as a song supplied by the app. Play one note for each steady count. If a note sounds late or wrong, slow down and repeat just the transition that caused trouble."
+        ],
+        "steps": [
+          "Find a group of two black keys and the C to its left.",
+          "Play C, then D, then E, with one note per count.",
+          "Return through D to C, keeping the gaps between notes even.",
+          "Repeat the pattern twice before trying it from another C."
+        ]
+      },
+      {
+        "heading": "Move from a pattern to a song",
+        "paragraphs": [
+          "Choose a short melody from a lawful source with notes you can identify. Work on one phrase at a time and separate finding the notes from keeping time. Start slowly enough that you can repeat the phrase without guessing; then join two phrases. This is a learning approach, not a claim about a particular song catalogue in Melody Garden.",
+          "On a physical piano, hand position, finger movement, key resistance, and pedals add skills that a touchscreen cannot reproduce. Use a virtual keyboard to explore notes, then practise those movements on an instrument when available."
+        ]
+      },
+      {
+        "heading": "Keep the next practice session simple",
+        "paragraphs": [
+          "In Melody Garden, select piano and your learning age range, then choose a suitable lesson. On-screen practice does not require microphone permission. Optional microphone practice analyzes sound locally for pitch feedback without saving or uploading audio.",
+          "Finish by noting which pattern needs another attempt. The app keeps results and preferences locally, so avoid resetting progress or uninstalling if you want to retain them. Check current download access on the app page before planning around a new installation."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Can I learn piano without owning a piano?",
+        "You can begin learning note locations and simple patterns on a virtual keyboard. Physical playing technique still needs practice on an instrument."
+      ],
+      [
+        "Can I play piano in my browser on this website?",
+        "A Wonderworld Labs web version is planned. This page is a beginner guide, not a playable keyboard. The current Melody Garden product is an Android app."
+      ],
+      [
+        "Does Melody Garden also help me learn guitar?",
+        "Yes, the current Android app supports guitar learning and an optional microphone-based tuner. Guitar fingering and string technique require a physical guitar."
+      ]
+    ],
+    "date": "2026-10-28"
+  },
+  {
+    "app": "arrow-unleashed",
+    "name": "Arrow unleashed",
+    "slug": "arrow-puzzle-hints-better-practice",
+    "title": "Arrow puzzle hints: turn a stuck moment into useful practice",
+    "description": "Use a deliberate routine when an arrow puzzle feels difficult: inspect the board, make a prediction, use a hint thoughtfully, and protect local progress.",
+    "answer": "Before using an arrow puzzle hint, pause and decide what you are unsure about. Read the current puzzle instructions, inspect one candidate move, and predict its result. If you use a hint, compare it with your prediction before continuing. Arrow unleashed stores hints, lives, and progress locally; this guide does not promise unlimited hints or a universal answer.",
+    "sections": [
+      {
+        "heading": "Check which puzzle you are playing",
+        "paragraphs": [
+          "Searches for arrow puzzles can lead to sliding-arrow games, arrow-word crosswords, or direction puzzles. Their rules and answers are different. Match help to the game and board in front of you rather than applying a solution just because its title contains the word arrow.",
+          "In Arrow unleashed, use the instructions and feedback in your installed version. A screenshot of another game or a different board is not reliable evidence for the next move. This guide is a general practice routine, not a level-by-level solution."
+        ]
+      },
+      {
+        "heading": "Use a pause, predict, check routine",
+        "paragraphs": [
+          "When the board looks crowded, reduce the decision to one candidate. Explain to yourself why you think it will work before tapping. The purpose is to make your reasoning visible, so you can change it when the result differs."
+        ],
+        "steps": [
+          "Pause rather than repeating the same uncertain move.",
+          "Re-read the current objective and any relevant instructions.",
+          "Inspect one candidate and predict what the game will do.",
+          "Make the move only when you are ready to compare the result with that prediction.",
+          "After feedback, review what you missed before choosing again."
+        ]
+      },
+      {
+        "heading": "Make one hint worth more than one answer",
+        "paragraphs": [
+          "If a hint is available, first identify the part you cannot resolve. After using it, look back at that uncertainty and explain what the hint helped you notice. On the next comparable decision, try the reasoning yourself before requesting another hint.",
+          "Arrow unleashed saves remaining lives and hints on the device. The privacy policy does not specify how hints are earned or replenished, so this guide does not promise an allowance, refill time, or reward method. Check the current game interface for the options actually offered."
+        ]
+      },
+      {
+        "heading": "Finish without losing your progress",
+        "paragraphs": [
+          "A short session can end with one useful observation rather than a completed board. Arrow unleashed keeps puzzle progress, daily completions, settings, XP, badges, and goals locally. It has no developer game server or account that restores your play history.",
+          "Clearing Android app storage or uninstalling removes local records. Restarting one puzzle is different from erasing all app data; do not use system storage controls as a way to obtain more hints. The current game has no advertising or in-app purchases."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Does this guide give the answer to every arrow puzzle?",
+        "No. Boards and rules vary. It gives a repeatable way to examine a decision and learn from feedback."
+      ],
+      [
+        "Are hints unlimited in Arrow unleashed?",
+        "No unlimited-hint claim is made. Hints are recorded locally; use the options shown by your installed version."
+      ],
+      [
+        "Do I need an internet connection to keep my milestones?",
+        "The current game stores milestones on-device and does not request internet permission. Local storage is not cloud backup."
+      ]
+    ],
+    "date": "2026-10-28"
+  },
+  {
+    "app": "whispering-diary",
+    "name": "The Whispering Diary",
+    "slug": "offline-ai-chat-model-download-checklist",
+    "title": "Offline AI chat setup: what to check before downloading the model",
+    "description": "Prepare for The Whispering Diary’s model download, understand the connection used during setup, and check local conversations before going offline.",
+    "answer": "The Whispering Diary needs a one-time model download of approximately 805 MB before ordinary AI conversations can run offline. Use a stable connection and sufficient free storage, allow the app to check the downloaded file, and try a short conversation before relying on it without internet. Downloading a model is separate from uploading your diary: diary entries are not included in the download request.",
+    "sections": [
+      {
+        "heading": "Why an offline chat app needs an initial download",
+        "paragraphs": [
+          "A local AI model is the file the app uses to generate replies on your phone. The Whispering Diary downloads its Qwen model directly from Hugging Face over HTTPS and checks the file before use. The download service can process technical request details such as your IP address, file requested, and time.",
+          "After setup, ordinary conversations run locally. This distinction matters when comparing offline AI chat apps: ask which stage needs a connection and which information travels over it, rather than assuming offline means no network request ever."
+        ]
+      },
+      {
+        "heading": "Prepare storage and a connection",
+        "paragraphs": [
+          "The approximately 805 MB figure is the model file, not a promise that the whole app fits within that space. Leave additional room for the installed app, conversations, and normal device operation. Exact free-space requirements and generation speed depend on the app and device; this guide does not give an unverified RAM or speed guarantee."
+        ],
+        "steps": [
+          "Check available device storage before beginning.",
+          "Use a connection suitable for a large download and check any mobile-data limits.",
+          "Follow the app’s setup prompts and let its file check finish.",
+          "Try a short, non-sensitive conversation while setup is complete.",
+          "Disconnect from the network and confirm that an ordinary conversation works on your installed version."
+        ]
+      },
+      {
+        "heading": "If setup does not complete",
+        "paragraphs": [
+          "Read the error shown by the app before retrying. Check the connection and free storage first. A failed download is not proof that you must erase conversations or reinstall the app. If the error persists, contact support with the error text and device details, avoiding private diary entries.",
+          "Do not substitute a random model file merely because it has a similar name. Compatibility and file checks matter. This guide does not promise resumable downloads, manual model import, or support for arbitrary models."
+        ]
+      },
+      {
+        "heading": "Understand what remains on your phone",
+        "paragraphs": [
+          "Conversations, drafts, approved memories, preferences, and response flags are stored privately on the device and excluded from automatic Android cloud backup. Optional diary lock uses Android biometric or screen-lock controls; the app does not receive your fingerprint or device PIN.",
+          "Removing the downloaded model preserves conversations, but the model is needed to generate ordinary local replies. Uninstalling removes local app data. Export anything you want to keep before uninstalling, and consider the storage practices of the export destination. Elias is a fictional character for adults; replies can be inaccurate and are not professional or emergency advice."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Are my diary entries sent during the model download?",
+        "No. The model download request does not include diary entries. Hugging Face may process technical information needed to deliver the file."
+      ],
+      [
+        "Does removing the model delete conversations?",
+        "The current app preserves conversations when you remove the downloaded model. Uninstalling is different and removes local app data."
+      ],
+      [
+        "Can I use the app for emergency or professional advice?",
+        "No. The Whispering Diary is adult fictional entertainment. Its small local model can generate inaccurate responses."
+      ]
+    ],
+    "date": "2026-10-28"
   }
 ]
