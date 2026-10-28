@@ -300,6 +300,19 @@
           "The app has no account and is configured not to participate in Android app-data backup. There is no documented cloud-save or cross-device synchronization feature in this release. Installing the game on another device should not be treated as a way to recover your previous local progress.",
           "Daily completions and badges describe what is stored by your installation. They do not imply an online leaderboard or a server-side history. If keeping a record of a milestone matters to you, note it separately before removing the app, while recognizing that a note or screenshot is not an importable game save."
         ]
+      },
+      {
+        "heading": "Clear cache or clear storage: check the label first",
+        "paragraphs": [
+          "Android distinguishes temporary cache from stored app data. Clearing storage is a destructive reset of app data, while clearing cache removes temporary files. Names and menus vary across phones; read the confirmation dialog instead of assuming two neighbouring buttons do the same thing.",
+          "If your aim is simply to replay a puzzle, use the game’s own controls. Do not clear Android storage to troubleshoot a difficult board or obtain hints. If the game is not responding, first try closing and reopening it; keep any error text for support before taking a step that removes saves."
+        ],
+        "steps": [
+          "Decide whether you want to replay one puzzle, troubleshoot an unresponsive app, or erase all local records.",
+          "For a replay, stay within the game. For a technical problem, note what happened and try reopening it.",
+          "If you choose Android storage controls, read the exact action and cancellation options before confirming.",
+          "Treat clearing storage or uninstalling as loss of local progress; do not expect an account-based restore."
+        ]
       }
     ],
     "faq": [
@@ -320,8 +333,13 @@
       {
         "title": "Android Help: storage, cache, and app data",
         "url": "https://support.google.com/android/answer/7431795"
+      },
+      {
+        "title": "Android Help: storage and cache controls",
+        "url": "https://support.google.com/android/answer/7431795"
       }
-    ]
+    ],
+    "updated": "2026-10-29"
   },
   {
     "app": "whispering-diary",
@@ -366,6 +384,14 @@
           "Flagging a response hides it and stores your reason and optional note locally. Nothing is sent to Wonderworld Labs. Flags remain until you remove them, erase diary data, or uninstall. A flag is not a support ticket and does not alert a reviewer outside your phone.",
           "For help, describe the operation and the difficulty through the support link on the app page. You do not need to include the private contents of a conversation to ask where an export went or how a deletion control works."
         ]
+      },
+      {
+        "heading": "Check an export before removing the local diary",
+        "paragraphs": [
+          "Before deleting something you want to keep, open the exported file from the destination you chose and check that it contains the conversation you expected. A saved file is a readable copy; the current app policy does not promise that you can import it to restore the diary, its memories, or its settings.",
+          "A cloud provider selected in Android’s document picker may synchronize the export beyond your phone. A local destination may still be included in another backup process. The app’s diary lock does not automatically protect a separate exported file. Choose a destination based on who can access it.",
+          "Deleting a conversation in the app does not remove copies you previously exported or shared. To remove those, visit the destination provider and check its deletion, trash, and backup controls. Avoid sending a private export to support when a short description of the problem will do."
+        ]
       }
     ],
     "faq": [
@@ -386,7 +412,8 @@
         "The current policy documents conversation export, but does not promise import or restore support. Treat an export as a separate readable copy unless your installed version explicitly offers more."
       ]
     ],
-    "sources": []
+    "sources": [],
+    "updated": "2026-10-29"
   },
   {
     "app": "melody-garden",
@@ -564,5 +591,77 @@
       ]
     ],
     "date": "2026-10-28"
+  },
+  {
+    "app": "melody-garden",
+    "name": "Melody Garden",
+    "slug": "learn-guitar-first-session-string-notes",
+    "date": "2026-10-29",
+    "title": "Learn guitar: string names and a simple first practice session",
+    "description": "Start learning guitar with standard string names, a tuning check, and a short single-string exercise. Compare physical practice, Android lessons, and online tools.",
+    "answer": "Start with a tuned six-string guitar and learn its open-string notes: E, A, D, G, B, E, from thickest to thinnest in standard tuning. Practise making one clear note before trying a whole song. Melody Garden offers offline Android guitar lessons and an optional microphone tuner; a virtual guitar cannot reproduce fretting and strumming a physical instrument.",
+    "sections": [
+      {
+        "heading": "Know which string you are playing",
+        "paragraphs": [
+          "In standard tuning, string 6 is the thick, low E; string 1 is the thin, high E. Between them are A, D, G, and B. An open string is played without pressing a fret. Name a string before plucking it so that the note name becomes connected to its location.",
+          "This guide is for a standard six-string guitar. Other instruments and alternate tunings need different notes. If you are unsure how to tune your instrument, use its instructions or ask a teacher rather than repeatedly tightening a string that does not sound right."
+        ]
+      },
+      {
+        "heading": "Tune before comparing your notes",
+        "paragraphs": [
+          "Use a tuner suited to your instrument and follow its instructions one string at a time. Melody Garden includes an optional microphone-based guitar tuner. It analyzes live sound on your device without saving or uploading microphone audio. On-screen practice remains available if you do not grant microphone access.",
+          "Choose a quiet place and let one string sound clearly before moving to another. If detection is inconsistent, reduce competing sound and check microphone permission. Do not assume an unclear reading means that the string needs a large adjustment."
+        ]
+      },
+      {
+        "heading": "Try a short open-string exercise",
+        "steps": [
+          "Choose one comfortable open string and identify its name.",
+          "Pluck it once, let the sound settle, and repeat with a light, controlled movement.",
+          "Count four steady beats and try one pluck on each beat. Start slowly enough to stay consistent.",
+          "Move to a neighbouring string and repeat, saying its name before playing.",
+          "Finish by returning to the first string without looking at a note list."
+        ],
+        "paragraphs": [
+          "This is a suggested beginner exercise, not a named app mode. Focus on a clear sound and an even gap between notes. Chords and complete songs can wait until selecting a string and keeping a slow pulse feel less unfamiliar."
+        ]
+      },
+      {
+        "heading": "Use an app or online lesson with a clear goal",
+        "paragraphs": [
+          "In Melody Garden, choose guitar and the appropriate learning age range, then start a suitable lesson. Keep your first goal small: recognizing string names, following an on-screen exercise, or using the tuner. Local results and favorites can help you return to the same material.",
+          "Learning guitar online can mean watching instruction, reading a chord diagram, or using a virtual instrument. These are different activities. Check that the resource teaches the skill you want, and distinguish a computer keyboard shortcut from a real fret or string. Wonderworld Labs plans a web version; no browser guitar player, release date, pricing, or song catalogue is promised here."
+        ]
+      },
+      {
+        "heading": "Build towards playing a song",
+        "paragraphs": [
+          "Choose a short beginner arrangement from a lawful source. Identify the tuning and the notes or chords it requires before starting. Work on a small phrase slowly, then connect it to the next phrase. A physical guitar is needed to develop pressure, finger placement, and strumming control.",
+          "Keep practice comfortable, take breaks, and avoid forcing a difficult movement. An app can guide repetition, but it cannot inspect your posture or replace individual feedback. Check the app page for current download access before relying on a new installation."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What are the standard guitar string names?",
+        "From thickest to thinnest: E, A, D, G, B, E. The thickest string is number 6; the thinnest is number 1."
+      ],
+      [
+        "Can I learn guitar without allowing the microphone?",
+        "Melody Garden supports on-screen practice without microphone permission. Its optional tuner and microphone practice need that permission."
+      ],
+      [
+        "Can I play guitar online on this website?",
+        "The Wonderworld Labs web version is planned. The current Melody Garden app is for Android; this guide is not a playable browser instrument."
+      ]
+    ],
+    "sources": [
+      {
+        "title": "Fender: standard guitar tuning",
+        "url": "https://www.fender.com/articles/setup/tuning-tip-standard-tuning"
+      }
+    ]
   }
 ]
