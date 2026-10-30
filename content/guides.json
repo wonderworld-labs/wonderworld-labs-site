@@ -45,6 +45,20 @@
         "paragraphs": [
           "Because progress is stored locally without an account, do not assume it will synchronize to another phone. Read the app privacy policy for the current data-handling details."
         ]
+      },
+      {
+        "heading": "Separate the beat from the notes",
+        "paragraphs": [
+          "If a passage feels difficult, practise its timing before adding more notes. The beat is the recurring pulse; rhythm describes the pattern of sounds and silences around it. Keeping one simple pulse lets you notice whether the difficulty is finding a note or placing it in time.",
+          "Try the exercise below away from the screen first, then use a single comfortable note on your instrument. It is an editorial practice idea, not a claim that Melody Garden contains a metronome, rhythm-scoring mode, or this specific exercise."
+        ],
+        "steps": [
+          "Count one, two, three, four at a comfortable, even pace.",
+          "Tap once on every count for two rounds.",
+          "Keep counting but tap only on one and three for two rounds. The pulse continues during the silent counts.",
+          "Return to tapping every count without speeding up.",
+          "Use one note instead of a tap, then return to a short lesson passage. Slow down if choosing the notes interrupts the pulse."
+        ]
       }
     ],
     "faq": [
@@ -60,6 +74,13 @@
         "Is Melody Garden an offline guitar learning app as well as a piano app?",
         "Yes. The current Android release supports both piano and guitar learning offline. Choose an instrument in the app and use its lessons and practice features."
       ]
+    ],
+    "updated": "2026-10-30",
+    "sources": [
+      {
+        "title": "Music theory lessons: rhythm and meter",
+        "url": "https://www.musictheory.net/lessons/"
+      }
     ]
   },
   {
@@ -104,6 +125,20 @@
           "Restarting one puzzle does not erase all progress, settings, or milestones. If you want to continue your daily routine, keep the app storage intact. The current release has no reset-all control inside the app.",
           "To delete all local records, clear the app's storage using Android Settings or uninstall the app. This removes the local information used to continue playing. There is no developer account or server copy of gameplay data for Wonderworld Labs to restore or delete, and the app is configured not to participate in Android app-data backup."
         ]
+      },
+      {
+        "heading": "Check the exact activity you plan to use while travelling",
+        "paragraphs": [
+          "An offline label is useful only if the activity you want works on your installed version. Test both an ordinary puzzle and any daily activity you plan to use before leaving a connection behind. Do not infer that a different game’s reward videos, archive access, or account features work offline just because its main puzzle does.",
+          "Arrow unleashed’s current published policy describes a game with no internet permission or developer-operated game server. This is separate from whether Google Play currently makes the app available to your account. Installing or updating an app still requires access to its distribution source."
+        ],
+        "steps": [
+          "While connected, confirm that the intended version is installed and opens normally.",
+          "Disconnect Wi-Fi and mobile data, or use airplane mode where appropriate. Check that Wi-Fi has not remained enabled.",
+          "Open the activity you actually intend to play, make a move, and return using the normal game controls.",
+          "Reopen the game and check the saved state before relying on it during a journey.",
+          "If something fails, record the activity and error for support. Avoid clearing storage or reinstalling as a first step because those actions can remove local progress."
+        ]
       }
     ],
     "faq": [
@@ -123,7 +158,8 @@
         "Where do I find the official download?",
         "Use the Arrow unleashed app page linked below to check current Google Play access or contact Wonderworld Labs. Public availability is still unconfirmed."
       ]
-    ]
+    ],
+    "updated": "2026-10-30"
   },
   {
     "app": "whispering-diary",
@@ -168,6 +204,14 @@
           "Settings provides individual deletion and an erase function. Removing the downloaded model preserves conversations; it is not the same action as erasing diary data. Uninstalling removes local app data. If you exported a conversation, manage that exported copy separately at its destination.",
           "These distinctions help you choose between freeing model storage, deleting an individual conversation, and removing diary records. Read the current policy before deciding which action matches your intent."
         ]
+      },
+      {
+        "heading": "What a local response flag does—and does not do",
+        "paragraphs": [
+          "In The Whispering Diary, flagging a response saves your reason and optional note locally and hides that response. It is not a report sent to Wonderworld Labs, and it does not request a support reply. A local flag also should not be interpreted as a promise that the model has been retrained or will never produce a similar reply.",
+          "Use a flag when you want to mark and hide a reply on your device. Use the app’s deletion or erase controls when you want to remove stored diary material instead. Flags remain until you remove them, erase diary data, or uninstall the app; exports you have already saved elsewhere need separate attention.",
+          "If you need help with a technical problem, contact support separately with the app version and a brief description. Avoid including diary entries or an entire conversation export when a non-sensitive example or error message will explain the issue. Elias is fictional entertainment for adults, and a local response flag is not an emergency or professional-support channel."
+        ]
       }
     ],
     "faq": [
@@ -187,7 +231,8 @@
         "Do I need an account or subscription?",
         "The current release has no account, advertising SDK, analytics SDK, subscriptions, or purchases."
       ]
-    ]
+    ],
+    "updated": "2026-10-30"
   },
   {
     "app": "melody-garden",
