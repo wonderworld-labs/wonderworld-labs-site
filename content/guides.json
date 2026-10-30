@@ -501,6 +501,18 @@
           "In Melody Garden, select piano and your learning age range, then choose a suitable lesson. On-screen practice does not require microphone permission. Optional microphone practice analyzes sound locally for pitch feedback without saving or uploading audio.",
           "Finish by noting which pattern needs another attempt. The app keeps results and preferences locally, so avoid resetting progress or uninstalling if you want to retain them. Check current download access on the app page before planning around a new installation."
         ]
+      },
+      {
+        "heading": "If an online piano makes no sound",
+        "paragraphs": [
+          "Before practising notes in a browser, check that one tapped key produces sound. A silent keyboard is a playback problem to resolve before judging your timing or note choices. Browser and instrument controls differ; use the help for the particular player you opened."
+        ],
+        "steps": [
+          "Tap the on-screen keyboard directly before trying computer-keyboard shortcuts. If tapping works, check the player’s shortcut labels and whether a text field has keyboard focus.",
+          "Check media volume, the player’s volume control, and whether the browser tab or site is muted.",
+          "Check where audio is playing: connected headphones or a Bluetooth speaker may be receiving it instead of the device speaker.",
+          "If sound is still blocked, consult the player’s browser-audio instructions. Musicca’s help, for example, discusses autoplay settings; this is guidance for that service, not a Melody Garden web feature."
+        ]
       }
     ],
     "faq": [
@@ -517,7 +529,14 @@
         "Yes, the current Android app supports guitar learning and an optional microphone-based tuner. Guitar fingering and string technique require a physical guitar."
       ]
     ],
-    "date": "2026-10-28"
+    "date": "2026-10-28",
+    "updated": "2026-10-31",
+    "sources": [
+      {
+        "title": "Musicca help: browser audio troubleshooting",
+        "url": "https://www.musicca.com/help"
+      }
+    ]
   },
   {
     "app": "arrow-unleashed",
@@ -560,6 +579,14 @@
           "A short session can end with one useful observation rather than a completed board. Arrow unleashed keeps puzzle progress, daily completions, settings, XP, badges, and goals locally. It has no developer game server or account that restores your play history.",
           "Clearing Android app storage or uninstalling removes local records. Restarting one puzzle is different from erasing all app data; do not use system storage controls as a way to obtain more hints. The current game has no advertising or in-app purchases."
         ]
+      },
+      {
+        "heading": "Ask for help with the board you actually have",
+        "paragraphs": [
+          "A useful arrow puzzle help request identifies the board and the decision, not just a level number. Different games can use the same number for entirely different layouts. If a puzzle has changed since a screenshot was taken, an answer for that screenshot may no longer apply.",
+          "For example: “I am playing Arrow unleashed, version [version], in [mode or level]. On this board I tried [move] because [reason]. I expected [result], but saw [feedback].” Add the date for a daily puzzle and, if useful, a screenshot cropped to the game board. Do not include unrelated notifications or personal information.",
+          "This makes it easier to distinguish a misunderstood rule from a possible technical problem. Describe one reproducible action before spending more hints or resetting anything. A screenshot shared for support is separate from the game’s local save data; it does not provide a restore point."
+        ]
       }
     ],
     "faq": [
@@ -576,7 +603,8 @@
         "The current game stores milestones on-device and does not request internet permission. Local storage is not cloud backup."
       ]
     ],
-    "date": "2026-10-28"
+    "date": "2026-10-28",
+    "updated": "2026-10-31"
   },
   {
     "app": "whispering-diary",
@@ -619,6 +647,14 @@
           "Conversations, drafts, approved memories, preferences, and response flags are stored privately on the device and excluded from automatic Android cloud backup. Optional diary lock uses Android biometric or screen-lock controls; the app does not receive your fingerprint or device PIN.",
           "Removing the downloaded model preserves conversations, but the model is needed to generate ordinary local replies. Uninstalling removes local app data. Export anything you want to keep before uninstalling, and consider the storage practices of the export destination. Elias is a fictional character for adults; replies can be inaccurate and are not professional or emergency advice."
         ]
+      },
+      {
+        "heading": "Separate downloading, loading, and generating a reply",
+        "paragraphs": [
+          "These are three different stages. Downloading transfers the model file to storage. Loading prepares the model for use in working memory. Generating uses that model to produce a reply. Having space for an approximately 805 MB download does not establish a phone’s available RAM or guarantee a particular reply speed.",
+          "If setup fails while transferring the file, record the download error and check connection and storage. If the file check finishes but opening chat fails, record that later stage instead of assuming the download must be repeated. If chat opens but a reply fails, note whether the failure happens for a short, non-sensitive test message too.",
+          "When contacting support, include the phone model, Android version, app version, stage, and exact error text. Do not send private diary entries to demonstrate the problem. Hugging Face’s model-loading documentation explains the general distinction between saved model weights and memory used to load them; it is not a compatibility specification for The Whispering Diary."
+        ]
       }
     ],
     "faq": [
@@ -635,7 +671,14 @@
         "No. The Whispering Diary is adult fictional entertainment. Its small local model can generate inaccurate responses."
       ]
     ],
-    "date": "2026-10-28"
+    "date": "2026-10-28",
+    "updated": "2026-10-31",
+    "sources": [
+      {
+        "title": "Hugging Face: loading models and memory",
+        "url": "https://huggingface.co/docs/transformers/models"
+      }
+    ]
   },
   {
     "app": "melody-garden",
