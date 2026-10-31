@@ -46,3 +46,8 @@ Keyword Planner estimates are separate from site performance and advertising com
 - [Gum installation platforms](https://gumcli.dev/install)
 
 The user setup guide is stored outside the website at `../SEO-SETUP-GUIDE.md`.
+
+## Current owner instructions (31 October 2026)
+
+The owner authorized live read-only Google Search Console and Keyword Planner access on 27 October; this supersedes the earlier public-only statements above. Use the private refresh/collection workflow and never expose credentials. Read LANDING-PAGE-GUIDELINES.md before every content update. Keep the owner-selected Vaultaire reference structure in app pages, with verified app-specific facts, concise product sections, honest artwork and download availability. Long educational content belongs in /guides/; do not append guide lists to landing pages.
+
