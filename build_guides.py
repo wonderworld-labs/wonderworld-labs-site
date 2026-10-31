@@ -17,7 +17,7 @@ def page(path, title, description, body, graph):
     template = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*', lambda m:m[1]+esc(title,quote=True), template)
     template = template.replace(BASE+'/apps/"', BASE+path+'"')
     template = re.sub(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False)+'</script>', template)
-    template = re.sub(r'<main class="wrap">.*?</main>', '<main class="wrap">'+body+'</main>', template)
+    template = re.sub(r'<main class="wrap" id="content">.*?</main>', '<main class="wrap" id="content">'+body+'</main>', template)
     target=ROOT/path.strip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(template,encoding='utf-8')
 
@@ -43,7 +43,18 @@ for g in guides:
     graph=[{'@type':'Article','@id':BASE+path+'#article','headline':g['title'],'description':g['description'],'datePublished':g['date'],'dateModified':g.get('updated',g['date']),'mainEntityOfPage':BASE+path,'author':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'publisher':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'about':{'@type':'SoftwareApplication','name':g['name'],'url':BASE+'/apps/'+g['app']+'/','operatingSystem':'Android'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Guides','item':BASE+'/guides/'},{'@type':'ListItem','position':2,'name':g['title'],'item':BASE+path}]}]
     page(path,g['title'],g['description'],body,graph)
 
-# Article lists belong in the blog hub, not the product landing pages.
+# Keep every guide discoverable from its parent app without copying article bodies.
+for app in sorted({g['app'] for g in guides}):
+    group=[g for g in guides if g['app']==app]
+    target=ROOT/'apps'/app/'index.html'
+    content=target.read_text(encoding='utf-8')
+    resources='<section class="app-resources" id="guides"><div><p class="eyebrow">Explore &amp; learn</p><h2>More from '+esc(group[0]['name'])+'.</h2><p>Practical answers, setup help, and ideas for your next session.</p></div><ul>'+''.join(guide_link(g) for g in group)+'</ul></section>'
+    block='<!-- app-guides:start -->'+resources+'<!-- app-guides:end -->'
+    if '<!-- app-guides:start -->' in content:
+        content=re.sub(r'<!-- app-guides:start -->.*?<!-- app-guides:end -->',lambda m:block,content,flags=re.S)
+    else:
+        content=content.replace('<section id="download"',block+'<section id="download"')
+    target.write_text(content,encoding='utf-8')
 
 body='<div class="hero"><p class="eyebrow">Practical help</p><h1>Android app guides</h1><p class="lead">Plan an offline music practice session, choose an arrow puzzle game, or understand local AI conversations.</p></div>'
 for app in sorted({g['app'] for g in guides}):
