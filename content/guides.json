@@ -769,5 +769,69 @@
         "url": "https://www.fender.com/articles/setup/tuning-tip-standard-tuning"
       }
     ]
+  },
+  {
+    "app": "melody-garden",
+    "name": "Melody Garden",
+    "slug": "learn-music-notes-melody-chords",
+    "date": "2026-11-02",
+    "title": "Learn music: the difference between notes, melodies, and chords",
+    "description": "Understand notes, melody, and chords with a simple C–E–G keyboard exercise. Use the same musical idea in piano, guitar, or beginner online practice.",
+    "answer": "A note names a musical pitch, a melody arranges notes over time, and a chord combines notes heard together. Start by finding C, E, and G on a keyboard: play them separately, then together as a C major chord. This small comparison helps connect note names with the sounds you hear.",
+    "sections": [
+      {
+        "heading": "Start with three note names",
+        "paragraphs": [
+          "Find a group of two black keys on a piano keyboard. The white key immediately to its left is C. Move right through the white keys: C, D, E, F, G. For this exercise, choose C, E, and G. Each name identifies a pitch class; another C elsewhere on the keyboard can be higher or lower.",
+          "Play C alone, let it finish, then try E and G separately. Say each name before playing. You are learning to connect a label, a location, and a sound. You do not need to start with a complete song or a fast exercise."
+        ]
+      },
+      {
+        "heading": "Hear a sequence, then a chord",
+        "steps": [
+          "Play C, E, G, E, C one at a time at a slow, even pace.",
+          "Repeat the sequence with the same order and spacing. Listen for the rise and return.",
+          "On a keyboard that supports simultaneous notes, play C, E, and G together. These notes form a C major triad.",
+          "Return to the single-note sequence. Notice how the same notes can sound different when their timing and combination change."
+        ],
+        "paragraphs": [
+          "The sequence is a short melody exercise; the simultaneous combination is a chord. A song can contain a melody with chord accompaniment, but it does not need to introduce every musical idea at once. This exercise is editorial guidance, not a named Melody Garden activity or a promise about its song catalogue."
+        ]
+      },
+      {
+        "heading": "Use the idea on piano, guitar, or a virtual instrument",
+        "paragraphs": [
+          "On a physical piano, you can compare the notes directly and practise pressing several keys together. On a guitar, the same note names can occur on different strings and frets. A piano key pattern is not a guitar fingering diagram: use a suitable beginner resource for the exact guitar shape rather than translating keyboard positions literally.",
+          "An online piano can help you explore the sound, but check its input controls. Some virtual instruments or phone touch interfaces may not support the combination you try. If you can play only one note at a time, practise the sequence and use another suitable instrument for the simultaneous chord. Computer-keyboard shortcuts may differ from musical note names."
+        ]
+      },
+      {
+        "heading": "Choose one goal for the next session",
+        "paragraphs": [
+          "To learn music steadily, choose a specific next goal: finding the three notes without a label, repeating a short melody evenly, or recognizing a chord against separate notes. Repeat that goal before adding more material. This is a practice suggestion, not a guaranteed learning timeline.",
+          "Melody Garden provides offline piano and guitar learning on Android, with on-screen practice and optional microphone feedback. Select a suitable lesson for your instrument and learning age range. A Wonderworld Labs web version is planned; this page is an explanation rather than a playable instrument. Check the app page for current download access."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Is a chord the same as a melody?",
+        "No. A melody is a sequence of notes over time. A chord combines notes heard together; both can occur in the same piece."
+      ],
+      [
+        "Which notes make a C major chord?",
+        "C, E, and G form a C major triad. This guide uses them on a keyboard so you can compare a sequence with a simultaneous chord."
+      ],
+      [
+        "Can I use this exercise without microphone permission?",
+        "Yes. The exercise can be tried on an instrument or a suitable virtual keyboard. Melody Garden also offers on-screen practice without microphone access."
+      ]
+    ],
+    "sources": [
+      {
+        "title": "musictheory.net: introduction to chords",
+        "url": "https://www.musictheory.net/lessons/40"
+      }
+    ]
   }
 ]
