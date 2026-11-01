@@ -75,6 +75,12 @@ for slug in ['melody-garden', 'arrow-unleashed', 'whispering-diary']:
     # All existing policy paragraphs remain verbatim; only navigation is appended.
     for paragraph in re.findall(r'<p\b[^>]*>.*?</p>', old, re.S):
         assert paragraph in current, (slug, paragraph)
-assert (ROOT / 'privacy-policy.html').read_bytes() == subprocess.check_output(
-    ['git', 'show', '21b16ef:privacy-policy.html'], cwd=ROOT)
+legacy_original = subprocess.check_output(['git', 'show', '21b16ef:privacy-policy.html'], cwd=ROOT).decode()
+legacy_current = (ROOT / 'privacy-policy.html').read_text(encoding='utf-8')
+for paragraph in re.findall(r'<p\b[^>]*>.*?</p>', legacy_original, re.S):
+    assert paragraph in legacy_current, ('Legacy policy wording changed', paragraph)
+for path in pages:
+    source = path.read_text(encoding='utf-8')
+    assert source.count('data-theme-toggle') == 1, ('Theme switch missing or duplicated', path)
+    assert '/assets/theme.js' in source and '/assets/theme.css' in source, path
 print(f'PASS: {len(pages)} pages; internal links and anchors; JSON-LD; {len(urls)} sitemap URLs; original privacy copy and legacy policy preserved.')

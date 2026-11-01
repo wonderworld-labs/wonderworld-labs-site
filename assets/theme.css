@@ -1,0 +1,20 @@
+:root{color-scheme:light;--bg:#fafaf7;--panel:#f0f1eb;--text:#1b201b;--muted:#596254;--teal:#416514}
+:root[data-theme=dark]{color-scheme:dark;--bg:#101113;--panel:#1b1c20;--text:#f5f4f0;--muted:#b4b4bc;--teal:#d4fa70}
+.theme-toggle{margin-left:auto;border:1px solid #89917d;border-radius:100px;background:transparent;color:var(--text);padding:10px 15px;min-height:44px;font:inherit;font-size:12px;cursor:pointer;white-space:nowrap}
+.theme-toggle:hover{background:var(--panel)}.theme-toggle:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+html:not([data-theme=dark]) body{background:var(--bg);color:var(--text)}
+html:not([data-theme=dark]) a:hover{color:#29440b}
+html:not([data-theme=dark]) header,html:not([data-theme=dark]) footer,html:not([data-theme=dark]) .section-head,html:not([data-theme=dark]) .features,html:not([data-theme=dark]) .feature,html:not([data-theme=dark]) .walkthrough,html:not([data-theme=dark]) .app-faq details,html:not([data-theme=dark]) .app-resources,html:not([data-theme=dark]) .app-resources li,html:not([data-theme=dark]) .document-page .faq,html:not([data-theme=dark]) .document-page main>section{border-color:#d5dacd}
+html:not([data-theme=dark]) .step-grid li{background:linear-gradient(145deg,#f1f3ec,#e9ede2);border-color:#d5dacd}
+html:not([data-theme=dark]) .trust-panel{background:linear-gradient(120deg,#eaf0df,#f3f5ed);border-color:#cdd7bc}
+html:not([data-theme=dark]) .proof-strip span{color:#3d4935;border-color:#ccd4bf}
+html:not([data-theme=dark]) .statement{border-color:#d5dacd}
+html:not([data-theme=dark]) .download{background:#d4fa70;color:#161815}
+html:not([data-theme=dark]) .button{background:#365616;color:#fff}
+html:not([data-theme=dark]) .button:hover{background:#26400d;color:#fff}
+html:not([data-theme=dark]) .download .button{background:#171914;color:#fff}
+html:not([data-theme=dark]) .document-page article>nav,html:not([data-theme=dark]) .document-page .card{background:#f0f1eb;border-color:#d5dacd}
+html:not([data-theme=dark]) .document-page .notice{background:#edf2e3;border-color:#cdd7bc}
+html:not([data-theme=dark]) .document-page main a:not(.button){text-decoration-color:#a5b296}
+html:not([data-theme=dark]) .text-link{border-color:#9ca68f}
+@media(max-width:600px){header nav.wrap{position:relative;padding-top:76px}.theme-toggle{position:absolute;right:20px;top:18px}.brand{width:auto}.document-page header nav.wrap{padding-top:76px}}

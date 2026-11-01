@@ -13,3 +13,5 @@ Owner-selected reference: https://vaultaire.app/ (reviewed 31 October 2026). Use
 - Preserve all policy URLs and wording. Verify actual download destinations before changing availability language. The planned music web version remains planned until a working release is verified.
 
 Daily publishing: review these guidelines before changing app pages. Improve an existing answer or article when intent overlaps; do not lengthen a landing page or add thin pages to meet a quota. Recheck layout at desktop and mobile widths after structural changes.
+
+All pages use assets/theme.css and assets/theme.js with a top-right theme switch. Light is the default for new visitors; preserve each visitor's stored choice. Guide templates must retain the theme assets and accessible button. Check both themes after visual changes.
