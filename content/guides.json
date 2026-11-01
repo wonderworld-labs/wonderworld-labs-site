@@ -280,6 +280,19 @@
           "Describe your phone model, Android version, app version if visible, instrument, selected practice activity, and what feedback you expected. Say whether microphone permission is allowed and whether a quieter setting changed the behavior. A short description of the steps is more useful than simply saying that the app cannot hear you.",
           "The current app analyzes microphone sound live on the device. It does not record, save, or upload microphone audio. Lesson results and settings are local; the developer does not automatically receive diagnostic reports or a copy of your practice. Contact support through the app page and avoid including unnecessary personal information."
         ]
+      },
+      {
+        "heading": "If microphone permission used to work",
+        "paragraphs": [
+          "Android can reset permissions for apps you have not used for a while. Permission granted during an earlier session is not proof that access is still enabled. Check the current setting before changing your instrument position or removing app data.",
+          "On Android versions with a privacy dashboard, review recent microphone access in Settings. Menu names and the available history vary by device. The dashboard can help you check whether microphone access occurred during your test; it does not establish that the app recognized a note correctly."
+        ],
+        "steps": [
+          "Open Melody Garden’s Android app permissions and inspect Microphone again.",
+          "If you want sound-based practice, permit access while using the app, then reopen the intended microphone activity.",
+          "Play one clear note and check the feedback. On supported devices, review the microphone indicator or privacy dashboard for that test.",
+          "If you prefer to keep access disabled, use on-screen practice. If access is allowed but feedback still fails, send support the current setting and test result."
+        ]
       }
     ],
     "faq": [
@@ -300,8 +313,13 @@
       {
         "title": "Android Help: change app permissions",
         "url": "https://support.google.com/android/answer/9431959"
+      },
+      {
+        "title": "Android privacy: permissions and unused apps",
+        "url": "https://www.android.com/safety/privacy/"
       }
-    ]
+    ],
+    "updated": "2026-11-01"
   },
   {
     "app": "arrow-unleashed",
@@ -437,6 +455,14 @@
           "A cloud provider selected in Android’s document picker may synchronize the export beyond your phone. A local destination may still be included in another backup process. The app’s diary lock does not automatically protect a separate exported file. Choose a destination based on who can access it.",
           "Deleting a conversation in the app does not remove copies you previously exported or shared. To remove those, visit the destination provider and check its deletion, trash, and backup controls. Avoid sending a private export to support when a short description of the problem will do."
         ]
+      },
+      {
+        "heading": "Does diary lock protect an exported conversation?",
+        "paragraphs": [
+          "Treat diary lock and file export as separate controls. The Whispering Diary’s optional lock uses Android’s biometric or screen-lock system to control access in the app. A conversation saved through Android’s document picker becomes a separate file at the destination you chose. Do not assume that opening that file will require the diary lock.",
+          "Before exporting sensitive material, choose a destination you control and check whether it syncs, backs up, or shares files. After export, open only the copy you intended to verify. If you no longer need it, remove it at that destination and review any provider-managed trash or additional copies.",
+          "Locking the diary does not erase exports, and deleting an export does not erase the conversation inside the app. Use the app’s deletion controls for diary records and the destination’s controls for exported files. The app does not receive your fingerprint or device PIN."
+        ]
       }
     ],
     "faq": [
@@ -458,7 +484,7 @@
       ]
     ],
     "sources": [],
-    "updated": "2026-10-29"
+    "updated": "2026-11-01"
   },
   {
     "app": "melody-garden",
