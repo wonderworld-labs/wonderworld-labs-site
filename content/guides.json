@@ -455,14 +455,6 @@
           "A cloud provider selected in Android’s document picker may synchronize the export beyond your phone. A local destination may still be included in another backup process. The app’s diary lock does not automatically protect a separate exported file. Choose a destination based on who can access it.",
           "Deleting a conversation in the app does not remove copies you previously exported or shared. To remove those, visit the destination provider and check its deletion, trash, and backup controls. Avoid sending a private export to support when a short description of the problem will do."
         ]
-      },
-      {
-        "heading": "Does diary lock protect an exported conversation?",
-        "paragraphs": [
-          "Treat diary lock and file export as separate controls. The Whispering Diary’s optional lock uses Android’s biometric or screen-lock system to control access in the app. A conversation saved through Android’s document picker becomes a separate file at the destination you chose. Do not assume that opening that file will require the diary lock.",
-          "Before exporting sensitive material, choose a destination you control and check whether it syncs, backs up, or shares files. After export, open only the copy you intended to verify. If you no longer need it, remove it at that destination and review any provider-managed trash or additional copies.",
-          "Locking the diary does not erase exports, and deleting an export does not erase the conversation inside the app. Use the app’s deletion controls for diary records and the destination’s controls for exported files. The app does not receive your fingerprint or device PIN."
-        ]
       }
     ],
     "faq": [
@@ -484,7 +476,7 @@
       ]
     ],
     "sources": [],
-    "updated": "2026-11-01"
+    "updated": "2026-10-29"
   },
   {
     "app": "melody-garden",
