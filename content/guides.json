@@ -833,5 +833,66 @@
         "url": "https://www.musictheory.net/lessons/40"
       }
     ]
+  },
+  {
+    "app": "whispering-diary",
+    "name": "The Whispering Diary",
+    "slug": "offline-ai-character-conversation-starters",
+    "date": "2026-11-03",
+    "title": "Offline AI character chat: simple conversation starters",
+    "description": "Try original fictional conversation starters with Elias in The Whispering Diary. Keep a scene small, ask one clear question, and follow up without sharing personal details.",
+    "answer": "To begin a fictional AI character conversation, give one small situation and ask one clear question. For example: “Elias, imagine we found an unsigned postcard in a second-hand book. What detail would you look at first?” In The Whispering Diary, ordinary conversations run on your Android phone after model setup. These prompts are creative suggestions, not guaranteed model responses.",
+    "sections": [
+      {
+        "heading": "Start with one situation",
+        "paragraphs": [
+          "A short opening gives you something concrete to respond to. Choose a fictional object, place, or choice instead of supplying a long biography and several events at once. You can keep your own name, address, and real experiences out of the scene.",
+          "The Whispering Diary features Elias, an original fictional character for adults. The suggestions here are ordinary messages to try, not a character editor, scenario library, or separate roleplay mode promised by the app. A small local model may interpret a message differently from what you intended."
+        ]
+      },
+      {
+        "heading": "Three original openings to try",
+        "paragraphs": [
+          "A small mystery: “Elias, an old book has a postcard tucked inside, but no signature. Would you inspect the picture or the handwriting first? Why?”",
+          "A quiet choice: “Imagine a rainy afternoon with time for one small adventure: a bookshop or a covered market. Which would you choose, and what would catch your attention?”",
+          "An invented keepsake: “A traveller left a plain brass key on a table. Let us invent an ordinary explanation for it. What might it open?”",
+          "These are original writing exercises. They do not describe events in the app’s story, built-in scenes, or tested outcomes. Try one opening at a time and adapt it to the conversation you actually receive."
+        ]
+      },
+      {
+        "heading": "Follow up on one detail",
+        "steps": [
+          "Read the reply and choose one detail you want to explore.",
+          "Ask a focused follow-up, such as “What made you notice that?” or “What happens when we look closer?”",
+          "If the reply changes the scene unexpectedly, restate the one detail you want to keep and continue from there.",
+          "Finish at a comfortable stopping point rather than adding more instructions just to keep the chat going."
+        ],
+        "paragraphs": [
+          "A clearer follow-up may make your intention easier to understand, but it does not guarantee consistency or permanent memory. Treat surprising or inaccurate replies as generated fiction. The app’s user-approved memories are a separate control; a line in a conversation is not a promise that every detail will be retained."
+        ]
+      },
+      {
+        "heading": "Prepare for an offline session",
+        "paragraphs": [
+          "Initial setup requires an approximately 805 MB model download. Complete setup and try an ordinary conversation before going offline. Download size is not a complete device-memory requirement or a guarantee of response speed.",
+          "Keep the activity fictional and recreational. Elias is not a real person or professional adviser. If you want to keep a copy, use the documented conversation export and consider the destination’s storage practices. Check the app page for current download availability."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Do these prompts require internet?",
+        "Typing an ordinary conversation does not require internet after The Whispering Diary’s initial model download and setup. Installing the app and downloading the model need a connection."
+      ],
+      [
+        "Can I create a new character with these prompts?",
+        "This guide describes conversation ideas for Elias. It does not promise a custom-character creator or a downloadable character library."
+      ],
+      [
+        "Will Elias always follow the scene exactly?",
+        "No. A small local model can produce inconsistent or inaccurate replies. Keep expectations flexible and treat the exchange as fiction."
+      ]
+    ],
+    "sources": []
   }
 ]
