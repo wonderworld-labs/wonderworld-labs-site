@@ -1,0 +1,26 @@
+# Wonderworld Labs
+
+> Official Android app information. Each app page and privacy policy is the source of truth. Public download availability is not confirmed for every app and account.
+
+## Official pages
+- [Home](https://wonderworldlabs.com/)
+- [All Android apps](https://wonderworldlabs.com/apps/)
+- [Android guides](https://wonderworldlabs.com/guides/)
+
+## Apps
+- [Melody Garden](https://wonderworldlabs.com/apps/melody-garden/): Melody Garden is an Android app for learning piano and guitar with offline lessons and on-screen practice. Microphone feedback is optional, and lesson progress stays on your device.
+- [Arrow unleashed](https://wonderworldlabs.com/apps/arrow-unleashed/): Arrow unleashed is an Android arrow puzzle game for offline play, with daily challenges, hints and local milestones. Ordinary puzzles do not require an account or a constant connection.
+- [The Whispering Diary](https://wonderworldlabs.com/apps/whispering-diary/): The Whispering Diary is an adults-only Android app for fictional AI chats with Elias. After an initial model download of approximately 805 MB, ordinary conversations run locally on the device.
+- [Photo & File Vault](https://wonderworldlabs.com/apps/photo-file-vault/): Photo & File Vault keeps encrypted copies of selected photos and files in an offline Android vault. No recovery service is provided for a lost unlock secret, and exported files are unencrypted.
+- [Block Blasting](https://wonderworldlabs.com/apps/block-blasting/): Block Blasting is an offline Android block puzzle game with Classic mode and 24 Adventure levels. Best scores, badges and preferences are saved locally without an account or ads.
+- [Explain Studio](https://wonderworldlabs.com/apps/explain-studio/): Explain Studio is an Android video recording and editing app with a teleprompter, optional on-device English voice follow, and local video rendering. AI assets are made outside the app and imported.
+
+## Help and policies
+- [Music learning](https://wonderworldlabs.com/categories/music-learning/)
+- [Arrow puzzles](https://wonderworldlabs.com/categories/puzzle-games/)
+- [Fictional AI chat](https://wonderworldlabs.com/categories/ai-character-conversations/)
+- [App privacy](https://wonderworldlabs.com/privacy/)
+- [Website privacy](https://wonderworldlabs.com/service-privacy/)
+- Contact: contact@wonderworldlabs.com
+
+This optional index does not guarantee AI citations or improve Google rankings by itself.
