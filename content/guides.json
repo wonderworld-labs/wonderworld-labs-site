@@ -482,9 +482,9 @@
     "app": "melody-garden",
     "name": "Melody Garden",
     "slug": "learn-piano-online-or-android-beginner",
-    "title": "Learn piano: start with an online keyboard or an Android app",
-    "description": "Find your first notes, practise a short pattern, and choose between a virtual piano and offline Android practice. Understand what each option can teach.",
-    "answer": "To start learning piano, find a group of two black keys and the white key immediately to its left: C. Practise a short C–D–E pattern slowly before adding more notes. An online piano offers a quick browser start; an offline Android app can help you keep a practice routine without a connection. Neither replaces the feel of a physical keyboard.",
+    "title": "Learn Piano on Your Phone: Beginner Android Practice",
+    "description": "Learn piano at home using your phone: find C, play your first five-note pattern, and compare online keyboards with offline Android lessons.",
+    "answer": "To begin learning piano on your phone, find a group of two black keys and the white key immediately to its left: C. Play C-D-E-D-C slowly, one note per count. An online keyboard is useful for exploring notes; an Android app such as Melody Garden can provide offline lessons and on-screen practice. A touchscreen is a starting point, not a substitute for developing technique on a physical instrument.",
     "sections": [
       {
         "heading": "Choose the tool for your first session",
@@ -548,7 +548,7 @@
       ]
     ],
     "date": "2026-10-28",
-    "updated": "2026-10-31",
+    "updated": "2026-11-04",
     "sources": [
       {
         "title": "Musicca help: browser audio troubleshooting",
