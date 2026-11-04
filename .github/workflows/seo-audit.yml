@@ -1,0 +1,23 @@
+name: SEO and content validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate SEO, content, internal links and policies
+        run: |
+          python -m py_compile build_guides.py check_site.py check_seo.py seo_research.py
+          python check_site.py
+          python check_seo.py
