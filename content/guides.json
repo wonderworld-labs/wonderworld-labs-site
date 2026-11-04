@@ -6,7 +6,7 @@
     "date": "2026-10-26",
     "title": "How to practice piano and guitar offline on Android",
     "description": "Build a short offline piano or guitar practice routine with Melody Garden: on-screen practice, optional microphone feedback, favorites, and local progress.",
-    "answer": "You can practice piano and guitar offline with Melody Garden on Android. Choose your instrument and learning age range, then use lessons and on-screen practice without microphone permission. Microphone practice and the guitar tuner are optional; sound is analyzed on your device without recording or uploading audio.",
+    "answer": "To start learning music on an Android phone, choose piano or guitar in Melody Garden and pick one lesson or on-screen exercise. Repeat a short pattern until you can find its notes in order, then try it on an instrument when one is available. On-screen practice works offline without microphone permission. Optional microphone feedback analyzes live pitch on the device.",
     "sections": [
       {
         "heading": "What an offline music learning app should let you do",
@@ -25,6 +25,13 @@
         ],
         "paragraphs": [
           "This is a suggested routine, not a timed mode or guaranteed learning programme built into the app. On-screen practice can introduce notes and patterns; playing a physical instrument also involves touch, positioning, and technique that a phone screen cannot reproduce."
+        ]
+      },
+      {
+        "heading": "Find out what to practise next on your phone",
+        "paragraphs": [
+          "Pick one short pattern from the lesson and notice where you hesitate. If you cannot find the next note, practise just the two notes around that spot. If you can find the notes but the gaps between them vary, slow down and count an even pulse. Use the same pattern on the next attempt so you can tell what changed.",
+          "When you move to a piano or guitar, start with that same small pattern. Locate the notes on the instrument before trying to match your speed on the phone. Save the lesson in favorites if you want to return to it. The next session can start with one clear goal, such as finding the next note without pausing."
         ]
       },
       {
@@ -75,7 +82,7 @@
         "Yes. The current Android release supports both piano and guitar learning offline. Choose an instrument in the app and use its lessons and practice features."
       ]
     ],
-    "updated": "2026-10-30",
+    "updated": "2026-11-05",
     "sources": [
       {
         "title": "Music theory lessons: rhythm and meter",
