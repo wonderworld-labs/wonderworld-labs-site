@@ -22,7 +22,7 @@ for p in ROOT.rglob('*.html'):
  assert len(a.robots)==1 and 'index' in a.robots[0],(p,'robots')
  assert len(a.image)==1,(p,'og:image')
  graph=[]
- for m in re.finditer(r'<script type="application/ld\\+json">([\\s\\S]*?)</script>',s):
+ for m in re.finditer(r'<script type="application/ld\+json">([\s\S]*?)</script>',s):
   d=json.loads(m.group(1));assert d.get('@context')=='https://schema.org';graph+=d.get('@graph',[d])
  assert any(g.get('@type')=='WebPage' for g in graph),(p,'webpage schema')
  if p.parent.parent.name=='apps' and p.parent.name in APPS:
