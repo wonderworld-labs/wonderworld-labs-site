@@ -16,6 +16,12 @@ def page(path, title, description, body, graph):
     template = re.sub(r'(<meta (?:name|property)="(?:description|og:description|twitter:description)" content=")[^"]*', lambda m:m[1]+esc(description,quote=True), template)
     template = re.sub(r'(<meta (?:name|property)="(?:og:title|twitter:title)" content=")[^"]*', lambda m:m[1]+esc(title,quote=True), template)
     template = template.replace(BASE+'/apps/"', BASE+path+'"')
+    # Keep article and collection-page entity metadata in generated HTML.
+    webpage = {'@type':'WebPage','@id':BASE+path+'#webpage','url':BASE+path,'name':title+' | Wonderworld Labs','description':description,'isPartOf':{'@id':BASE+'/#website'},'publisher':{'@id':BASE+'/#organization'}}
+    if path.startswith('/guides/') and path != '/guides/':
+        webpage['mainEntity'] = {'@id':BASE+path+'#article'}
+        template = template.replace('property="og:type" content="website"','property="og:type" content="article"')
+    graph.append(webpage)
     template = re.sub(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False)+'</script>', template)
     template = re.sub(r'<main class="wrap" id="content">.*?</main>', '<main class="wrap" id="content">'+body+'</main>', template)
     target=ROOT/path.strip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True)
