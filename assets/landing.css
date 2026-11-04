@@ -5,3 +5,8 @@
 
 /* Concise answer-first app definitions and breadcrumb navigation. */
 .app-breadcrumbs{display:flex;flex-wrap:wrap;gap:10px;padding:12px 0 20px;color:var(--muted);font-size:13px;line-height:1.6}.app-breadcrumbs a{color:var(--text);text-decoration:underline;text-underline-offset:4px}.app-summary{padding:28px 34px;margin:12px 0 26px;border:1px solid #383b36;border-radius:22px;background:#1a1e1b}.app-summary h2{font-size:clamp(1.55rem,2.5vw,2.1rem);margin:0 0 12px;letter-spacing:-.035em}.app-summary p{font-size:16px;line-height:1.7;max-width:960px;margin:0 0 10px}.app-summary .app-summary-links{font-size:13px;color:var(--muted);margin:12px 0 0}.app-summary a{text-decoration:underline;text-underline-offset:4px}@media(max-width:700px){.app-summary{padding:22px 20px;margin-bottom:20px}.app-summary p{font-size:15px}.app-breadcrumbs{font-size:12px}}
+
+/* Keep the homepage hero legible without dominating a phone viewport. */
+@media (max-width:600px) {
+  .intro h1 {font-size:clamp(2.8rem,10vw,3.55rem);line-height:1.05;letter-spacing:-.062em;margin:18px 0 24px}
+}
