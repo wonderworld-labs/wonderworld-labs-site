@@ -894,5 +894,230 @@
       ]
     ],
     "sources": []
+  },
+  {
+    "app": "photo-file-vault",
+    "name": "Photo & File Vault",
+    "slug": "android-photo-vault-encrypted-copies-and-originals",
+    "date": "2026-11-04",
+    "title": "Android Photo Vault: Encrypted Copies, Originals and Exports",
+    "description": "Learn what an encrypted Android photo vault protects, why imported originals remain, how unencrypted exports work, and what happens if you lose a vault password.",
+    "answer": "An encrypted photo vault can protect copies of selected files inside an app, but importing does not automatically hide, move, or delete the original photos. Photo & File Vault encrypts imported file contents and filenames in local Android app storage. The original and any exported copy need separate care, and the app cannot recover a lost unlock secret.",
+    "sections": [
+      {
+        "heading": "Encrypted copy versus hidden original: what changes?",
+        "paragraphs": [
+          "A hidden folder, a private gallery view, and an encrypted file copy are not the same thing. Hiding may change where something is displayed; encryption changes how a protected copy is stored. The relevant question is which copy a particular app controls.",
+          "In Photo & File Vault, importing a file through Android's document picker creates an encrypted copy in the app's private storage. The original remains in its source folder. If that original is visible to another gallery app or already synchronized elsewhere, simply importing it into the vault does not remove those other copies.",
+          "The current implementation encrypts file contents and filenames. It can still expose limited local metadata, including space labels, lock types, encrypted sizes, or timing. The implementation has not been independently security-audited and does not claim protection from a compromised device."
+        ]
+      },
+      {
+        "heading": "A careful checklist before importing a private photo",
+        "steps": [
+          "Find the original file and note where it is stored before opening the vault. Check whether your normal gallery or a backup provider can still access the original.",
+          "Use Photo & File Vault's Android document picker to choose a supported local file. Its current implementation does not support third-party cloud document providers.",
+          "Confirm that the imported copy is accessible inside the vault using the intended lock. Do not delete the original until you have decided whether you need another recoverable copy.",
+          "Review any device or gallery backup settings separately. Importing is not a command to delete existing copies from other locations."
+        ],
+        "paragraphs": [
+          "These are safe planning steps, not a guarantee that an imported file has been deleted elsewhere. Consider using a non-sensitive sample file while learning the flow. Do not send a private photo or unlock secret to support just to demonstrate how import works."
+        ]
+      },
+      {
+        "heading": "What if the PIN, password or pattern is forgotten?",
+        "paragraphs": [
+          "The app supports local password, PIN, or pattern locking, with additional locks available for individual files. Unlock secrets are not sent to Wonderworld Labs, and there is no developer recovery key or password-reset service.",
+          "A lost unlock secret can therefore mean permanent loss of access to protected copies. Keeping a secret somewhere you control is important, but leaving it with the protected file or disclosing it to an untrusted person defeats the purpose of the lock.",
+          "Automatic Android app backup and device-transfer backup are disabled for the vault. Do not assume signing into a Google account or reinstalling on a different phone will restore its contents."
+        ]
+      },
+      {
+        "heading": "Exports are readable files, not encrypted vault backups",
+        "paragraphs": [
+          "Exporting from Photo & File Vault creates an unencrypted file at a local destination you choose. That file may be accessible to other applications and may be picked up by a separate device-backup tool. The vault's encryption does not follow an exported copy.",
+          "If you need a readable copy before changing phones, choose a trusted destination, check the file, and protect it according to its sensitivity. The current app does not promise encrypted backup or recovery. Removing the app can remove access to everything left only in its private storage.",
+          "Deleting an encrypted copy inside the vault does not delete the original or previously exported files. Likewise, file deletion does not guarantee physical erasure from flash storage. Manage each location separately."
+        ]
+      },
+      {
+        "heading": "Choose the right protection for your needs",
+        "paragraphs": [
+          "A vault is useful when you need a separate locally encrypted copy and understand its unlock and export limits. It is not a substitute for a complete backup strategy, device security updates, or safely managing originals.",
+          "Before relying on any Android vault, look for plain answers to four questions: where the original remains, what the app encrypts, how exports leave the vault, and whether a lost password can be recovered. The official Photo & File Vault policy answers these questions for this specific release."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Does importing a photo into the vault delete the original?",
+        "No. Importing creates an encrypted local copy. The original remains at its source until you manage it separately."
+      ],
+      [
+        "Can Wonderworld Labs reset a forgotten vault password?",
+        "No. The current app provides no password recovery or developer-held key. Losing an unlock secret can permanently prevent access."
+      ],
+      [
+        "Are files exported from Photo & File Vault encrypted?",
+        "No. Exports are unencrypted copies at a local destination you choose. Protect those copies separately."
+      ],
+      [
+        "Will the vault restore my photos on a new Android phone?",
+        "Do not assume so. Automatic app backup and device-transfer backup are disabled, and the current release does not offer an encrypted backup or recovery feature."
+      ]
+    ]
+  },
+  {
+    "app": "block-blasting",
+    "name": "Block Blasting",
+    "slug": "block-puzzle-strategy-android-classic-adventure",
+    "date": "2026-11-04",
+    "title": "Block Puzzle Strategy on Android: Plan Space and Clear Lines",
+    "description": "A practical block puzzle decision routine for Android. Plan placements, preserve useful space, compare Classic and Adventure play, and understand local saved progress.",
+    "answer": "A useful block puzzle strategy is to check the space left after your next placement, not just whether the current piece fits. Before each move, identify possible line clears, consider where the remaining pieces might go, and avoid creating isolated gaps. Block Blasting offers offline Classic mode and 24 Adventure levels, with progress stored on your Android phone.",
+    "sections": [
+      {
+        "heading": "Start with the board, not the score",
+        "paragraphs": [
+          "Before placing a piece, look for rows or columns close to a clear and for open space that several different pieces might use. A move that earns points now may leave an awkward gap. A move that keeps flexible space may be more useful later.",
+          "Block puzzle rules vary by game and mode. Follow the actual instructions and placement feedback in your installed release instead of applying an online answer intended for a different puzzle. No single tactic guarantees a winning score.",
+          "Block Blasting includes a Classic mode and 24 Adventure levels. These are two ways to practise planning, but their goals need not be identical."
+        ]
+      },
+      {
+        "heading": "A five-check routine before each placement",
+        "steps": [
+          "Identify the current objective: are you trying to keep a Classic round going or complete the current Adventure activity?",
+          "Scan the available space and note any line that could be completed now or after a later placement.",
+          "Look at the piece or pieces currently presented and imagine the board after placing one of them, including any gaps it would leave.",
+          "Choose a move that balances a useful line clear with space for later moves. Avoid committing to a narrow opening if another legal placement leaves more flexibility.",
+          "After placement, inspect the changed board before moving again. Repeat the same checks rather than relying on a fast tap."
+        ],
+        "paragraphs": [
+          "This is an editorial practice routine, not an automated hint or a built-in solver. The game has placement hints among its settings, but the official policy does not promise that a hint identifies the best move for every board."
+        ]
+      },
+      {
+        "heading": "Classic versus 24 Adventure levels",
+        "paragraphs": [
+          "Use Classic to focus on your decision habits over a round: noticing space, trying placements, and reviewing which move closed an important opening. A personal best is feedback about that round, not proof that a tactic is universally optimal.",
+          "The current app also includes 24 Adventure levels. Check the objective shown in the level you open and solve for that objective. If the game presents different requirements, prioritize the visible goal instead of assuming the Classic approach always applies.",
+          "For either mode, take a short pause after an unsuccessful attempt and identify one move you would reconsider. Keep the review concrete rather than attributing every result to luck."
+        ]
+      },
+      {
+        "heading": "Use settings to make decisions easier to see",
+        "paragraphs": [
+          "Block Blasting stores preferences for sound, music, haptics, reduced motion, and placement hints. Try reducing distractions when a puzzle feels visually busy; the purpose is to make the board easier to read, not to change its underlying rules.",
+          "Placement hints can support learning, but their existence does not mean unlimited help, guaranteed solutions, or any specific refill schedule. Check the options in the version installed on your device.",
+          "The app plays offline without accounts, advertising, analytics, or network access in the current release. That does not mean a store download or update can happen without a network connection."
+        ]
+      },
+      {
+        "heading": "What happens to scores and progress?",
+        "paragraphs": [
+          "The game saves rounds, board and piece state, scores, personal bests, Adventure progress, badges, streak information, and preferences in local app storage. A previous valid save can also be kept locally as protection against a damaged save.",
+          "These are not developer-hosted cloud backups. Clearing Android app storage or uninstalling the game removes its local records, and automatic Android app backup is disabled. If keeping a personal-best milestone matters, save a separate note before a reset, recognizing that a screenshot is not an importable game save.",
+          "Use the official Block Blasting app page for the current feature list and distribution status. Public download availability has not yet been confirmed for every account."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How do I get better at block puzzle games?",
+        "Before placing each piece, consider possible line clears and the shape of the remaining open space. Review what changed after each move rather than tapping quickly."
+      ],
+      [
+        "Does Block Blasting work without internet?",
+        "The current Android game is offline, with no internet permission, ads, or developer account. Installing or updating it still depends on a distribution source."
+      ],
+      [
+        "How many Adventure levels are available?",
+        "The current Block Blasting release includes 24 Adventure levels alongside Classic mode."
+      ],
+      [
+        "Will I lose my best scores if I uninstall?",
+        "Yes. Progress is kept locally without automatic Android app backup or a developer server copy. Clearing storage or uninstalling removes local records."
+      ]
+    ]
+  },
+  {
+    "app": "explain-studio",
+    "name": "Explain Studio",
+    "slug": "record-video-with-teleprompter-android-offline",
+    "date": "2026-11-04",
+    "title": "Record Explainer Videos with an Android Teleprompter",
+    "description": "Plan a short explainer video, record with an on-device Android teleprompter, understand English voice follow, and export video and project backups safely.",
+    "answer": "To record an explainer video with a teleprompter on Android, start with a short script, check camera and microphone permission, record a test take, and review the result before exporting. Explain Studio supports local recording, a teleprompter with optional on-device English voice follow, editing, and export. It does not generate AI assets inside the app.",
+    "sections": [
+      {
+        "heading": "Prepare a script for one clear message",
+        "paragraphs": [
+          "Start with the question your viewer wants answered, then write an opening sentence, two or three useful points, and a closing action. Read the script aloud before recording: short sentences and natural pauses are easier to deliver than dense paragraphs.",
+          "Explain Studio can import a script or a production pack containing prepared material such as images, video, captions, and editing instructions. Creating AI illustrations or a script with another service is an external step, not an in-app AI generation feature.",
+          "If you plan to speak while showing materials, organize what you need before the take. The purpose of this preparation is to reduce interruptions, not to promise a built-in storyboard or automatic editing workflow."
+        ]
+      },
+      {
+        "heading": "Set up the camera, microphone and teleprompter",
+        "steps": [
+          "Choose a quiet space, prepare your phone's camera framing, and read a short test sentence to check that your face and voice are clear.",
+          "Open Explain Studio and import your script or prepared production pack, using the options available in your installed version.",
+          "Allow camera and microphone permission if you want to record. If permission has been denied, Android's app-permission controls can be used to review it.",
+          "Choose the teleprompter behavior that fits your take. Optional English voice follow uses an on-device speech model to advance the script as you speak.",
+          "Record a brief test, review how naturally you can read while looking toward the camera, and adjust your pace before making a full take."
+        ],
+        "paragraphs": [
+          "English voice follow is a specific supported feature, not a promise of multilingual speech tracking or cloud transcription. The app processes voice-follow audio locally and does not upload recordings to a developer speech server."
+        ]
+      },
+      {
+        "heading": "Review a take before you edit or export",
+        "paragraphs": [
+          "After recording, listen for clarity, check whether your opening answers the promised question, and look for distracting long pauses. A concise video can be more useful than a longer one if it delivers the intended explanation.",
+          "Explain Studio keeps original takes while you edit and renders videos locally. Imported projects and rendered outputs remain in private app storage. Editing in the app is distinct from generating AI assets in an external service.",
+          "Before sharing an explainer that includes other people, consider whether you have appropriate permission to record and publish them. This applies especially to recordings that include children."
+        ]
+      },
+      {
+        "heading": "Export the video and the project deliberately",
+        "paragraphs": [
+          "Explain Studio can export an edited video or project ZIP backup through Android's file picker. Choose the destination, then verify that the export is present and readable before treating it as a saved copy.",
+          "A destination can be local storage or a cloud provider. If you choose a cloud provider, that provider's storage and sharing practices apply. The app itself does not run a developer-operated upload server.",
+          "Project backups and video files serve different needs. A video is the shareable result; a project backup preserves material for future work. The app has no automatic cloud backup, and uninstalling or clearing storage removes local projects without deleting exports saved elsewhere."
+        ]
+      },
+      {
+        "heading": "A short recording checklist",
+        "steps": [
+          "Write a one-sentence promise that accurately describes the video.",
+          "Break the script into short, speakable phrases.",
+          "Check camera framing, microphone input, and whether optional English voice follow suits the session.",
+          "Record a test take, then review your opening and sound before finishing.",
+          "Export the video and any project backup you need, inspect the destination, and keep track of copies you share."
+        ],
+        "paragraphs": [
+          "This checklist is editorial guidance for a basic workflow. It does not guarantee any particular platform format, voice-follow accuracy, video codec, or output duration. See Explain Studio's current app page and privacy policy for supported behavior."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Does Explain Studio need internet to record a video?",
+        "The current Android app records, performs English voice follow, edits, and renders locally without an internet permission. A separate file destination may have its own network behavior."
+      ],
+      [
+        "Does the teleprompter follow Hindi or other languages?",
+        "The documented on-device voice-follow feature is English. This guide does not claim recognition support for other languages."
+      ],
+      [
+        "Can Explain Studio generate AI images or clips for my project?",
+        "No. AI asset creation happens outside the app. Prepared images, videos and scripts can be imported."
+      ],
+      [
+        "What happens to my recordings if I uninstall?",
+        "Local projects and recordings in app storage are removed. Export the video or a project backup first, and manage those exported copies separately."
+      ]
+    ]
   }
 ]

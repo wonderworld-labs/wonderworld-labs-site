@@ -30,6 +30,20 @@ for p in ROOT.rglob('*.html'):
   assert any(g.get('@type')=='SoftwareApplication' and g.get('applicationCategory') for g in graph),(p,'app schema')
   assert any(g.get('@type')=='BreadcrumbList' for g in graph),(p,'breadcrumbs')
  urls.add(a.canonical[0])
+# Guide discovery coverage: every published article must be linked from the guide hub
+# and its parent app, and supply visible, matching Article metadata.
+guide_index=(ROOT/'guides/index.html').read_text(encoding='utf8')
+guides=json.loads((ROOT/'content/guides.json').read_text(encoding='utf8'))
+for g in guides:
+ path='/guides/'+g['slug']+'/'
+ assert 'href="'+path+'"' in guide_index,(g['slug'],'not on guide hub')
+ app_html=(ROOT/'apps'/g['app']/'index.html').read_text(encoding='utf8')
+ assert 'href="'+path+'"' in app_html,(g['slug'],'not linked from app')
+ article_html=(ROOT/'guides'/g['slug']/'index.html').read_text(encoding='utf8')
+ assert '<h1>'+g['title'].replace('&','&amp;')+'</h1>' in article_html,(g['slug'],'h1 mismatch')
+ assert '\"@type\":\"Article\"' in article_html or '\"@type\": \"Article\"' in article_html,(g['slug'],'Article schema missing')
+for app in APPS:
+ assert 'id="guides"' in (ROOT/'apps'/app/'index.html').read_text(encoding='utf8'),(app,'guide section missing')
 listed={e.text for e in ET.parse(ROOT/'sitemap.xml').findall('{*}url/{*}loc')}
 assert listed==urls,('sitemap coverage',listed-urls,urls-listed)
 assert 'Sitemap: '+BASE+'/sitemap.xml' in (ROOT/'robots.txt').read_text()

@@ -15,6 +15,13 @@
 - [Block Blasting](https://wonderworldlabs.com/apps/block-blasting/): Block Blasting is an offline Android block puzzle game with Classic mode and 24 Adventure levels. Best scores, badges and preferences are saved locally without an account or ads.
 - [Explain Studio](https://wonderworldlabs.com/apps/explain-studio/): Explain Studio is an Android video recording and editing app with a teleprompter, optional on-device English voice follow, and local video rendering. AI assets are made outside the app and imported.
 
+## Helpful guides
+- [Encrypted photo vault copies and originals](https://wonderworldlabs.com/guides/android-photo-vault-encrypted-copies-and-originals/)
+- [Block puzzle strategy](https://wonderworldlabs.com/guides/block-puzzle-strategy-android-classic-adventure/)
+- [Android video teleprompter recording](https://wonderworldlabs.com/guides/record-video-with-teleprompter-android-offline/)
+- [Offline AI character chat setup](https://wonderworldlabs.com/guides/offline-ai-character-chat-android/)
+- [Learn piano on your phone](https://wonderworldlabs.com/guides/learn-piano-online-or-android-beginner/)
+
 ## Help and policies
 - [Music learning](https://wonderworldlabs.com/categories/music-learning/)
 - [Arrow puzzles](https://wonderworldlabs.com/categories/puzzle-games/)

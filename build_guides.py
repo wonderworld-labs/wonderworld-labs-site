@@ -67,11 +67,11 @@ for app in sorted({g['app'] for g in guides}):
         content=content.replace('<section id="download"',block+'<section id="download"')
     target.write_text(content,encoding='utf-8')
 
-body='<div class="hero"><p class="eyebrow">Practical help</p><h1>Android app guides</h1><p class="lead">Plan an offline music practice session, choose an arrow puzzle game, or understand local AI conversations.</p></div>'
+body='<div class="hero"><p class="eyebrow">Practical help</p><h1>Android app guides</h1><p class="lead">Find step-by-step help for music practice, offline puzzles, local AI chats, encrypted photo storage, and recording videos with an Android teleprompter.</p></div>'
 for app in sorted({g['app'] for g in guides}):
     group=[g for g in guides if g['app']==app]
     body+='<section><h2>'+esc(group[0]['name'])+'</h2><ul>'+''.join(guide_link(g) for g in group)+'</ul></section>'
-page('/guides/','Android App Guides','Practical guides to Melody Garden, Arrow unleashed, and The Whispering Diary: offline learning, puzzles, and AI character conversations.',body,[{'@type':'CollectionPage','name':'Android app guides','url':BASE+'/guides/'}])
+page('/guides/','Android App Guides','Practical Android guides for offline music learning, puzzle games, encrypted photo storage, fictional AI chat and video recording with a teleprompter.',body,[{'@type':'CollectionPage','name':'Android app guides','url':BASE+'/guides/'}])
 namespace='http://www.sitemaps.org/schemas/sitemap/0.9'
 ET.register_namespace('',namespace)
 tree=ET.parse(ROOT/'sitemap.xml');urls={el.text for el in tree.findall('{*}url/{*}loc')}
