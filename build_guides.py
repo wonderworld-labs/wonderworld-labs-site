@@ -22,6 +22,8 @@ def page(path, title, description, body, graph):
         webpage['mainEntity'] = {'@id':BASE+path+'#article'}
         template = template.replace('property="og:type" content="website"','property="og:type" content="article"')
     graph.append(webpage)
+    if path == '/guides/':
+        graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Android guides','item':BASE+'/guides/'}]})
     template = re.sub(r'<script type="application/ld\+json">.*?</script>', '<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False)+'</script>', template)
     template = re.sub(r'<main class="wrap" id="content">.*?</main>', '<main class="wrap" id="content">'+body+'</main>', template)
     target=ROOT/path.strip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True)
