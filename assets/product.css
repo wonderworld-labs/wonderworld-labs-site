@@ -1,0 +1,51 @@
+/* Product pages share the brand while giving each experience its own rhythm. */
+.product-page{--product-accent:#c8bbfa;--line:#d5dacd;--surface:var(--panel)}
+:root[data-theme=dark] .product-page{--line:#36373c}
+.product-music{--product-accent:#c8bbfa}
+.product-arrows{--product-accent:#ffaf8f}
+.product-blocks{--product-accent:#f8cf79}
+.product-diary{--product-accent:#a9c5fa}
+.product-vault{--product-accent:#d4fa70}
+.product-studio{--product-accent:#b4ddd1}
+.product-craftlane{--product-accent:#baedc5}
+.product-signal-and-scale{--product-accent:#b9cbfc}
+.product-sarkarijob{--product-accent:#f3d895}
+.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin:24px 0 16px}
+.hero-actions .button{white-space:normal;line-height:1.5}
+.product-page .app-hero .lead{max-width:620px}
+.product-page .app-hero .micro{max-width:580px;line-height:1.7}
+.product-page .micro a{text-decoration:underline;text-underline-offset:3px}
+.product-page .app-hero .button{background:var(--product-accent);color:#18201c}
+.product-page .app-hero h1{font-size:clamp(2.5rem,4.7vw,4.8rem);line-height:1.08}
+.product-page .download{background:var(--product-accent);color:#18201c}
+.product-page .download .micro{color:inherit;font-size:12px;max-width:300px}
+.product-page .section-head h2{max-width:750px}
+.product-page .feature>span{color:var(--muted)}
+.product-perspective{display:grid;grid-template-columns:1fr 1.2fr;gap:12px 55px;padding:48px 0;border-top:1px solid var(--line)}
+.product-perspective>.eyebrow{grid-column:1/-1}
+.product-perspective h2{font-size:clamp(2rem,3vw,3rem);line-height:1.15;margin:0}
+.product-perspective>p:last-child{max-width:580px;color:var(--muted);font-size:18px;line-height:1.8;margin:0}
+.product-craftlane .art{border-radius:45px 12px 45px 12px;transform:rotate(2deg)}
+.product-craftlane .feature{border:1px solid var(--line);border-radius:22px;padding:28px}
+.product-craftlane .features{gap:20px}
+.product-signal-and-scale .launch-hero{grid-template-columns:1.4fr .6fr;border-bottom:2px solid var(--line)}
+.product-signal-and-scale .app-hero h1{font-family:Georgia,serif;font-weight:500;letter-spacing:-.055em;font-size:clamp(3rem,5.7vw,5.7rem)}
+.product-signal-and-scale .art{border-radius:0;box-shadow:none}
+.product-signal-and-scale .product-perspective{padding-top:40px;border-top:0}
+.product-signal-and-scale .features{border-top:1px solid var(--line);padding-top:30px}
+.product-sarkarijob .launch-hero{grid-template-columns:1.4fr .6fr}
+.product-sarkarijob .art{border-radius:50%;aspect-ratio:1;box-shadow:none}
+.product-sarkarijob .feature{border-top:3px solid var(--product-accent);padding-top:24px}
+.product-sarkarijob .product-perspective{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px;margin:15px 0}
+.product-diary .app-hero h1{font-family:Georgia,serif;font-weight:500}
+.product-diary .art{border-radius:120px 120px 20px 20px}
+.product-blocks .feature{border-top:3px solid var(--product-accent);padding-top:22px}
+.product-vault .art{border-radius:28px 70px 28px 70px}
+.product-studio .art{border-radius:14px}
+@media(max-width:850px){.hero-actions{align-items:flex-start;gap:14px}.product-page .app-hero h1{font-size:clamp(2.5rem,6vw,3.8rem)}}
+@media(max-width:600px){.product-page .launch-hero{grid-template-columns:1fr}.product-page .app-hero h1{font-size:2.7rem}.product-perspective{grid-template-columns:1fr;gap:18px;padding:30px 0}.product-perspective>p:last-child{font-size:16px}.product-page .product-visual{max-width:100%}.product-sarkarijob .product-visual{max-width:280px;margin:0 auto}.product-signal-and-scale .app-hero h1{font-size:3.3rem}.product-craftlane .feature{padding:22px}.product-page .download .button{white-space:normal}.product-sarkarijob .product-perspective{padding:24px}}
+@media(prefers-reduced-motion:reduce){.product-craftlane .art{transform:none}}
+
+html:not([data-theme=dark]) .product-page .app-hero .button{background:var(--product-accent);color:#18201c}
+html:not([data-theme=dark]) .product-page .download{background:var(--product-accent);color:#18201c}
+.product-page .app-hero .button:hover{filter:brightness(.94);color:#18201c}
