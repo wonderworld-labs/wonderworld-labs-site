@@ -1,0 +1,12 @@
+
+.browser-game{--product-accent:#b9d8f5}.game-scale-safari{--product-accent:#f3d393}.game-linkloom{--product-accent:#cebdf5}.game-hinthunt{--product-accent:#b7e2d1}
+.game-portrait{background:var(--game-accent);border-radius:30px;padding:40px;text-align:center;display:grid;gap:22px;justify-items:center;color:#10213a}.game-portrait img{max-width:100%;height:auto;box-shadow:0 18px 40px #10213a25;border-radius:26%}.game-portrait span{font-size:14px;font-weight:700}
+.game-ladderday .game-portrait{transform:rotate(-2deg);border-radius:20px 65px 20px 20px}.game-ladderday .app-hero h1{letter-spacing:-.06em}
+.game-scale-safari .game-portrait{border-radius:50%;aspect-ratio:1;padding:45px}.game-scale-safari .feature{border-top:3px solid var(--product-accent);padding-top:24px}
+.game-linkloom .game-portrait{border-radius:80px 80px 16px 16px}.game-linkloom .product-perspective{background:var(--panel);padding:32px;border-radius:20px;border:1px solid var(--line)}
+.game-hinthunt .game-portrait{border-radius:50% 35% 45% 30%}.game-hinthunt .app-hero h1{font-family:Georgia,serif;font-weight:500}.game-hinthunt .feature{border:1px solid var(--line);padding:24px;border-radius:20px}.game-hinthunt .features{gap:18px}
+.browser-game .download .button{white-space:normal}.browser-game .download{background:var(--product-accent)}html:not([data-theme=dark]) .browser-game .download{background:var(--product-accent)}
+.games-play-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 40px}.games-play-links .button{font-size:14px}
+@media(max-width:600px){.game-portrait{max-width:320px;margin:auto;padding:30px}.game-portrait img{max-width:220px}.game-scale-safari .game-portrait{padding:35px}.game-ladderday .game-portrait{transform:none}.game-linkloom .product-perspective{padding:24px}.games-play-links .button{flex:1 1 44%;text-align:center}}
+@media(prefers-reduced-motion:reduce){.game-ladderday .game-portrait{transform:none}}
+@media(max-width:800px){header nav.wrap:has(>a[href="/games/"]){grid-template-columns:max-content max-content minmax(0,1fr) max-content;grid-template-areas:"brand brand brand toggle" "apps games guides contact"}header nav.wrap>a[href="/games/"]{grid-area:games;white-space:nowrap}}

@@ -14,3 +14,12 @@ Pushes to each product's repository deploy only that product. Product links, dir
 One AdSense publisher account manages the properties. Distinct registered domains such as sarkarijob.work require their own site approval within the same account. Each deployment serving ads needs the publisher code, ads.txt handling and appropriate privacy/consent integration. A company-directory listing does not itself enable ads.
 
 GitHub Pages may temporarily remain as a fallback while old DNS caches expire; Cloudflare is the authoritative production destination.
+
+## Browser games launched November 2026
+
+Four independent static Cloudflare Workers use branded custom domains. Each private wonderworld-labs GitHub repository contains v5 source and wrangler.jsonc. Updates can be deployed with `npx wrangler@4 deploy` after Cloudflare login; automatic Git builds are not configured.
+
+- Ladderday: https://ladderday.wonderworldlabs.com/ — repository wonderworld-labs/ladderday; company page /games/ladderday/
+- Scale Safari: https://scale-safari.wonderworldlabs.com/ — repository wonderworld-labs/scale-safari; company page /games/scale-safari/
+- Linkloom: https://linkloom.wonderworldlabs.com/ — repository wonderworld-labs/linkloom; company page /games/linkloom/
+- HintHunt: https://hinthunt.wonderworldlabs.com/ — repository wonderworld-labs/hinthunt; company page /games/hinthunt/
