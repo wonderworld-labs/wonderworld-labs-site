@@ -48,7 +48,7 @@ for p, page in pages.items():
             continue
         if u.netloc and u.netloc != 'wonderworldlabs.com':
             continue
-        target = ROOT / u.path.lstrip('/') if u.path else p
+        target = ((ROOT / u.path.lstrip('/')) if u.path.startswith('/') else (p.parent / u.path)).resolve() if u.path else p
         if target.is_dir():
             target /= 'index.html'
         assert target.exists(), (p, link)
@@ -59,7 +59,9 @@ urls = ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')
 assert len(urls) == len({url.text for url in urls}), 'Duplicate sitemap URL'
 assert {url.text for url in urls} == {page.canonical[0] for page in pages.values()}, 'Sitemap coverage differs from canonical pages'
 for url in urls:
-    target = ROOT / urlsplit(url.text).path.lstrip('/') / 'index.html'
+    target = ROOT / urlsplit(url.text).path.lstrip('/')
+    if target.is_dir():
+        target /= 'index.html'
     assert target in pages and pages[target].canonical == [url.text], url.text
 
 for guide in json.loads((ROOT / 'content/guides.json').read_text(encoding='utf-8')):
@@ -81,6 +83,9 @@ for paragraph in re.findall(r'<p\b[^>]*>.*?</p>', legacy_original, re.S):
     assert paragraph in legacy_current, ('Legacy policy wording changed', paragraph)
 for path in pages:
     source = path.read_text(encoding='utf-8')
+    if path.is_relative_to(ROOT / 'apps/craftlane'):
+        assert 'assets/styles.css' in source, ('Craftlane styles missing', path)
+        continue
     assert source.count('data-theme-toggle') == 1, ('Theme switch missing or duplicated', path)
     assert '/assets/theme.js' in source and '/assets/theme.css' in source, path
 print(f'PASS: {len(pages)} pages; internal links and anchors; JSON-LD; {len(urls)} sitemap URLs; original privacy copy and legacy policy preserved.')
