@@ -2,5 +2,3 @@
 /apps/craftlane/tools/* https://craftlane.wonderworldlabs.com/tools/:splat 301
 /apps/craftlane/privacy.html https://craftlane.wonderworldlabs.com/privacy.html 301
 
-https://www.wonderworldlabs.com/* https://wonderworldlabs.com/:splat 301
-https://wonderworld-labs.pages.dev/* https://wonderworldlabs.com/:splat 301
