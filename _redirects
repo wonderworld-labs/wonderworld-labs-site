@@ -1,0 +1,3 @@
+/apps/craftlane/index.html https://craftlane-4ke.pages.dev/ 301
+/apps/craftlane/tools/* https://craftlane-4ke.pages.dev/tools/:splat 301
+/apps/craftlane/privacy.html https://craftlane-4ke.pages.dev/privacy.html 301
