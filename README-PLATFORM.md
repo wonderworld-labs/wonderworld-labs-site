@@ -1,15 +1,16 @@
-# Hosting architecture
+# Independent app hosting
 
-Company catalogue source: wonderworld-labs-site repository. The Cloudflare Pages project is deployed at https://wonderworld-labs.pages.dev. The wonderworldlabs.com DNS cutover is pending Squarespace identity verification; the existing GitHub Pages domain still serves the same catalogue source meanwhile.
+The company catalogue is deployed from this repository to the wonderworld-labs Cloudflare Pages project at https://wonderworldlabs.com. www redirects to the apex domain. DNS is managed by Cloudflare; registration remains with Squarespace. Google Workspace MX, SPF, DKIM and verification records are preserved.
 
-Craftlane source: craftlane repository. Live standalone studio: https://craftlane-4ke.pages.dev. Planned custom hostname: craftlane.wonderworldlabs.com. No studio runtime is duplicated in the company repo. Legacy privacy URL remains and Cloudflare redirects are prepared for old tool URLs.
+Products:
+- Craftlane: https://craftlane.wonderworldlabs.com, craftlane repository, separate Cloudflare Pages project. This company repo contains its product and legacy privacy pages, not the studio runtime.
+- Signal & Scale: https://signal-and-scale.wonderworldlabs.com, signal-and-scale repository, separate static Cloudflare Worker.
+- Sarkarijob Search: https://sarkarijob.work, sarkarimatch repository, existing Cloudflare Pages and alerts Worker. Preserve its domain and refresh schedules.
 
-Signal & Scale source: signal-and-scale repository. Existing static Cloudflare Worker: https://signal-and-scale.pushpendra-dahiya.workers.dev. Custom domain signal-and-scale.wonderworldlabs.com is bound in Cloudflare, pending authoritative DNS cutover.
+/apps/ lists products. /games/ lists Android games and future browser editions. Preserve established /apps/game-slug/ URLs; create independent repositories and Cloudflare projects for browser editions. Add Play links only after deployment is verified. Never label planned web games as playable.
 
-Sarkarijob Search: https://sarkarijob.work, sarkarimatch repository, existing Pages project and alerts Worker. Preserve its domain and job refresh schedules.
+Pushes to each product's repository deploy only that product. Product links, directories and company guides are maintained here. Default Pages hostnames redirect to branded production addresses. Keep Google Workspace mail records intact during DNS changes.
 
-/apps/ lists products; /games/ lists Android games with browser editions marked planned. Preserve existing /apps/game-slug/ URLs. Add independent repositories, Cloudflare projects and verified Play links when web games are ready.
+One AdSense publisher account manages the properties. Distinct registered domains such as sarkarijob.work require their own site approval within the same account. Each deployment serving ads needs the publisher code, ads.txt handling and appropriate privacy/consent integration. A company-directory listing does not itself enable ads.
 
-DNS migration: all 10 original records were imported; compare MX, SPF, DKIM and verification records before switching. Assigned Cloudflare nameservers: fiona.ns.cloudflare.com and hassan.ns.cloudflare.com. Complete DNSSEC transition and verify its final status. After zone activation, bind wonderworldlabs.com and www to the company Pages project; finish Craftlane custom-domain verification; update product and legacy links to branded addresses, canonical URLs and redirect the default app hostname only after the custom hostname works. Update Signal & Scale's build SITE_URL after hostname activation.
-
-One AdSense publisher account can manage all these properties. Distinct registered domains such as sarkarijob.work need separate site review in that account. Each app serving ads needs its own publisher code and consent integration; listing it in the company directory does not enable advertising automatically.
+GitHub Pages may temporarily remain as a fallback while old DNS caches expire; Cloudflare is the authoritative production destination.
