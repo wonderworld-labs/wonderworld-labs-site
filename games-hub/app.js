@@ -7,7 +7,7 @@ const GAMES=[
 {id:'linkloom',name:'Linkloom',category:'CONNECTIONS',color:'#dce7b7',tip:'Swap the tiles. Connect the pyramid.'},
 {id:'scale-safari',name:'Scale Safari',category:'ESTIMATION',color:'#bcdde5',tip:'Trust your sense of scale. How close can you get?'}
 ];
-const $=id=>document.getElementById(id),byId=id=>GAMES.find(g=>g.id===id),url=g=>`https://${g.id}.wonderworldlabs.com/`;
+const $=id=>document.getElementById(id),byId=id=>GAMES.find(g=>g.id===id),url=g=>`play/${g.id}/`;
 let favorites=[],recent=[],filter='all',active=null,toastTimer;
 const frames=new Map(),loaded=new Set();
 try{const s=JSON.parse(localStorage.getItem('wonderworld-play-v1')||'{}');favorites=Array.isArray(s.favorites)?[...new Set(s.favorites.filter(byId))]:[];recent=Array.isArray(s.recent)?s.recent.filter(r=>r&&byId(r.id)&&Number.isFinite(r.at)).slice(0,6):[]}catch{}
