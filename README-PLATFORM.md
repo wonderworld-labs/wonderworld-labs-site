@@ -23,3 +23,16 @@ Four independent static Cloudflare Workers use branded custom domains. Each priv
 - Scale Safari: https://scale-safari.wonderworldlabs.com/ — repository wonderworld-labs/scale-safari; company page /games/scale-safari/
 - Linkloom: https://linkloom.wonderworldlabs.com/ — repository wonderworld-labs/linkloom; company page /games/linkloom/
 - HintHunt: https://hinthunt.wonderworldlabs.com/ — repository wonderworld-labs/hinthunt; company page /games/hinthunt/
+
+
+## Android browser editions — 8 November 2026
+
+Five independent static Cloudflare Pages projects were published from prebuilt files. Their complete source lives in private wonderworld-labs repositories. Photo & File Vault is excluded. These are direct-upload Pages deployments; Git pushes do not automatically publish them. Redeploy the corresponding static output with Wrangler. No server-side functions or cloud AI inference were added.
+
+- Melody Garden: https://melody-garden.wonderworldlabs.com/ — private repository wonderworld-labs/melody-garden-web; Pages project melody-garden; company page /apps/melody-garden/.
+- Arrow unleashed: https://arrow-unleashed.wonderworldlabs.com/ — private repository wonderworld-labs/arrow-unleashed-web; Pages project arrow-unleashed; company page /apps/arrow-unleashed/.
+- Block Blasting: https://block-blasting.wonderworldlabs.com/ — private repository wonderworld-labs/block-blasting-web; Pages project block-blasting; company page /apps/block-blasting/.
+- The Whispering Diary: https://whispering-diary.wonderworldlabs.com/ — private repository wonderworld-labs/whispering-diary-web; Pages project whispering-diary; company page /apps/whispering-diary/.
+- Explain Studio: https://explain-studio.wonderworldlabs.com/ — private repository wonderworld-labs/explain-studio-web; Pages project explain-studio; company page /apps/explain-studio/.
+
+Browser privacy and storage differ from Android and are disclosed inside each web edition. The diary does not supply Android biometric locking. Real-device camera, microphone and cross-browser regression acceptance remains with the owner. Existing Android policies and releases are preserved.
