@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520"><rect width="600" height="520" fill="#d4fa70"/><circle cx="420" cy="170" r="130" fill="#fff" opacity=".35"/><text x="50" y="280" font-family="sans-serif" font-size="130" font-weight="bold">✳</text><text x="50" y="440" font-family="sans-serif" font-size="32" font-weight="bold">CREATE</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520">
+  <rect width="600" height="520" fill="#d4fa70"/>
+  <circle cx="445" cy="150" r="120" fill="#ffffff" opacity="0.45"/>
+  <!-- Video & Thumbnail Studio Frame -->
+  <g transform="translate(95, 110)">
+    <rect x="0" y="0" width="410" height="270" rx="22" fill="#182018" stroke="#182018" stroke-width="6"/>
+    <!-- Top window dots -->
+    <circle cx="28" cy="24" r="6" fill="#ff6b6b"/>
+    <circle cx="48" cy="24" r="6" fill="#ffd166"/>
+    <circle cx="68" cy="24" r="6" fill="#d4fa70"/>
+    <!-- Canvas area -->
+    <rect x="20" y="46" width="250" height="156" rx="12" fill="#253025"/>
+    <!-- Play triangle inside video preview -->
+    <polygon points="128,98 128,150 174,124" fill="#d4fa70"/>
+    <!-- Caption pill overlay -->
+    <rect x="52" y="166" width="186" height="22" rx="6" fill="#ffffff" opacity="0.9"/>
+    <!-- Right tools sidebar -->
+    <rect x="286" y="46" width="104" height="44" rx="10" fill="#d4fa70"/>
+    <rect x="286" y="102" width="104" height="44" rx="10" fill="#324032"/>
+    <rect x="286" y="158" width="104" height="44" rx="10" fill="#324032"/>
+    <!-- Bottom timeline track -->
+    <rect x="20" y="218" width="370" height="30" rx="8" fill="#253025"/>
+    <rect x="44" y="225" width="160" height="16" rx="5" fill="#8fe2ca"/>
+    <line x1="145" y1="212" x2="145" y2="254" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -33,7 +33,7 @@
 This optional index does not guarantee AI citations or improve Google rankings by itself.
 
 ## Browser games
-- [Ladderday](https://wonderworldlabs.com/games/ladderday/): Daily word ladders. Play at https://ladderday.wonderworldlabs.com/
-- [Scale Safari](https://wonderworldlabs.com/games/scale-safari/): Visual estimation & size puzzles. Play at https://scale-safari.wonderworldlabs.com/
-- [Linkloom](https://wonderworldlabs.com/games/linkloom/): Pyramid word & number puzzles. Play at https://linkloom.wonderworldlabs.com/
-- [HintHunt](https://wonderworldlabs.com/games/hinthunt/): Semantic mystery-word game. Play at https://hinthunt.wonderworldlabs.com/
+- [Ladderday](https://wonderworldlabs.com/games/ladderday/): Daily word ladders. Play at https://games.wonderworldlabs.com/ladderday/
+- [Scale Safari](https://wonderworldlabs.com/games/scale-safari/): Visual estimation & size puzzles. Play at https://games.wonderworldlabs.com/scale-safari/
+- [Linkloom](https://wonderworldlabs.com/games/linkloom/): Pyramid word & number puzzles. Play at https://games.wonderworldlabs.com/linkloom/
+- [HintHunt](https://wonderworldlabs.com/games/hinthunt/): Semantic mystery-word game. Play at https://games.wonderworldlabs.com/hinthunt/

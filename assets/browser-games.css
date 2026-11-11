@@ -1,12 +1,129 @@
-
 .browser-game{--product-accent:#b9d8f5}.game-scale-safari{--product-accent:#f3d393}.game-linkloom{--product-accent:#cebdf5}.game-hinthunt{--product-accent:#b7e2d1}
-.game-portrait{background:var(--game-accent);border-radius:30px;padding:40px;text-align:center;display:grid;gap:22px;justify-items:center;color:#10213a}.game-portrait img{max-width:100%;height:auto;box-shadow:0 18px 40px #10213a25;border-radius:26%}.game-portrait span{font-size:14px;font-weight:700}
-.game-ladderday .game-portrait{transform:rotate(-2deg);border-radius:20px 65px 20px 20px}.game-ladderday .app-hero h1{letter-spacing:-.06em}
-.game-scale-safari .game-portrait{border-radius:50%;aspect-ratio:1;padding:45px}.game-scale-safari .feature{border-top:3px solid var(--product-accent);padding-top:24px}
-.game-linkloom .game-portrait{border-radius:80px 80px 16px 16px}.game-linkloom .product-perspective{background:var(--panel);padding:32px;border-radius:20px;border:1px solid var(--line)}
-.game-hinthunt .game-portrait{border-radius:50% 35% 45% 30%}.game-hinthunt .app-hero h1{font-family:Georgia,serif;font-weight:500}.game-hinthunt .feature{border:1px solid var(--line);padding:24px;border-radius:20px}.game-hinthunt .features{gap:18px}
+.game-portrait{background:var(--game-accent);border-radius:26px;padding:24px;text-align:center;display:grid;gap:14px;justify-items:center;color:#10213a}.game-portrait img{max-width:100%;height:auto;box-shadow:0 12px 30px #10213a20;border-radius:16px}.game-portrait span{font-size:14px;font-weight:700}
+.game-ladderday .game-portrait{border-radius:24px}.game-ladderday .app-hero h1{letter-spacing:-.06em}
+.game-scale-safari .game-portrait{border-radius:24px}.game-scale-safari .feature{border-top:3px solid var(--product-accent);padding-top:24px}
+.game-linkloom .game-portrait{border-radius:24px}.game-linkloom .product-perspective{background:var(--panel);padding:32px;border-radius:20px;border:1px solid var(--line)}
+.game-hinthunt .game-portrait{border-radius:24px}.game-hinthunt .app-hero h1{font-family:Georgia,serif;font-weight:500}.game-hinthunt .feature{border:1px solid var(--line);padding:24px;border-radius:20px}.game-hinthunt .features{gap:18px}
 .browser-game .download .button{white-space:normal}.browser-game .download{background:var(--product-accent)}html:not([data-theme=dark]) .browser-game .download{background:var(--product-accent)}
-.games-play-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 40px}.games-play-links .button{font-size:14px}
-@media(max-width:600px){.game-portrait{max-width:320px;margin:auto;padding:30px}.game-portrait img{max-width:220px}.game-scale-safari .game-portrait{padding:35px}.game-ladderday .game-portrait{transform:none}.game-linkloom .product-perspective{padding:24px}.games-play-links .button{flex:1 1 44%;text-align:center}}
+
+/* Clean Wonderworld Games Header & Controls on /games/ */
+.ww-games-header {
+  padding: 28px 0 22px;
+}
+
+.ww-games-title-row h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px;
+}
+
+.ww-games-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ww-sort-tabs {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.ww-sort-tabs button {
+  border: 1.5px solid #89917d;
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ww-sort-tabs button[aria-pressed="true"] {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+.ww-search-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ww-search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #89917d;
+  background: transparent;
+  color: var(--text);
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ww-search-wrap input {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  transition: width 0.2s ease, opacity 0.18s ease, padding 0.2s ease, margin 0.2s ease;
+  pointer-events: none;
+}
+
+.ww-search-wrap.open input {
+  width: 200px;
+  opacity: 1;
+  margin-left: 8px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--text);
+  border-radius: 999px;
+  background: var(--panel);
+  pointer-events: auto;
+  outline: none;
+}
+
+/* Clean proportional game cards on both desktop and mobile */
+.ww-games-grid .art,
+.collection .art {
+  aspect-ratio: 1.6;
+  border-radius: 16px;
+  border: 1.5px solid rgba(128, 128, 128, 0.22);
+}
+
+.ww-games-grid .art img,
+.collection .art img {
+  object-fit: cover;
+}
+
+.ww-game-card .product-info {
+  padding: 12px 4px 18px;
+}
+
+.ww-game-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media(max-width:600px){
+  .game-portrait{max-width:340px;margin:auto;padding:18px}
+  .game-linkloom .product-perspective{padding:24px}
+  .ww-games-header { padding: 18px 0 16px; }
+  .ww-search-wrap.open input { width: 150px; }
+  .collection { gap: 18px; }
+}
 @media(prefers-reduced-motion:reduce){.game-ladderday .game-portrait{transform:none}}
 @media(max-width:800px){header nav.wrap:has(>a[href="/games/"]){grid-template-columns:max-content max-content minmax(0,1fr) max-content;grid-template-areas:"brand brand brand toggle" "apps games guides contact"}header nav.wrap>a[href="/games/"]{grid-area:games;white-space:nowrap}}

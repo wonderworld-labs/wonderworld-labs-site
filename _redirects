@@ -1,4 +1,9 @@
 /apps/craftlane/index.html https://craftlane.wonderworldlabs.com/ 301
 /apps/craftlane/tools/* https://craftlane.wonderworldlabs.com/tools/:splat 301
-/apps/craftlane/privacy.html https://craftlane.wonderworldlabs.com/privacy.html 301
-
+/games https://games.wonderworldlabs.com/ 301
+/games/ https://games.wonderworldlabs.com/ 301
+/games/index.html https://games.wonderworldlabs.com/ 301
+/games/ladderday/ https://ladderday.wonderworldlabs.com/ 301
+/games/scale-safari/ https://scale-safari.wonderworldlabs.com/ 301
+/games/linkloom/ https://linkloom.wonderworldlabs.com/ 301
+/games/hinthunt/ https://hinthunt.wonderworldlabs.com/ 301

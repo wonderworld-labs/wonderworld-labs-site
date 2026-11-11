@@ -115,7 +115,7 @@
           "Review settings for vibration. Arrow unleashed uses optional vibration feedback, which you can turn off in the app settings."
         ],
         "paragraphs": [
-          "This check is especially useful before a flight or commute. Downloading and installing an app through Google Play still needs a connection; offline gameplay refers to using the installed game."
+          "This check is especially useful before a flight or commute. Downloading and installing an Android app in the future still needs a connection; offline gameplay refers to using the installed game."
         ]
       },
       {
@@ -137,7 +137,7 @@
         "heading": "Check the exact activity you plan to use while travelling",
         "paragraphs": [
           "An offline label is useful only if the activity you want works on your installed version. Test both an ordinary puzzle and any daily activity you plan to use before leaving a connection behind. Do not infer that a different game’s reward videos, archive access, or account features work offline just because its main puzzle does.",
-          "Arrow unleashed’s current published policy describes a game with no internet permission or developer-operated game server. This is separate from whether Google Play currently makes the app available to your account. Installing or updating an app still requires access to its distribution source."
+          "Arrow unleashed’s current published policy describes a game with no internet permission or developer-operated game server. This is separate from Android app availability; you can also play directly in your web browser. Installing or updating an app still requires access to its distribution source."
         ],
         "steps": [
           "While connected, confirm that the intended version is installed and opens normally.",
@@ -163,7 +163,7 @@
       ],
       [
         "Where do I find the official download?",
-        "Use the Arrow unleashed app page linked below to check current Google Play access or contact Wonderworld Labs. Public availability is still unconfirmed."
+        "Use the Arrow unleashed app page linked below to play in your browser or contact Wonderworld Labs. Public availability is still unconfirmed."
       ]
     ],
     "updated": "2026-10-30"

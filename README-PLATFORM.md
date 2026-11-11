@@ -19,10 +19,10 @@ GitHub Pages may temporarily remain as a fallback while old DNS caches expire; C
 
 Four independent static Cloudflare Workers use branded custom domains. Each private wonderworld-labs GitHub repository contains v5 source and wrangler.jsonc. Updates can be deployed with `npx wrangler@4 deploy` after Cloudflare login; automatic Git builds are not configured.
 
-- Ladderday: https://ladderday.wonderworldlabs.com/ — repository wonderworld-labs/ladderday; company page /games/ladderday/
-- Scale Safari: https://scale-safari.wonderworldlabs.com/ — repository wonderworld-labs/scale-safari; company page /games/scale-safari/
-- Linkloom: https://linkloom.wonderworldlabs.com/ — repository wonderworld-labs/linkloom; company page /games/linkloom/
-- HintHunt: https://hinthunt.wonderworldlabs.com/ — repository wonderworld-labs/hinthunt; company page /games/hinthunt/
+- Ladderday: https://games.wonderworldlabs.com/ladderday/ — repository wonderworld-labs/ladderday; company page /games/ladderday/
+- Scale Safari: https://games.wonderworldlabs.com/scale-safari/ — repository wonderworld-labs/scale-safari; company page /games/scale-safari/
+- Linkloom: https://games.wonderworldlabs.com/linkloom/ — repository wonderworld-labs/linkloom; company page /games/linkloom/
+- HintHunt: https://games.wonderworldlabs.com/hinthunt/ — repository wonderworld-labs/hinthunt; company page /games/hinthunt/
 
 
 ## Android browser editions — 8 November 2026

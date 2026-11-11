@@ -17,17 +17,16 @@ html:not([data-theme=dark]) .document-page article>nav,html:not([data-theme=dark
 html:not([data-theme=dark]) .document-page .notice{background:#edf2e3;border-color:#cdd7bc}
 html:not([data-theme=dark]) .document-page main a:not(.button){text-decoration-color:#a5b296}
 html:not([data-theme=dark]) .text-link{border-color:#9ca68f}
-/* Compact, predictable two-row navigation on phones and narrow tablets. */
 @media (max-width:800px) {
   header nav.wrap, .document-page header nav.wrap {
     display:grid;
-    grid-template-columns:max-content minmax(0,1fr) max-content;
-    grid-template-areas:"brand brand toggle" "apps guides contact";
-    column-gap:10px;
-    row-gap:14px;
+    grid-template-columns:max-content max-content minmax(0,1fr) max-content;
+    grid-template-areas:"brand brand brand toggle" "apps games guides contact";
+    column-gap:14px;
+    row-gap:12px;
     align-items:center;
     min-height:0;
-    padding:16px 20px 18px;
+    padding:14px 20px 16px;
     font-size:13px;
   }
   header nav.wrap .brand {
@@ -36,11 +35,12 @@ html:not([data-theme=dark]) .text-link{border-color:#9ca68f}
     min-width:0;
     margin-right:0;
     gap:8px;
-    font-size:14px;
+    font-size:14.5px;
     white-space:nowrap;
   }
-  header nav.wrap .brand img {width:32px;height:32px;flex-shrink:0}
+  header nav.wrap .brand img {width:30px;height:30px;flex-shrink:0}
   header nav.wrap > a[href="/apps/"] {grid-area:apps;white-space:nowrap}
+  header nav.wrap > a[href*="/games"], header nav.wrap > a[href*="games.wonderworldlabs.com"] {grid-area:games;white-space:nowrap}
   header nav.wrap > a[href="/guides/"] {grid-area:guides;justify-self:center;white-space:nowrap}
   header nav.wrap > a[href^="mailto:"] {grid-area:contact;justify-self:end;white-space:nowrap}
   header nav.wrap .theme-toggle {
@@ -48,8 +48,8 @@ html:not([data-theme=dark]) .text-link{border-color:#9ca68f}
     position:static;
     margin-left:0;
     justify-self:end;
-    min-height:40px;
-    padding:8px 12px;
+    min-height:38px;
+    padding:6px 12px;
     font-size:12px;
   }
 }
@@ -64,4 +64,3 @@ html:not([data-theme=dark]) .text-link{border-color:#9ca68f}
   header nav.wrap .theme-toggle {font-size:11px;padding:8px 9px}
   header nav.wrap > a:not(.brand) {font-size:11px}
 }
-
