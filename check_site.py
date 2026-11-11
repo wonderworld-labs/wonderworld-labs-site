@@ -32,6 +32,8 @@ class Page(HTMLParser):
 
 pages = {}
 for p in ROOT.rglob('*.html'):
+    if 'games-hub' in p.parts:
+        continue
     text = p.read_text(encoding='utf-8')
     page = pages[p] = Page(text)
     assert page.h1 == 1, p

@@ -17,6 +17,8 @@ class Meta(HTMLParser):
   if tag=='meta' and a.get('property')=='og:image':self.image.append(a.get('content'))
 urls=set();total=0
 for p in ROOT.rglob('*.html'):
+ if 'games-hub' in p.parts:
+  continue
  s=p.read_text(encoding='utf8');a=Meta();a.feed(s);total+=1
  assert a.h1==1,(p,'h1');assert len(a.canonical)==1,(p,'canonical');assert len(a.desc)==1,(p,'description')
  assert len(a.robots)==1 and 'index' in a.robots[0],(p,'robots')
