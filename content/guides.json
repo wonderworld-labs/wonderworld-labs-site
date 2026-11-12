@@ -1126,5 +1126,297 @@
         "Local projects and recordings in app storage are removed. Export the video or a project backup first, and manage those exported copies separately."
       ]
     ]
+  },
+  {
+    "app": "arrow-unleashed",
+    "name": "Arrow unleashed",
+    "slug": "arrow-unleashed-loop-strategy-daily-puzzles",
+    "date": "2026-11-12",
+    "title": "Arrow Unleashed Strategy: Solving Complex Loops and Daily Boards",
+    "description": "Learn how to spot loop patterns, clear outer corridors first, and solve advanced 30+ arrow boards in Arrow unleashed without burning hints.",
+    "answer": "Solving advanced Arrow unleashed boards requires reading exit vectors from the outside in: prioritize arrows with unimpeded borders, track looping cross-blockers, and only use hints when you need to confirm the first break in a circular dependency.",
+    "sections": [
+      {
+        "heading": "Identify outer exit vectors before touching inner loops",
+        "steps": [
+          "Scan all four outer perimeter edges for arrows whose exit path has zero obstructions.",
+          "Trace perpendicular neighbors to ensure releasing an outer arrow does not block another path.",
+          "Release perimeter arrows first to create wide navigation buffers for crowded inner arrows."
+        ],
+        "paragraphs": [
+          "Complex boards like Level 39 feature interlocking multi-segment arrows that loop back toward the center. Attempting to untangle inner clusters first invariably leads to collisions.",
+          "By clearing unobstructed outer perimeter arrows first, you reduce visual noise and expose hidden exit gaps."
+        ]
+      },
+      {
+        "heading": "How to resolve circular interlocking blockers",
+        "paragraphs": [
+          "When three or four arrows form a clockwise or counter-clockwise loop where each head faces another arrow's tail, they cannot be resolved without freeing an external blocker first.",
+          "Look for the 'key' arrow—the one whose tail extends into open space or only intersects a single non-loop arrow."
+        ]
+      },
+      {
+        "heading": "Preserving hints and lives for high-tier boards",
+        "paragraphs": [
+          "Because Arrow unleashed stores progress and hints locally on your device, pacing your hint consumption during daily challenges helps build long-term pattern recognition.",
+          "Use the restart button liberally when testing hypothesis paths; restarting a level resets the board without costing hints."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How do I know which arrow to release first?",
+        "Always look at the arrows along the outer perimeter edges. Any arrow pointing directly off the grid with an empty path ahead is an ideal first move."
+      ],
+      [
+        "Can all levels be solved without hints?",
+        "Yes, every puzzle level is mathematically designed to have at least one valid, collision-free solution sequence."
+      ],
+      [
+        "Does clearing app storage delete my solved levels?",
+        "Yes. Arrow unleashed saves milestones, daily completion streaks, and hint balances locally on your device."
+      ]
+    ]
+  },
+  {
+    "app": "block-blasting",
+    "name": "Block Blasting",
+    "slug": "block-blasting-streak-combos-adventure-levels",
+    "date": "2026-11-12",
+    "title": "Block Blasting Combo Guide: Streaks, Board Space, and Adventure Puzzles",
+    "description": "Master multi-turn clear streaks, board management, and jewel goals in Block Blasting Classic and Adventure levels.",
+    "answer": "Consistent high scores in Block Blasting depend on maintaining multi-turn streaks by clearing at least one line per move, keeping a 3x3 pocket open for awkward shapes, and sequencing gem collections before the board fills.",
+    "sections": [
+      {
+        "heading": "Maintain multi-turn streaks for exponential multipliers",
+        "steps": [
+          "Check all three piece options in your lower tray before placing any single block.",
+          "Plan at least one row or column clear on every placement to preserve your active streak counter.",
+          "Combine simultaneous horizontal and vertical clears on turn 3+ of a streak for massive bonus points."
+        ],
+        "paragraphs": [
+          "In Block Blasting, single line clears grant modest points, but continuous streaks multiply score gains significantly. Breaking a streak resets your multiplier back to base."
+        ]
+      },
+      {
+        "heading": "Board preservation: protecting a 3x3 pocket",
+        "paragraphs": [
+          "The most common cause of sudden game overs is receiving the 3x3 square block or 5-block L-shapes when no contiguous open space remains.",
+          "Always leave one central quadrant or lower corner cleared to accommodate large shapes without panic."
+        ]
+      },
+      {
+        "heading": "Adventure mode strategy: prioritizing gem tiles",
+        "paragraphs": [
+          "In Adventure levels, the objective is collecting target gems within a limited number of moves rather than simply surviving. Clear lines containing gems even if it yields fewer raw points."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How is the streak multiplier calculated?",
+        "Each consecutive placement that completes at least one line advances your streak tier, multiplying line-clear points by up to 5x."
+      ],
+      [
+        "What should I do when I receive three large awkward shapes?",
+        "Look for placements that immediately complete a line and consume part of the newly placed piece, creating breathing room."
+      ],
+      [
+        "Do Adventure level gems carry over across attempts?",
+        "No, each Adventure attempt requires reaching the target gem quota within that specific game session."
+      ]
+    ]
+  },
+  {
+    "app": "ladderday",
+    "name": "Ladderday",
+    "slug": "ladderday-word-ladder-strategy-shortest-paths",
+    "date": "2026-11-12",
+    "title": "Ladderday Word Ladder Strategy: Shortest Routes to GOLD",
+    "description": "How to navigate four-letter word transitions, pivot through bridge vowels, and interpret Route Coach hints in Ladderday.",
+    "answer": "The shortest word ladder path to GOLD relies on identifying bridge vowels (switching consonants while keeping vowels versatile), avoiding dead-end letter clusters, and watching Route Coach temperature feedback to pivot in the right direction.",
+    "sections": [
+      {
+        "heading": "The anatomy of an optimal word ladder",
+        "steps": [
+          "Identify common letters shared between your starting word and the destination GOLD (G, O, L, D).",
+          "Change letters at positions where multiple high-frequency dictionary words can be formed.",
+          "Avoid dead-end consonants like J, Q, X, or Z unless they immediately transition toward an objective letter."
+        ],
+        "paragraphs": [
+          "In Ladderday, you transform a starting 4-letter word into GOLD by changing one letter per move into a real dictionary word. The elegance score is determined by how closely your path matches the theoretical minimum moves."
+        ]
+      },
+      {
+        "heading": "Pivoting through versatile bridge vowels",
+        "paragraphs": [
+          "Vowel shifts often open up dozens of consonant possibilities. If stuck with an uncommon consonant combination, changing a middle vowel (e.g., DIME to DAME or DOME) instantly creates new routing opportunities."
+        ]
+      },
+      {
+        "heading": "Interpreting Route Coach hints without spoiling the puzzle",
+        "paragraphs": [
+          "Route Coach offers subtle directional clues ('warmer', 'colder', or 'sideways') without revealing the destination word directly, helping you evaluate whether your latest pivot shortened your distance."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What dictionary does Ladderday use?",
+        "Ladderday uses a verified, family-friendly English word list containing thousands of recognized four-letter words."
+      ],
+      [
+        "Can I practice with random words after finishing the daily challenge?",
+        "Yes, Practice Mode generates fresh starting words with infinite attempts and optimal move analysis."
+      ],
+      [
+        "Does my daily streak reset if I miss a day?",
+        "Yes, daily streaks depend on consecutive calendar day solves stored locally in your browser."
+      ]
+    ]
+  },
+  {
+    "app": "scale-safari",
+    "name": "Scale Safari",
+    "slug": "scale-safari-visual-estimation-ratio-guide",
+    "date": "2026-11-12",
+    "title": "Scale Safari Estimation Guide: Visual Ratios and Real-World Scale",
+    "description": "Improve your estimation accuracy in Scale Safari by anchoring against known reference sizes, adjusting scale sliders, and mastering relative proportions.",
+    "answer": "Accurate size estimation in Scale Safari comes from anchoring unfamiliar objects against the known reference benchmark (such as a 28-meter basketball court), multiplying mentally by halves and doubles, and verifying proportions before submitting.",
+    "sections": [
+      {
+        "heading": "The reference benchmark technique",
+        "steps": [
+          "Carefully examine the reference object and note its exact labeled real-world dimension.",
+          "Mentally segment the target object into multiples of the reference object (e.g., 2x, 2.5x, 3x).",
+          "Use the fine-tuning plus/minus controls on the slider to hone in on your computed ratio."
+        ],
+        "paragraphs": [
+          "Human perception easily falls victim to square-cube scaling illusions where doubled height appears quadrupled in overall area. Scale Safari focuses on linear dimension comparisons."
+        ]
+      },
+      {
+        "heading": "Differentiating 2D height from 3D volume",
+        "paragraphs": [
+          "When comparing living animals or natural monuments like mountains, always focus on the requested linear metric (e.g., height or length) rather than visual bulk."
+        ]
+      },
+      {
+        "heading": "Refining precision with touch and keyboard controls",
+        "paragraphs": [
+          "Scale Safari allows both direct stage pinch/drag scaling and precision numeric slider inputs. For close tolerances, use numeric steps to lock in your final percentage."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How is accuracy scored in Scale Safari?",
+        "Guesses within 5% receive perfect scores; accuracy decays gradually down to a 25% error margin."
+      ],
+      [
+        "What real-world units are supported?",
+        "Scale Safari displays measurements in standard metric meters and centimeters, with imperial feet provided for context."
+      ],
+      [
+        "Is Scale Safari playable offline?",
+        "Yes, once loaded in your browser, the daily rounds and estimation stages run on-device without continuous internet access."
+      ]
+    ]
+  },
+  {
+    "app": "linkloom",
+    "name": "Linkloom",
+    "slug": "linkloom-pyramid-word-connections-puzzle-guide",
+    "date": "2026-11-12",
+    "title": "Linkloom Pyramid Guide: Solving Compound Word Connections",
+    "description": "Step-by-step tactics for solving phrase pyramid puzzles in Linkloom: finding anchor tiles, pairing bidirectional compounds, and conserving checks.",
+    "answer": "Solving Linkloom compound word pyramids begins with finding anchor words that only pair with one other tile on the board, establishing the top and bottom tiers first, and saving check attempts until the full pyramid structure feels cohesive.",
+    "sections": [
+      {
+        "heading": "Deconstructing the phrase pyramid structure",
+        "steps": [
+          "Notice that each parent tile connected by dotted lines to a child tile must form a recognized compound word or familiar phrase.",
+          "Check both directions: Parent + Child (e.g., GREEN + BERRY) or Child + Parent.",
+          "Begin with tiles that have strict grammatical pairings, leaving flexible words (like FIRE, WOOD, BACK) for intermediate positions."
+        ],
+        "paragraphs": [
+          "A 6-tile pyramid contains multiple overlapping connections. A word placed incorrectly in the middle tier breaks both its parent link above and its child links below."
+        ]
+      },
+      {
+        "heading": "Identifying anchor tiles with solitary pairings",
+        "paragraphs": [
+          "Scan the board for unique nouns or adjectives. If a word like 'BERRY' can only form a legitimate phrase with 'GREEN', lock that connection early to eliminate variables."
+        ]
+      },
+      {
+        "heading": "Conserving checks and using the undo buffer",
+        "paragraphs": [
+          "You are granted 4 check attempts per puzzle. Swapping tiles is unlimited and completely free, so experiment with candidate layouts before consuming a validation check."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Do compound words need to be single words or two-word phrases?",
+        "Both single closed compounds (e.g., FIREWOOD) and standard open phrases (e.g., GREEN TEA) are valid."
+      ],
+      [
+        "What happens if I use all 4 checks?",
+        "The game shows your current correct connection count, allowing you to reshuffle or continue deducing."
+      ],
+      [
+        "Are there other game modes besides phrases?",
+        "Yes, Linkloom also features Numbers mode (arithmetic pyramid sums) and Fragments mode."
+      ]
+    ]
+  },
+  {
+    "app": "hinthunt",
+    "name": "HintHunt",
+    "slug": "hinthunt-semantic-word-mystery-bullseye-guide",
+    "date": "2026-11-12",
+    "title": "HintHunt Semantic Guide: Triangulating Orbit Clues to a Bullseye",
+    "description": "How semantic word embeddings work in HintHunt and practical tactics to narrow down concentric rings to the daily secret word in under 10 darts.",
+    "answer": "In HintHunt, every guess is measured by its semantic distance to the secret word. Start with distinct conceptual domains (nature, objects, emotions) to locate the warm ring quickly, then zoom into synonyms and close associates to land the bullseye.",
+    "sections": [
+      {
+        "heading": "How semantic distance works in HintHunt",
+        "steps": [
+          "Understand that HintHunt evaluates meaning and contextual relationships, not alphabetical similarity.",
+          "Throw your first three darts into divergent conceptual categories: living things, human-made artifacts, and abstract ideas.",
+          "Once a category enters the inner rings or triggers Orbit's 'WARMER' status, discard the other categories."
+        ],
+        "paragraphs": [
+          "Powered by trained MiniLM semantic embeddings computed privately on your device, HintHunt positions words in high-dimensional vector space. Words that frequently share contexts score closer to the center bullseye."
+        ]
+      },
+      {
+        "heading": "Triangulating from outer rings to the bullseye",
+        "paragraphs": [
+          "If 'ANIMAL' lands in the middle ring, test sub-classes like 'MAMMAL', 'OCEAN', or 'BIRD'. When 'OCEAN' pushes you into the inner ring, aquatic animals like 'WHALE', 'SHARK', or 'DOLPHIN' rapidly converge on the secret."
+        ]
+      },
+      {
+        "heading": "Managing your 10 darts for maximum information gain",
+        "paragraphs": [
+          "Avoid submitting minor spelling variants or plurals early. Each dart should deliver broad information until you are within the inner yellow ring."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Does HintHunt send my guesses to an external server?",
+        "No. The semantic embedding model runs completely on-device in your browser using local vector math."
+      ],
+      [
+        "Are synonyms always closer than antonyms?",
+        "Generally yes, but strongly linked antonym pairs (hot/cold) can share semantic contexts. Orbit's directional clues help guide the distinction."
+      ],
+      [
+        "Can I play past daily secret words?",
+        "HintHunt offers a new puzzle every midnight local time, with solved records saved in your browser history."
+      ]
+    ]
   }
 ]

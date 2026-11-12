@@ -39,7 +39,8 @@ guides=json.loads((ROOT/'content/guides.json').read_text(encoding='utf8'))
 for g in guides:
  path='/guides/'+g['slug']+'/'
  assert 'href="'+path+'"' in guide_index,(g['slug'],'not on guide hub')
- app_html=(ROOT/'apps'/g['app']/'index.html').read_text(encoding='utf8')
+ parent_p = (ROOT/'games'/g['app']/'index.html') if (ROOT/'games'/g['app']).exists() else (ROOT/'apps'/g['app']/'index.html')
+ app_html=parent_p.read_text(encoding='utf8')
  assert 'href="'+path+'"' in app_html,(g['slug'],'not linked from app')
  article_html=(ROOT/'guides'/g['slug']/'index.html').read_text(encoding='utf8')
  assert '<h1>'+g['title'].replace('&','&amp;')+'</h1>' in article_html,(g['slug'],'h1 mismatch')

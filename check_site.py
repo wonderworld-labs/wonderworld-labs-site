@@ -67,10 +67,13 @@ for url in urls:
     assert target in pages and pages[target].canonical == [url.text], url.text
 
 for guide in json.loads((ROOT / 'content/guides.json').read_text(encoding='utf-8')):
-    parent = pages[ROOT / 'apps' / guide['app'] / 'index.html']
-    assert '/guides/' + guide['slug'] + '/' in parent.links, ('Guide missing from app home', guide['slug'])
+    is_game = (ROOT / 'games' / guide['app']).exists()
+    parent_path = (ROOT / 'games' / guide['app'] / 'index.html') if is_game else (ROOT / 'apps' / guide['app'] / 'index.html')
+    parent = pages[parent_path]
+    assert '/guides/' + guide['slug'] + '/' in parent.links, ('Guide missing from parent home', guide['slug'])
     article = pages[ROOT / 'guides' / guide['slug'] / 'index.html']
-    assert '/apps/' + guide['app'] + '/#download' in article.links, guide['slug']
+    target_link = ('/games/' + guide['app'] + '/#play') if is_game else ('/apps/' + guide['app'] + '/#download')
+    assert target_link in article.links, guide['slug']
 
 for slug in ['melody-garden', 'arrow-unleashed', 'whispering-diary']:
     rel = f'privacy/{slug}/index.html'
