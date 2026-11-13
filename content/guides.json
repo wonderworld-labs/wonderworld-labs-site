@@ -491,13 +491,13 @@
     "slug": "learn-piano-online-or-android-beginner",
     "title": "Learn Piano on Your Phone: Beginner Android Practice",
     "description": "Learn piano at home using your phone: find C, play your first five-note pattern, and compare online keyboards with offline Android lessons.",
-    "answer": "To begin learning piano on your phone, find a group of two black keys and the white key immediately to its left: C. Play C-D-E-D-C slowly, one note per count. An online keyboard is useful for exploring notes; an Android app such as Melody Garden can provide offline lessons and on-screen practice. A touchscreen is a starting point, not a substitute for developing technique on a physical instrument.",
+    "answer": "To learn piano on your phone, open Melody Garden in your browser, choose your age group and select Piano. Open Play my first notes to try C, D and E. On a physical keyboard, C is the white key immediately to the left of a group of two black keys. Try C-D-E-D-C slowly, one note per count.",
     "sections": [
       {
         "heading": "Choose the tool for your first session",
         "paragraphs": [
           "If you want to play piano online without installing an app, choose a browser instrument that makes sound when you tap its keys. Check whether it labels musical notes, which computer keys it maps to notes, and whether it works on your phone. A computer-keyboard letter is an input shortcut and may not be the musical note being played.",
-          "If you want lessons and practice available without a connection, Melody Garden provides piano and guitar learning on Android, including on-screen practice and local progress. Wonderworld Labs plans a web version; there is no released web player promised by this guide. Features, pricing, and a launch date for that version have not been announced."
+          "To try the browser lesson, open Melody Garden and choose Piano during setup. Select Play my first notes and tap the highlighted key shown for each step. The beginner exercise starts on C and moves through D and E before returning to C."
         ]
       },
       {
@@ -546,8 +546,8 @@
         "You can begin learning note locations and simple patterns on a virtual keyboard. Physical playing technique still needs practice on an instrument."
       ],
       [
-        "Can I play piano in my browser on this website?",
-        "A Wonderworld Labs web version is planned. This page is a beginner guide, not a playable keyboard. The current Melody Garden product is an Android app."
+        "Can I learn piano in my browser?",
+        "Yes. Use the Open Melody Garden button above, select Piano and choose Play my first notes. The first exercise displays an on-screen keyboard and guides you through C, D and E."
       ],
       [
         "Does Melody Garden also help me learn guitar?",
@@ -555,11 +555,15 @@
       ]
     ],
     "date": "2026-10-28",
-    "updated": "2026-11-04",
+    "updated": "2026-11-14",
     "sources": [
       {
         "title": "Musicca help: browser audio troubleshooting",
         "url": "https://www.musicca.com/help"
+      },
+      {
+        "title": "Open Melody Garden in your browser",
+        "url": "https://melody-garden.wonderworldlabs.com/"
       }
     ]
   },
@@ -745,7 +749,7 @@
         "heading": "Use an app or online lesson with a clear goal",
         "paragraphs": [
           "In Melody Garden, choose guitar and the appropriate learning age range, then start a suitable lesson. Keep your first goal small: recognizing string names, following an on-screen exercise, or using the tuner. Local results and favorites can help you return to the same material.",
-          "Learning guitar online can mean watching instruction, reading a chord diagram, or using a virtual instrument. These are different activities. Check that the resource teaches the skill you want, and distinguish a computer keyboard shortcut from a real fret or string. Wonderworld Labs plans a web version; no browser guitar player, release date, pricing, or song catalogue is promised here."
+          "Melody Garden opens in your browser. Choose Guitar during setup to find the introductory lesson, Meet three clear notes. When you move to a physical guitar, repeat the open-string exercise in this guide to practise plucking and listening to each string."
         ]
       },
       {
@@ -766,16 +770,21 @@
         "Melody Garden supports on-screen practice without microphone permission. Its optional tuner and microphone practice need that permission."
       ],
       [
-        "Can I play guitar online on this website?",
-        "The Wonderworld Labs web version is planned. The current Melody Garden app is for Android; this guide is not a playable browser instrument."
+        "Can I start learning guitar in my browser?",
+        "Yes. Open Melody Garden from the button above and choose Guitar during setup to reach the introductory lesson, Meet three clear notes."
       ]
     ],
     "sources": [
       {
         "title": "Fender: standard guitar tuning",
         "url": "https://www.fender.com/articles/setup/tuning-tip-standard-tuning"
+      },
+      {
+        "title": "Open Melody Garden in your browser",
+        "url": "https://melody-garden.wonderworldlabs.com/"
       }
-    ]
+    ],
+    "updated": "2026-11-14"
   },
   {
     "app": "melody-garden",
@@ -816,7 +825,7 @@
         "heading": "Choose one goal for the next session",
         "paragraphs": [
           "To learn music steadily, choose a specific next goal: finding the three notes without a label, repeating a short melody evenly, or recognizing a chord against separate notes. Repeat that goal before adding more material. This is a practice suggestion, not a guaranteed learning timeline.",
-          "Melody Garden provides offline piano and guitar learning on Android, with on-screen practice and optional microphone feedback. Select a suitable lesson for your instrument and learning age range. A Wonderworld Labs web version is planned; this page is an explanation rather than a playable instrument. Check the app page for current download access."
+          "Open Melody Garden in your browser and select Piano to practise finding notes in its introductory exercise. To compare the individual notes C, E and G with the three-note chord, use a keyboard that lets you sound all three together."
         ]
       }
     ],
@@ -838,8 +847,13 @@
       {
         "title": "musictheory.net: introduction to chords",
         "url": "https://www.musictheory.net/lessons/40"
+      },
+      {
+        "title": "Open Melody Garden in your browser",
+        "url": "https://melody-garden.wonderworldlabs.com/"
       }
-    ]
+    ],
+    "updated": "2026-11-14"
   },
   {
     "app": "whispering-diary",
