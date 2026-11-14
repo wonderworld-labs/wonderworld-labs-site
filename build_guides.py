@@ -236,10 +236,21 @@ for app in sorted({g['app'] for g in guides}):
     target.write_text(content, encoding='utf-8')
 
 # Render guides hub index
-body = '<div class="hero"><p class="eyebrow">Practical help</p><h1>App &amp; game guides</h1><p class="lead">Step-by-step guides for browser games, music practice, puzzles, local AI chats, and teleprompter recording. Play instantly in your browser — Android apps coming soon.</p></div>'
+body = '<div class="hero"><p class="eyebrow">Practical help</p><h1>App &amp; game guides</h1><p class="lead">Learn how to use our apps, or find tips for your next game.</p></div>'
+body += '<nav class="guide-hero-actions" aria-label="Guide sections"><a class="button" href="#apps">App guides</a><a class="button" href="#games">Game guides</a></nav>'
+groups = {'apps': [], 'games': []}
 for app in sorted({g['app'] for g in guides}):
     group = [g for g in guides if g['app']==app]
-    body += '<section><h2>'+esc(group[0]['name'])+'</h2><ul>'+''.join(guide_link(g) for g in group)+'</ul></section>'
+    has_game_landing = (ROOT / 'games' / app / 'index.html').is_file()
+    # These two games also have Android landing pages under /apps/.
+    is_game = has_game_landing or app in {'arrow-unleashed', 'block-blasting'}
+    landing = f'/games/{app}/' if has_game_landing else f'/apps/{app}/'
+    groups['games' if is_game else 'apps'].append(
+        f'<article><h3><a href="{landing}">{esc(group[0]["name"])}</a></h3>'
+        + '<ul>' + ''.join(guide_link(guide) for guide in group) + '</ul></article>'
+    )
+for category, title in [('apps', 'App guides'), ('games', 'Game guides')]:
+    body += f'<section id="{category}" class="faq"><h2>{title}</h2>' + ''.join(groups[category]) + '</section>'
 page('/guides/','App & Game Guides','Practical guides for browser games, offline music learning, puzzle games, encrypted photo storage, fictional AI chat and video recording with a teleprompter.',body,[{'@type':'CollectionPage','name':'App and game guides','url':BASE+'/guides/'}])
 
 # Update sitemap.xml to include all guides
