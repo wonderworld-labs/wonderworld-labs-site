@@ -24,6 +24,15 @@ export function measureArea(shape, a, b) {
   return a * b * (shape === 'triangle' ? 0.5 : 1);
 }
 
+export function tileQuote(area, coverage, price, delivery = 0) {
+  if (![area, coverage].every(value => Number.isFinite(value) && value > 0)
+      || ![price, delivery].every(value => Number.isFinite(value) && value >= 0)) return null;
+  const boxes = Math.max(1, roundUp(area / coverage));
+  const total = boxes * price + delivery;
+  if (!Number.isSafeInteger(boxes) || !Number.isFinite(total) || total > Number.MAX_SAFE_INTEGER) return null;
+  return { boxes, total };
+}
+
 export function estimate(mode, sections, settings) {
   if (!['area', 'tile', 'gravel', 'concrete'].includes(mode)) throw new Error('Unknown calculator.');
   if (!sections.some(section => !section.subtract)) throw new Error('Add at least one section to measure.');

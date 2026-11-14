@@ -1,4 +1,4 @@
-import { estimate, shapes, FOOT, INCH, SQFT, CUFT, CUYD, SHORT_TON } from './math.mjs';
+import { estimate, shapes, tileQuote, FOOT, INCH, SQFT, CUFT, CUYD, SHORT_TON } from './math.mjs?v=3';
 
 const root = document.querySelector('[data-tool]');
 const mode = root.dataset.tool;
@@ -6,6 +6,8 @@ const isVolume = mode === 'gravel' || mode === 'concrete';
 const storageKey = 'wonderworld-projectroom-v1';
 const sectionList = document.querySelector('#sections');
 const settingsPanel = document.querySelector('#settings');
+const quoteInputs = document.querySelector('#quote-inputs');
+const quoteResult = document.querySelector('#quote-result');
 const errorMessage = document.querySelector('#estimate-error');
 const resultOutput = document.querySelector('#result-output');
 const details = document.querySelector('#breakdown');
@@ -111,6 +113,16 @@ function renderInputs() {
         : '') + '</div></fieldset>';
   }).join('');
   settingsPanel.innerHTML = settingNames.map(key => numericField(...[fields[key][0], key, fields[key][1], settings[key]])).join('');
+  if (quoteInputs) {
+    quoteInputs.innerHTML = ['A', 'B'].map(label => {
+      const key = 'quote' + label;
+      return '<fieldset class="section"><legend>Product ' + label + '</legend><div class="settings">' +
+        numericField('Coverage per box', key + 'Coverage', 'area', settings[key + 'Coverage']) +
+        numericField('Price per box', key + 'Price', 'money', settings[key + 'Price']) +
+        numericField('Delivery fee (optional)', key + 'Delivery', 'money', settings[key + 'Delivery']) +
+        '</div></fieldset>';
+    }).join('');
+  }
   document.querySelectorAll('[data-add]').forEach(button => { button.disabled = model.sections.length >= 25; });
 }
 function quantity(value, unit) {
@@ -141,10 +153,38 @@ function fillList(list, pairs) {
     return [name, amount];
   }));
 }
+
+function compareQuotes(area) {
+  const rows = [];
+  const quotes = ['A', 'B'].map(label => {
+    const key = 'quote' + label;
+    const quote = tileQuote(area, settings[key + 'Coverage'], settings[key + 'Price'], settings[key + 'Delivery'] ?? 0);
+    if (quote) rows.push(['Product ' + label, format.format(quote.boxes) +
+      (quote.boxes === 1 ? ' box · ' : ' boxes · ') + money.format(quote.total)]);
+    return quote;
+  });
+  const [a, b] = quotes;
+  if (a && b) {
+    const difference = Math.round((a.total - b.total) * 100) / 100;
+    rows.push(['Price difference', difference === 0 ? 'Same total' :
+      'Product ' + (difference < 0 ? 'A' : 'B') + ' costs ' + money.format(Math.abs(difference)) + ' less']);
+  }
+  fillList(quoteResult, rows);
+  document.querySelector('#quote-guidance').hidden = quotes.every(Boolean);
+  return rows;
+}
 function update() {
   save();
   projectStatus.textContent = model.example ? 'Example measurements' : '';
   let result;
+  let quotes = [];
+  if (quoteResult) {
+    try {
+      quotes = compareQuotes(estimate('area', model.sections, settings).areaToBuy);
+    } catch {
+      quotes = compareQuotes(null);
+    }
+  }
   try {
     for (const key of ['bagPrice', 'bulkPrice']) {
       if (isVolume && settings[key] != null && settings[key] < 0) throw new Error('Enter a price of zero or more.');
@@ -199,7 +239,7 @@ function update() {
     quantity(row.area, 'area') + (isVolume ? ' · ' + quantity(row.volume, 'volume') : ''),
   ]);
   fillList(document.querySelector('#section-totals'), parts);
-  printText = [document.title.split(' | ')[0], ...[main, ...rows, ...parts].map(pair => pair.join(': '))].join('\n');
+  printText = [document.title.split(' | ')[0], ...[main, ...rows, ...parts, ...quotes].map(pair => pair.join(': '))].join('\n');
 }
 
 document.querySelector('#units').addEventListener('change', event => {

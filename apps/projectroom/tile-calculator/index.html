@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tile calculator | Projectroom</title>
-  <meta name="description" content="Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts.">
+  <title>Tile Calculator for Boxes &amp; Flooring Cost | Projectroom</title>
+  <meta name="description" content="Calculate floor or wall tile boxes with a waste allowance. Compare two tile products by box coverage, price and delivery for the same room.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://wonderworldlabs.com/apps/projectroom/tile-calculator/">
-  <meta property="og:title" content="Tile calculator">
-  <meta property="og:description" content="Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts.">
+  <meta property="og:title" content="Tile Calculator for Boxes &amp; Flooring Cost">
+  <meta property="og:description" content="Calculate floor or wall tile boxes with a waste allowance. Compare two tile products by box coverage, price and delivery for the same room.">
   <meta property="og:url" content="https://wonderworldlabs.com/apps/projectroom/tile-calculator/">
   <meta property="og:image" content="https://wonderworldlabs.com/assets/wonderworld-icon-512.png">
   <link rel="icon" href="/favicon.svg">
   <link rel="stylesheet" href="/assets/theme.css">
-  <link rel="stylesheet" href="/apps/projectroom/projectroom.css?v=2">
+  <link rel="stylesheet" href="/apps/projectroom/projectroom.css?v=3">
   <script src="/assets/theme.js"></script>
-  <script type="module" src="/apps/projectroom/tool.mjs?v=2"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Tile calculator","url":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/","description":"Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Apps","item":"https://wonderworldlabs.com/apps/"},{"@type":"ListItem","position":2,"name":"Projectroom","item":"https://wonderworldlabs.com/apps/projectroom/"},{"@type":"ListItem","position":3,"name":"Tile","item":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/"}]},{"@type":"WebApplication","name":"Tile calculator","url":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}}]}</script>
+  <script type="module" src="/apps/projectroom/tool.mjs?v=3"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Tile calculator","url":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/","description":"Calculate floor or wall tile boxes with a waste allowance. Compare two tile products by box coverage, price and delivery for the same room."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Apps","item":"https://wonderworldlabs.com/apps/"},{"@type":"ListItem","position":2,"name":"Projectroom","item":"https://wonderworldlabs.com/apps/projectroom/"},{"@type":"ListItem","position":3,"name":"Tile","item":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/"}]},{"@type":"WebApplication","name":"Tile calculator","url":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}}]}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
     <nav class="crumb" aria-label="Breadcrumb"><a href="/apps/">Apps</a><span aria-hidden="true">/</span><a href="/apps/projectroom/">Projectroom</a><span aria-hidden="true">/</span><span aria-current="page">Tile</span></nav>
     <div class="tool-intro">
       <h1>Tile calculator</h1>
-      <p>Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts.</p>
+      <p>Find how many tile boxes to buy, then compare the delivered cost of two products for the same room.</p>
     </div>
     <nav class="tool-tabs" aria-label="Projectroom calculators"><a href="/apps/projectroom/square-footage-calculator/">Square footage</a><a href="/apps/projectroom/tile-calculator/" aria-current="page">Tile</a><a href="/apps/projectroom/gravel-calculator/">Gravel</a><a href="/apps/projectroom/concrete-calculator/">Concrete</a></nav>
     <noscript><p class="noscript">Enable JavaScript to use the calculator. The worked example below shows how to calculate by hand.</p></noscript>
@@ -48,6 +48,7 @@
         </div>
         <div id="sections"></div>
         <p id="quick-result" aria-live="polite"></p>
+        <a class="handoff" href="#compare-tile-prices">Compare tile prices by the box &darr;</a>
         <div class="actions">
           <button class="action primary" type="button" data-add="section">+ Add section</button>
           <button class="action" type="button" data-add="cutout">− Add cutout</button>
@@ -85,10 +86,19 @@
         </div>
       </section>
     </div>
+    <section class="panel how" id="compare-tile-prices" aria-labelledby="quote-heading">
+      <h2 id="quote-heading">Compare tile box prices</h2>
+      <p>Use the coverage printed on each box and enter both prices in the same currency. The comparison uses your room area and extra-material allowance above. Add delivery if applicable. Taxes, adhesive and grout are separate.</p>
+      <div id="quote-inputs" class="settings"></div>
+      <p id="quote-guidance" class="hint">Enter your room measurements, then add each product’s coverage and price per box.</p>
+      <dl id="quote-result" aria-live="polite"></dl>
+    </section>
     <section class="how">
       <h2>How the estimate works</h2>
       <p>Multiply tile length plus grout gap by tile width plus grout gap for nominal coverage per tile. Divide the net project area with allowance by this coverage, then round up to tiles and to whole boxes. A 120 ft² area with 12 × 12 in tiles, zero gap and 10% extra needs 132 tiles, or 14 boxes at 10 per box.</p>
       <p>This gives an area-based estimate. Borders, staggered patterns, large cuts, and reuse of offcuts can change the actual tile count.</p>
+      <h3>Which tile is cheaper after box rounding?</h3>
+      <p>For 132 ft² including waste, tile that covers 12 ft² per box needs 11 boxes. At $28 per box with $35 delivery, it costs $343. A tile that covers 15 ft² per box needs 9 boxes. At $33 per box with free delivery, it costs $297. The higher-priced box costs $46 less for this room.</p>
     </section>
   </main>
   <footer class="site-end">
