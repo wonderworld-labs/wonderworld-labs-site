@@ -1582,5 +1582,221 @@
         "url": "https://sarkarijob.work/guides/sarkari-naukri/"
       }
     ]
+  },
+  {
+    "app": "element-lab",
+    "name": "Infinite Craft",
+    "slug": "infinite-craft-test-recipe-branches",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Infinite Craft: How to Test a Recipe Branch",
+    "description": "Use a small batch of ingredient pairs to explore Infinite Craft without losing track of your discoveries.",
+    "answer": "Choose one ingredient and pair it with a small set of other elements. Write down the pairs and results, then choose one discovery as the starting point for the next round.",
+    "sections": [
+      {
+        "heading": "Start with one ingredient",
+        "paragraphs": [
+          "Use a familiar element as your starting point. For example, make Steam from Water and Fire. Set Steam aside on the board and use it for the next few trials."
+        ]
+      },
+      {
+        "heading": "Keep a short recipe log",
+        "paragraphs": [
+          "Try your chosen element with two or three ingredients you already have. Write each pair and whatever the game returns. Keep surprising results on the list so you can retrace the branch later."
+        ]
+      },
+      {
+        "heading": "Follow one result before changing themes",
+        "paragraphs": [
+          "Pick the discovery closest to your current goal and run another small batch with it. If a pair sends you in an unexpected direction, save it as a separate branch and return to your starting element."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How do I avoid repeating pairs?",
+        "Label a short list with your starting element and record each pairing as soon as you try it."
+      ]
+    ]
+  },
+  {
+    "app": "perfect-circle",
+    "name": "Draw a Perfect Circle",
+    "slug": "perfect-circle-practice-one-arc",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Draw a Perfect Circle: A Three-Attempt Practice Routine",
+    "description": "Use the score and trace in Draw a Perfect Circle to work on radius, speed and the closing arc.",
+    "answer": "Start with a comfortable radius and draw one complete circle at your usual pace. Review the colored trace, then use two more attempts to work on the section that wandered farthest from your intended path.",
+    "sections": [
+      {
+        "heading": "Use the first attempt as a baseline",
+        "paragraphs": [
+          "Choose a starting point with room around the center dot. After drawing the circle, look for the arc where the trace changes color. Notice whether it happened early in the turn, halfway around, or as you returned to the start."
+        ]
+      },
+      {
+        "heading": "Change the pace on the difficult arc",
+        "paragraphs": [
+          "Use the same starting point and approximate radius. Ease your pace slightly as you approach the problem area, then continue in one motion. Compare the same part of the two traces."
+        ]
+      },
+      {
+        "heading": "Practice returning to the start",
+        "paragraphs": [
+          "On your third attempt, look ahead to your starting point before you reach the final quarter. Let the curve bring the line back around. Compare the closing arc and your score with your first attempt."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should I change the circle size every time?",
+        "Keep it about the same during this routine so you can compare how the pace and closing arc affect the result."
+      ]
+    ]
+  },
+  {
+    "app": "asteroid-launcher",
+    "name": "Asteroid Launcher",
+    "slug": "asteroid-launcher-read-simulator-results",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Asteroid Launcher: How to Read the Simulator Results",
+    "description": "Read the energy, crater and overlay displays in the Asteroid Launcher game and compare two simulated runs.",
+    "answer": "After a launch, read the input values first and the result labels second. The energy readout and the map overlays show different outputs of the game model. Keep each result with its unit when comparing runs.",
+    "sections": [
+      {
+        "heading": "Record the settings with the readout",
+        "paragraphs": [
+          "Write down the diameter, speed, material and angle from your first run. Choose one result to compare and note the units displayed beside it. This gives you a baseline you can reproduce in the game."
+        ]
+      },
+      {
+        "heading": "Read each overlay separately",
+        "paragraphs": [
+          "Start with the crater display, then look at the other outputs. Check whether the result describes a diameter, a radius or another distance before comparing the numbers or judging the shapes on the map."
+        ]
+      },
+      {
+        "heading": "Compare one change at a time",
+        "paragraphs": [
+          "Repeat the run with the same map point and change one setting. Put the two readouts side by side and note which outputs changed. Use the result to describe the simulation and the settings you tested."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Why are the overlay boundaries different?",
+        "The game draws separate overlays for different model outputs. Use each overlay label and its associated result when comparing them."
+      ]
+    ]
+  },
+  {
+    "app": "password-panic",
+    "name": "The Password Game",
+    "slug": "password-game-track-rule-conflicts",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "The Password Game: How to Track Rule Conflicts",
+    "description": "Build an in-game string in small chunks so you can see which earlier puzzle rules a new addition changes.",
+    "answer": "When a new rule appears, identify a part of your in-game string you can edit. Make the smallest change that meets the new rule, then inspect the full rule list before adding anything else.",
+    "sections": [
+      {
+        "heading": "Give each rule a recognizable chunk",
+        "paragraphs": [
+          "Keep required words and digits easy to spot. Write a note outside the game for any chunk that contributes to several rules. That note gives you a short list of constraints to check after an edit."
+        ]
+      },
+      {
+        "heading": "Find the effect of required text",
+        "paragraphs": [
+          "A new chunk can add a digit or a letter that affects an earlier rule. If the digit total changes, inspect the digits you just added before editing the old number block. Use the rule feedback to test your explanation."
+        ]
+      },
+      {
+        "heading": "Check the rule list after every edit",
+        "paragraphs": [
+          "When one edit makes two rules fail, remember the previous string and undo the last change. Try a smaller adjustment to one chunk and check the rule feedback again. Use invented text for the puzzle."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What should I check when a previously solved rule fails?",
+        "Look first at the characters you just added or removed. Check whether the game is counting those characters for the earlier rule too."
+      ]
+    ]
+  },
+  {
+    "app": "fortune-frenzy",
+    "name": "Spend Bill Gates’ Money",
+    "slug": "spending-game-balance-challenge",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Spend Bill Gates’ Money: Try a Remaining-Balance Challenge",
+    "description": "Choose a target balance in the browser spending game and use the prices, quantity boxes and receipt to get close.",
+    "answer": "Pick a fictional balance to leave unspent. Use the difference between your target and the displayed balance as the amount you can allocate. Check the quantity and receipt after each purchase.",
+    "sections": [
+      {
+        "heading": "Set the finish line before buying",
+        "paragraphs": [
+          "Choose a remaining balance and limit yourself to a few different items. Look through the catalog and decide which purchases will account for most of the difference."
+        ]
+      },
+      {
+        "heading": "Use prices to choose the next quantity",
+        "paragraphs": [
+          "Divide the remaining amount you want to spend by an item’s price. Round down to a whole number of units, enter that quantity, and read the balance again. A lower-priced item may help you get closer to your target."
+        ]
+      },
+      {
+        "heading": "Use the receipt to revise your selection",
+        "paragraphs": [
+          "Look for the purchase that contributes most to the difference between your current and target balance. Adjust that quantity or use Sell, then recalculate. Try the challenge again with a different limit on item types."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How do I get closer without going past my target?",
+        "Use the displayed balance and round your calculated quantity down. Then check whether another item fits the remaining difference."
+      ]
+    ]
+  },
+  {
+    "app": "trolley-problems",
+    "name": "Absurd Trolley Problems",
+    "slug": "trolley-problems-compare-two-rounds",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Absurd Trolley Problems: Compare Your Reasoning Across Rounds",
+    "description": "Use two rounds of Absurd Trolley Problems to notice which details change your choice in the fictional scenarios.",
+    "answer": "After a round, write down your choice and the detail that mattered most. In the next round, do the same before looking back at the first answer. Compare the details and decide what changed your reasoning.",
+    "sections": [
+      {
+        "heading": "Write down the choice in one sentence",
+        "paragraphs": [
+          "Summarize the two outcomes on the screen, then record the one you chose. Use the specific situation in that round so you can explain the decision later."
+        ]
+      },
+      {
+        "heading": "Name the detail that tipped your decision",
+        "paragraphs": [
+          "You might focus on the number of people, whether someone took an action, or how certain an outcome seemed in the story. Pick the one detail you relied on most and describe it briefly."
+        ]
+      },
+      {
+        "heading": "Discuss one detail you would change",
+        "paragraphs": [
+          "With a friend, compare notes after you each make a choice. Ask what single change to the fictional setup might change the answer. A shared choice can come from different reasons, and those reasons give you something concrete to discuss."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What if I make a different choice in the next round?",
+        "Compare the two situations and identify the detail that changed. Use that detail to explain the difference between your answers."
+      ]
+    ]
   }
 ]

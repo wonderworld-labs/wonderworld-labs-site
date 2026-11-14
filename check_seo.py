@@ -40,6 +40,8 @@ for g in guides:
  path='/guides/'+g['slug']+'/'
  assert 'href="'+path+'"' in guide_index,(g['slug'],'not on guide hub')
  parent_p = (ROOT/'games'/g['app']/'index.html') if (ROOT/'games'/g['app']).exists() else (ROOT/'apps'/g['app']/'index.html')
+ if g.get('catalog_game'):
+  parent_p = ROOT/'games'/'index.html'
  app_html=parent_p.read_text(encoding='utf8')
  assert 'href="'+path+'"' in app_html,(g['slug'],'not linked from app')
  article_html=(ROOT/'guides'/g['slug']/'index.html').read_text(encoding='utf8')
