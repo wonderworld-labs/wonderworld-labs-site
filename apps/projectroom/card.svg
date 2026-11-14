@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="520" viewBox="0 0 600 520">
+  <defs>
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M25 0H0v25" fill="none" stroke="#d5c3ed" stroke-opacity=".28"/>
+    </pattern>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
+      <rect width="4" height="8" fill="#493674"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="520" fill="#382a70"/>
+  <rect width="600" height="520" fill="url(#grid)"/>
+  <path d="M163 151h281v204H163Z" fill="#bd99c9" fill-opacity=".42" stroke="#f6dbbb" stroke-width="3"/>
+  <path d="M361 287h83v68h-83Z" fill="#382a70"/>
+  <path d="M361 287h83v68h-83Z" fill="url(#hatch)" stroke="#f5c491" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M163 129h281M141 151v204M163 120v17m281-17v17M132 151h17m-17 204h17" fill="none" stroke="#f5c491" stroke-width="2"/>
+  <text x="298" y="258" text-anchor="middle" fill="#fff1df" font-family="Georgia,serif" font-size="42">114 ft²</text>
+</svg>

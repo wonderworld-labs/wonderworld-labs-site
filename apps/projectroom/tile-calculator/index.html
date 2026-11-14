@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tile calculator | Projectroom</title>
+  <meta name="description" content="Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://wonderworldlabs.com/apps/projectroom/tile-calculator/">
+  <meta property="og:title" content="Tile calculator">
+  <meta property="og:description" content="Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts.">
+  <meta property="og:url" content="https://wonderworldlabs.com/apps/projectroom/tile-calculator/">
+  <meta property="og:image" content="https://wonderworldlabs.com/assets/wonderworld-icon-512.png">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/assets/theme.css">
+  <link rel="stylesheet" href="/apps/projectroom/projectroom.css">
+  <script src="/assets/theme.js"></script>
+  <script type="module" src="/apps/projectroom/tool.mjs"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Tile calculator","url":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/","description":"Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Apps","item":"https://wonderworldlabs.com/apps/"},{"@type":"ListItem","position":2,"name":"Projectroom","item":"https://wonderworldlabs.com/apps/projectroom/"},{"@type":"ListItem","position":3,"name":"Tile","item":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/"}]},{"@type":"WebApplication","name":"Tile calculator","url":"https://wonderworldlabs.com/apps/projectroom/tile-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-top">
+    <nav class="shell project-nav" aria-label="Main navigation">
+      <a class="brand" href="/"><img src="/assets/wonderworld-mark.svg" width="32" height="32" alt="">Wonderworld Labs</a>
+      <a href="/apps/">Apps</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button>
+    </nav>
+  </header>
+  <main class="shell" id="main" data-tool="tile">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/apps/">Apps</a><span aria-hidden="true">/</span><a href="/apps/projectroom/">Projectroom</a><span aria-hidden="true">/</span><span aria-current="page">Tile</span></nav>
+    <div class="tool-intro">
+      <h1>Tile calculator</h1>
+      <p>Work out how many floor or wall tiles and whole boxes to buy, including an allowance for cuts.</p>
+    </div>
+    <nav class="tool-tabs" aria-label="Projectroom calculators"><a href="/apps/projectroom/square-footage-calculator/">Square footage</a><a href="/apps/projectroom/tile-calculator/" aria-current="page">Tile</a><a href="/apps/projectroom/gravel-calculator/">Gravel</a><a href="/apps/projectroom/concrete-calculator/">Concrete</a></nav>
+    <noscript><p class="noscript">Enable JavaScript to use the calculator. The worked example below shows how to calculate by hand.</p></noscript>
+    <div class="workspace">
+      <section class="panel" aria-labelledby="measurements-heading">
+        <div class="panel-head">
+          <h2 id="measurements-heading">Measurements</h2>
+          <label class="field"><span>Units</span><select id="units"><option value="us">US</option><option value="metric">Metric</option></select></label>
+        </div>
+        <div id="sections"></div>
+        <div class="actions">
+          <button class="action primary" type="button" data-add="section">+ Add section</button>
+          <button class="action" type="button" data-add="cutout">− Add cutout</button>
+        </div>
+        <div class="assumptions">
+          <h3>Material settings</h3>
+          <div class="settings" id="settings"></div>
+          <p class="hint">Use the tile’s measured dimensions. Set grout gap to zero for a more conservative count.</p>
+        </div>
+        <div class="actions secondary">
+          <button class="action" type="button" data-sample>Load example</button>
+          <button class="action" type="button" data-clear>Clear project</button>
+        </div>
+      </section>
+      <section class="panel result" aria-labelledby="result-heading">
+        <div class="result-head">
+          <h2 id="result-heading">Your estimate</h2>
+          <p id="estimate-error" role="status" hidden></p>
+          <div id="result-output" hidden>
+            <p id="result-label"></p><p id="total"></p>
+            <dl id="totals"></dl>
+          </div>
+        </div>
+        <figure class="blueprint">
+          <div id="diagram" aria-hidden="true"></div>
+          <figcaption id="diagram-caption">Section sketches, shown individually</figcaption>
+        </figure>
+        <div class="breakdown" id="breakdown" hidden>
+          <h3>Section breakdown</h3>
+          <dl id="section-totals"></dl>
+        </div>
+        <div class="result-actions">
+          <div class="actions">
+            <button class="action" type="button" data-output="copy" disabled>Copy estimate</button>
+            <button class="action" type="button" data-output="print" disabled>Print / save PDF</button>
+          </div>
+          <p id="notice" role="status"></p>
+          <textarea id="copy-fallback" aria-label="Estimate to copy" readonly hidden></textarea>
+        </div>
+      </section>
+    </div>
+    <section class="how">
+      <h2>How the estimate works</h2>
+      <p>Multiply tile length plus grout gap by tile width plus grout gap for nominal coverage per tile. Divide the net project area with allowance by this coverage, then round up to tiles and to whole boxes. A 120 ft² area with 12 × 12 in tiles, zero gap and 10% extra needs 132 tiles, or 14 boxes at 10 per box.</p>
+      <p>This gives an area-based estimate. Borders, staggered patterns, large cuts, and reuse of offcuts can change the actual tile count.</p>
+    </section>
+  </main>
+  <footer class="site-end">
+    <div class="shell end-links">
+      <a href="/apps/projectroom/">Projectroom</a><a href="/apps/">All Wonderworld Labs apps</a><a href="/service-privacy/">Website privacy</a><a href="mailto:contact@wonderworldlabs.com">Send feedback</a>
+    </div>
+  </footer>
+</body>
+</html>
