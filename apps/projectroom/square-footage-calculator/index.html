@@ -31,7 +31,7 @@
     <nav class="crumb" aria-label="Breadcrumb"><a href="/apps/">Apps</a><span aria-hidden="true">/</span><a href="/apps/projectroom/">Projectroom</a><span aria-hidden="true">/</span><span aria-current="page">Square footage</span></nav>
     <div class="tool-intro">
       <h1>Square footage calculator</h1>
-      <p>Measure rooms and irregular spaces. Add rectangular, circular or triangular sections and subtract cutouts.</p>
+      <p>Enter the length and width of your room. Add sections for irregular spaces.</p>
     </div>
     <nav class="tool-tabs" aria-label="Projectroom calculators"><a href="/apps/projectroom/square-footage-calculator/" aria-current="page">Square footage</a><a href="/apps/projectroom/tile-calculator/">Tile</a><a href="/apps/projectroom/gravel-calculator/">Gravel</a><a href="/apps/projectroom/concrete-calculator/">Concrete</a></nav>
     <noscript><p class="noscript">Enable JavaScript to use the calculator. The worked example below shows how to calculate by hand.</p></noscript>
@@ -41,20 +41,23 @@
           <h2 id="measurements-heading">Measurements</h2>
           <label class="field"><span>Units</span><select id="units"><option value="us">US</option><option value="metric">Metric</option></select></label>
         </div>
+        <div class="project-setup">
+          <button class="inline-action" type="button" data-sample>Try the example</button>
+          <button class="inline-action" type="button" data-clear>Start over</button>
+          <span id="project-status" role="status"></span>
+        </div>
         <div id="sections"></div>
+        <p id="quick-result" aria-live="polite"></p>
+        <a class="handoff quick-handoff" href="/apps/projectroom/tile-calculator/" data-handoff hidden>Estimate tile for this area <span aria-hidden="true">&rarr;</span></a>
         <div class="actions">
           <button class="action primary" type="button" data-add="section">+ Add section</button>
           <button class="action" type="button" data-add="cutout">− Add cutout</button>
         </div>
-        <div class="assumptions">
-          <h3>Buying allowance</h3>
+        <details class="assumptions">
+          <summary>Add a flooring allowance</summary>
           <div class="settings" id="settings"></div>
-          <p class="hint">Enter an optional buying allowance to show how much flooring area to purchase.</p>
-        </div>
-        <div class="actions secondary">
-          <button class="action" type="button" data-sample>Load example</button>
-          <button class="action" type="button" data-clear>Clear project</button>
-        </div>
+          <p class="hint">Include extra flooring for cuts or spare material.</p>
+        </details>
       </section>
       <section class="panel result" aria-labelledby="result-heading">
         <div class="result-head">
@@ -63,16 +66,17 @@
           <div id="result-output" hidden>
             <p id="result-label"></p><p id="total"></p>
             <dl id="totals"></dl>
+            <a class="handoff" href="/apps/projectroom/tile-calculator/">Estimate tile for this area <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
-        <figure class="blueprint">
-          <div id="diagram" aria-hidden="true"></div>
-          <figcaption id="diagram-caption">Section sketches, shown individually</figcaption>
-        </figure>
-        <div class="breakdown" id="breakdown" hidden>
-          <h3>Section breakdown</h3>
+        <details class="breakdown" id="breakdown" hidden>
+          <summary>Section breakdown</summary>
           <dl id="section-totals"></dl>
-        </div>
+          <figure class="blueprint">
+            <div id="diagram" aria-hidden="true"></div>
+            <figcaption id="diagram-caption">Section sketches, shown individually</figcaption>
+          </figure>
+        </details>
         <div class="result-actions">
           <div class="actions">
             <button class="action" type="button" data-output="copy" disabled>Copy estimate</button>

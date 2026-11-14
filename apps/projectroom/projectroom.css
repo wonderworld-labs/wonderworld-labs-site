@@ -126,10 +126,25 @@ select {padding:6px 8px}
 .site-end {border-top:1px solid var(--edge);padding-block:20px;color:var(--muted);font-size:.83rem}
 .end-links {display:flex;gap:16px;flex-wrap:wrap}
 .noscript {padding:12px;border:1px solid var(--edge)}
+.project-setup {display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px;margin-bottom:10px;color:var(--muted);font-size:.82rem}
+.inline-action {border:0;background:none;padding:7px 0;color:var(--violet);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+#project-status:not(:empty) {font-weight:700}
+.section-top {margin-top:10px}
+.section-top .field {max-width:180px}
+.measurements {margin-top:0}
+#quick-result {display:none}
+.assumptions summary,.breakdown summary {cursor:pointer;font-weight:700}
+.assumptions[open] summary,.breakdown[open] summary {margin-bottom:10px}
+.breakdown figure {margin-top:12px;border-radius:8px}
+.handoff {display:inline-flex;gap:8px;margin-top:14px;font-weight:700}
+.quick-handoff {display:none}
 @media(max-width:840px) {
   .shell {width:calc(100% - 40px)}
   .workspace {grid-template-columns:1fr}
   .tool-grid {grid-template-columns:repeat(2,1fr)}
+  #quick-result {display:block;margin:10px 0 14px;padding:9px 12px;border-left:3px solid var(--violet);background:var(--panel);font-size:.88rem;font-weight:700}
+  .quick-handoff {display:inline-flex;margin:0 0 14px;font-size:.88rem}
+  .result .handoff {display:none}
 }
 @media(max-width:600px) {
   .shell {width:calc(100% - 28px)}
@@ -147,6 +162,9 @@ select {padding:6px 8px}
   .panel {padding:14px}
   .panel.result {padding:0}
   .panel h2 {font-size:1.95rem}
+  .tool-intro h1 {font-size:clamp(2.2rem,8vw,3.25rem);margin-bottom:10px}
+  .tool-intro {padding-bottom:12px}
+  .tool-tabs {margin-bottom:14px}
   .panel-head .field {width:90px}
   .result-head h2 {font-size:.86rem}
 }
@@ -154,7 +172,7 @@ select {padding:6px 8px}
   :root,:root[data-theme=dark] {color-scheme:light;--text:#111;--muted:#333;--paper:#fff;--edge:#aaa;--bg:#fff;--violet:#333}
   .shell {width:100%}
   .workspace {display:block}
-  .site-top,.site-end,.crumb,.tool-tabs,.actions,.result-actions,.how,.skip,.result figure {display:none !important}
+  .site-top,.site-end,.crumb,.tool-tabs,.actions,.project-setup,#quick-result,.handoff,.result-actions,.how,.skip,.result figure {display:none !important}
   body,.result-head {color:#111 !important;background:#fff !important}
   h1 {font-size:32pt}
   .tool-intro p {display:none}

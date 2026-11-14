@@ -41,7 +41,13 @@
           <h2 id="measurements-heading">Measurements</h2>
           <label class="field"><span>Units</span><select id="units"><option value="us">US</option><option value="metric">Metric</option></select></label>
         </div>
+        <div class="project-setup">
+          <button class="inline-action" type="button" data-sample>Try the example</button>
+          <button class="inline-action" type="button" data-clear>Start over</button>
+          <span id="project-status" role="status"></span>
+        </div>
         <div id="sections"></div>
+        <p id="quick-result" aria-live="polite"></p>
         <div class="actions">
           <button class="action primary" type="button" data-add="section">+ Add section</button>
           <button class="action" type="button" data-add="cutout">− Add cutout</button>
@@ -50,10 +56,6 @@
           <h3>Material settings</h3>
           <div class="settings" id="settings"></div>
           <p class="hint">Use the tile’s measured dimensions. Set grout gap to zero for a more conservative count.</p>
-        </div>
-        <div class="actions secondary">
-          <button class="action" type="button" data-sample>Load example</button>
-          <button class="action" type="button" data-clear>Clear project</button>
         </div>
       </section>
       <section class="panel result" aria-labelledby="result-heading">
@@ -65,14 +67,14 @@
             <dl id="totals"></dl>
           </div>
         </div>
-        <figure class="blueprint">
-          <div id="diagram" aria-hidden="true"></div>
-          <figcaption id="diagram-caption">Section sketches, shown individually</figcaption>
-        </figure>
-        <div class="breakdown" id="breakdown" hidden>
-          <h3>Section breakdown</h3>
+        <details class="breakdown" id="breakdown" hidden>
+          <summary>Section breakdown</summary>
           <dl id="section-totals"></dl>
-        </div>
+          <figure class="blueprint">
+            <div id="diagram" aria-hidden="true"></div>
+            <figcaption id="diagram-caption">Section sketches, shown individually</figcaption>
+          </figure>
+        </details>
         <div class="result-actions">
           <div class="actions">
             <button class="action" type="button" data-output="copy" disabled>Copy estimate</button>

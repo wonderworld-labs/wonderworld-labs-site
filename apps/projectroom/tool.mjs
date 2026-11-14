@@ -10,15 +10,17 @@ const errorMessage = document.querySelector('#estimate-error');
 const resultOutput = document.querySelector('#result-output');
 const details = document.querySelector('#breakdown');
 const announcer = document.querySelector('#notice');
+const quickResult = document.querySelector('#quick-result');
+const projectStatus = document.querySelector('#project-status');
+const quickHandoff = document.querySelector('[data-handoff]');
 const actionButtons = [...document.querySelectorAll('[data-output]')];
 const format = new Intl.NumberFormat('en', { maximumFractionDigits: 3 });
 const money = new Intl.NumberFormat('en', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
 const depthKey = mode === 'concrete' ? 'concreteDepth' : 'gravelDepth';
 const defaultDepth = (mode === 'concrete' ? 4 : 3) * INCH;
-const preset = () => [
-  { shape: 'rectangle', a: 12 * FOOT, b: 10 * FOOT, subtract: false },
-];
+const newSection = () => ({ shape: 'rectangle', a: null, b: null, subtract: false });
+const exampleSection = () => ({ ...newSection(), a: 12 * FOOT, b: 10 * FOOT });
 const sectionDepth = section => Object.hasOwn(section, depthKey)
   ? section[depthKey]
   : section.depth ?? defaultDepth;
@@ -48,7 +50,7 @@ const units = {
   metric: { large: ['m', 1], small: ['mm', 0.001], area: ['m²', 1], volume: ['m³', 1],
     bag: ['L', 0.001], density: ['kg/m³', 1], weight: ['t', 1000], bulkPrice: ['per m³', 1] },
 };
-let model = { unit: 'us', sections: preset(), settings: {} };
+let model = { unit: 'us', sections: [newSection()], settings: {}, example: false };
 try {
   const saved = JSON.parse(localStorage.getItem(storageKey));
   if (saved && Object.hasOwn(units, saved.unit) && Array.isArray(saved.sections)
@@ -56,7 +58,7 @@ try {
       && saved.sections.every(row => row && Object.hasOwn(shapes, row.shape)
         && ['a', 'b', 'depth', 'concreteDepth', 'gravelDepth'].every(key =>
           row[key] == null || Number.isFinite(row[key])))) {
-    model = { unit: saved.unit, sections: saved.sections, settings: saved.settings ?? {} };
+    model = { unit: saved.unit, sections: saved.sections, settings: saved.settings ?? {}, example: saved.example === true };
   }
 } catch {}
 let settings = { ...defaults(), ...model.settings[mode] };
@@ -91,16 +93,22 @@ function renderInputs() {
   document.querySelector('#units').value = model.unit;
   sectionList.innerHTML = model.sections.map((section, index) => {
     const names = shapes[section.shape];
-    return '<fieldset class="section" data-section="' + index + '"><legend>' + (section.subtract ? 'Cutout ' : 'Section ') +
-      (index + 1) + '</legend><div class="section-top"><label class="field"><span>Shape</span><select data-shape>' +
-      options({ rectangle: 'Rectangle', triangle: 'Triangle', circle: 'Circle' }, section.shape) +
-      '</select></label><label class="field"><span>Count as</span><select data-operation>' +
-      options({ add: 'Include', subtract: 'Subtract' }, section.subtract ? 'subtract' : 'add') +
-      '</select></label><button type="button" class="remove" data-remove aria-label="Remove section ' + (index + 1) + '"' +
-      (model.sections.length === 1 ? ' disabled' : '') + '>×</button></div><div class="measurements">' +
+    const multiple = model.sections.length > 1;
+    return '<fieldset class="section" data-section="' + index + '"><legend>' +
+      (multiple ? (section.subtract ? 'Cutout ' : 'Section ') + (index + 1) : 'Room or area') +
+      '</legend><div class="measurements">' +
       numericField(names[0], 'a', 'large', section.a) +
       (names[1] ? numericField(names[1], 'b', 'large', section.b) : '') +
-      (isVolume ? numericField('Depth', depthKey, 'small', sectionDepth(section)) : '') + '</div></fieldset>';
+      (isVolume ? numericField('Depth', depthKey, 'small', sectionDepth(section)) : '') +
+      '</div><div class="section-top"><label class="field"><span>Shape</span><select data-shape>' +
+      options({ rectangle: 'Rectangle', triangle: 'Triangle', circle: 'Circle' }, section.shape) +
+      '</select></label>' + (multiple || section.subtract
+        ? '<label class="field"><span>Count as</span><select data-operation>' +
+          options({ add: 'Include', subtract: 'Subtract' }, section.subtract ? 'subtract' : 'add') + '</select></label>'
+        : '') + (multiple
+        ? '<button type="button" class="remove" data-remove aria-label="Remove section ' +
+          (index + 1) + '">&times;</button>'
+        : '') + '</div></fieldset>';
   }).join('');
   settingsPanel.innerHTML = settingNames.map(key => numericField(...[fields[key][0], key, fields[key][1], settings[key]])).join('');
   document.querySelectorAll('[data-add]').forEach(button => { button.disabled = model.sections.length >= 25; });
@@ -135,7 +143,7 @@ function fillList(list, pairs) {
 }
 function update() {
   save();
-  draw();
+  projectStatus.textContent = model.example ? 'Example measurements' : '';
   let result;
   try {
     for (const key of ['bagPrice', 'bulkPrice']) {
@@ -144,16 +152,21 @@ function update() {
     const sections = isVolume ? model.sections.map(section => ({ ...section, depth: sectionDepth(section) })) : model.sections;
     result = estimate(mode, sections, settings);
   } catch (error) {
-    errorMessage.textContent = error.message;
+    const empty = model.sections.length === 1 && model.sections[0].a == null && model.sections[0].b == null;
+    errorMessage.textContent = empty ? 'Enter your measurements to see an estimate.' : error.message;
+    quickResult.textContent = errorMessage.textContent;
     errorMessage.hidden = false;
     resultOutput.hidden = true;
     details.hidden = true;
+    if (quickHandoff) quickHandoff.hidden = true;
     actionButtons.forEach(button => { button.disabled = true; });
     return;
   }
   errorMessage.hidden = true;
   resultOutput.hidden = false;
-  details.hidden = false;
+  if (quickHandoff) quickHandoff.hidden = false;
+  details.hidden = result.rows.length === 1;
+  if (!details.hidden) draw();
   actionButtons.forEach(button => { button.disabled = false; });
 
   let main = ['Net area', quantity(result.area, 'area')];
@@ -161,9 +174,9 @@ function update() {
   if (mode === 'area' || mode === 'tile') {
     const alternate = model.unit === 'us' ? 'metric' : 'us';
     const [label, factor] = units[alternate].area;
-    rows.push(['Net area', quantity(result.area, 'area')],
-      ['Net area in ' + label, format.format(result.area / factor) + ' ' + label],
-      ['Area with allowance', quantity(result.areaToBuy, 'area')]);
+    if (mode === 'tile') rows.push(['Net area', quantity(result.area, 'area')]);
+    rows.push(['Equivalent area', format.format(result.area / factor) + ' ' + label]);
+    if (settings.waste > 0) rows.push(['Area with allowance', quantity(result.areaToBuy, 'area')]);
   }
   if (mode === 'tile') {
     main = ['Boxes to buy', format.format(result.boxes) + (result.boxes === 1 ? ' box' : ' boxes')];
@@ -179,6 +192,7 @@ function update() {
   }
   document.querySelector('#result-label').textContent = main[0];
   document.querySelector('#total').textContent = main[1];
+  quickResult.textContent = main[0] + ': ' + main[1];
   fillList(document.querySelector('#totals'), rows);
   const parts = result.rows.map((row, index) => [
     (model.sections[index].subtract ? 'Cutout ' : 'Section ') + (index + 1),
@@ -218,7 +232,7 @@ root.addEventListener('click', async event => {
   if (!button) return;
   if (button.hasAttribute('data-add')) {
     const subtract = button.dataset.add === 'cutout';
-    const section = { shape: 'rectangle', a: null, b: null, subtract };
+    const section = { ...newSection(), subtract };
     if (isVolume) section[depthKey] = sectionDepth(model.sections[0]) ?? defaultDepth;
     model.sections.push(section);
     renderInputs();
@@ -233,12 +247,13 @@ root.addEventListener('click', async event => {
     update();
   }
   if (button.hasAttribute('data-sample') || button.hasAttribute('data-clear')) {
-    model.sections = preset();
-    if (button.hasAttribute('data-clear')) Object.assign(model.sections[0], { a: null, b: null });
+    model.example = button.hasAttribute('data-sample');
+    model.sections = [model.example ? exampleSection() : newSection()];
     settings = defaults();
     renderInputs();
     update();
-    announcer.textContent = button.hasAttribute('data-clear') ? 'Measurements cleared.' : 'Example loaded.';
+    sectionList.querySelector('input').focus();
+    announcer.textContent = model.example ? 'Example loaded.' : 'Measurements cleared.';
   }
   if (button.dataset.output === 'print') window.print();
   if (button.dataset.output === 'copy') {
