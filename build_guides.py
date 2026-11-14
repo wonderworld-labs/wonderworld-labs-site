@@ -129,7 +129,7 @@ APP_GAMES = {
     },
     'asteroid-launcher': {
         'url': 'https://duhgames.com/asteroid-launcher/',
-        'play_text': 'Play Asteroid Launcher on Duh Games ↗',
+        'play_text': 'Play Asteroid Launcher on Duh! Games ↗',
         'heading': 'Play Asteroid Launcher in your browser',
         'lead': 'Simulate asteroid impacts, crater sizes, shock waves, and thermal radiation directly in your browser.',
         'screenshot': '/assets/gameplay-asteroid-launcher.png',
@@ -138,7 +138,7 @@ APP_GAMES = {
     },
     'element-lab': {
         'url': 'https://duhgames.com/element-lab/',
-        'play_text': 'Play Infinite Craft on Duh Games ↗',
+        'play_text': 'Play Infinite Craft on Duh! Games ↗',
         'heading': 'Play Infinite Craft in your browser',
         'lead': 'Combine basic elements to discover thousands of items and recipes in your browser.',
         'screenshot': '/assets/gameplay-element-lab.png',
@@ -147,7 +147,7 @@ APP_GAMES = {
     },
     'password-panic': {
         'url': 'https://duhgames.com/password-panic/',
-        'play_text': 'Play The Password Game on Duh Games ↗',
+        'play_text': 'Play The Password Game on Duh! Games ↗',
         'heading': 'Play The Password Game in your browser',
         'lead': 'Navigate escalating and conflicting password rules directly in your browser.',
         'screenshot': '/assets/gameplay-password-panic.png',
@@ -156,7 +156,7 @@ APP_GAMES = {
     },
     'perfect-circle': {
         'url': 'https://duhgames.com/perfect-circle/',
-        'play_text': 'Play Draw a Perfect Circle on Duh Games ↗',
+        'play_text': 'Play Draw a Perfect Circle on Duh! Games ↗',
         'heading': 'Play Draw a Perfect Circle in your browser',
         'lead': 'Test your drawing precision and score your circle accuracy instantly in your browser.',
         'screenshot': '/assets/gameplay-perfect-circle.png',
@@ -165,7 +165,7 @@ APP_GAMES = {
     },
     'fortune-frenzy': {
         'url': 'https://duhgames.com/fortune-frenzy/',
-        'play_text': "Play Spend Bill Gates' Money on Duh Games ↗",
+        'play_text': "Play Spend Bill Gates' Money on Duh! Games ↗",
         'heading': "Play Spend Bill Gates' Money in your browser",
         'lead': 'Explore spending a hundred-billion-dollar fortune on real-world items and luxury assets.',
         'screenshot': '/assets/gameplay-fortune-frenzy.png',
@@ -174,7 +174,7 @@ APP_GAMES = {
     },
     'trolley-problems': {
         'url': 'https://duhgames.com/trolley-problems/',
-        'play_text': 'Play Absurd Trolley Problems on Duh Games ↗',
+        'play_text': 'Play Absurd Trolley Problems on Duh! Games ↗',
         'heading': 'Play Absurd Trolley Problems in your browser',
         'lead': 'Delve into moral quandaries and hilarious hypothetical scenarios in your browser.',
         'screenshot': '/assets/gameplay-trolley-problems.png',
@@ -267,7 +267,7 @@ for g in guides:
         body = body.replace('Play free directly in your web browser with no download or setup required.', esc(game['notice']))
         body = body.replace('Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.', 'Use the linked browser app to follow the steps in this guide.')
     if catalog_game:
-        body = body.replace('Play free directly in your web browser with no download or setup required.', 'Open the game on Duh Games to try the exercises in this guide.')
+        body = body.replace('Play free directly in your web browser with no download or setup required.', 'Open the game on Duh! Games to try the exercises in this guide.')
         body = body.replace('Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.', '')
     parent_type = 'VideoGame' if is_game or catalog_game else ('WebApplication' if browser_resource else 'SoftwareApplication')
     parent_url = game['url'] if catalog_game else BASE + parent_path
