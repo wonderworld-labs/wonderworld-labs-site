@@ -1432,5 +1432,155 @@
         "HintHunt offers a new puzzle every midnight local time, with solved records saved in your browser history."
       ]
     ]
+  },
+  {
+    "date": "2026-11-14",
+    "app": "craftlane",
+    "name": "Craftlane",
+    "slug": "make-a-video-thumbnail-in-craftlane",
+    "title": "Make a Video Thumbnail in Craftlane",
+    "description": "Create a video thumbnail in the Craftlane browser editor. Pick a clear image, check the text at a small size, and export a PNG.",
+    "answer": "Open Craftlane and choose the thumbnail maker. Start with one clear image, add a short headline if it helps explain the video, then export a PNG. View the export at thumbnail size before uploading it.",
+    "sections": [
+      {
+        "heading": "Choose an image that shows what the video delivers",
+        "paragraphs": [
+          "Start with a frame or image you have permission to use. For a tutorial, show the result someone is trying to make. If you are making a thumbnail for a video about captions, show a frame with a readable caption and room for a short headline.",
+          "Choose your destination before placing text. Find its current thumbnail requirements and make room around important details so a crop will leave them visible."
+        ]
+      },
+      {
+        "heading": "Build the thumbnail in Craftlane",
+        "steps": [
+          "Open the thumbnail maker and select the image you want to use.",
+          "Place the main subject where it stays easy to recognize at a glance.",
+          "Add a few words only if they contribute something the image cannot show. Give the letters a clear background and keep them away from the edges.",
+          "Export the PNG and open it separately. Check the crop, the spelling and the size before uploading."
+        ]
+      },
+      {
+        "heading": "Check the export at the size a viewer will see",
+        "paragraphs": [
+          "Shrink the finished image until it is about the width of a small video card. If you have to zoom in to read the text, shorten it or increase the type. If the picture is hard to recognize, try a closer crop or an image with fewer competing details.",
+          "Compare it with the video title. The title can explain the task while the image shows the result. Keep the final image and your original file so you can make another version later."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Can I export the thumbnail as a PNG?",
+        "Yes. Craftlane supports PNG for thumbnail exports. Open the exported file to check how it will appear."
+      ],
+      [
+        "What if my thumbnail looks crowded on a phone?",
+        "Start by removing text that repeats the title. Then check the remaining words and the main image at small size."
+      ],
+      [
+        "Where does Craftlane process my selected image?",
+        "Craftlane processes selected media on your device. Its privacy page explains the separate website and advertising practices."
+      ]
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "app": "signal-and-scale",
+    "name": "Signal & Scale",
+    "slug": "read-visual-data-stories-in-signal-and-scale",
+    "title": "How to Read a Data Story in Signal & Scale",
+    "description": "Read a Signal & Scale data story by checking chart labels, date ranges, units and references before comparing values.",
+    "answer": "Open a Signal & Scale story and pick one chart. Read what the chart measures, check the unit and date, then follow its references. Use those details to decide whether two values can be compared.",
+    "sections": [
+      {
+        "heading": "Check the labels before comparing the bars or lines",
+        "steps": [
+          "Read the chart title and identify the population, place or group it covers.",
+          "Check the unit. A total, a percentage and a rate per person answer different questions.",
+          "Check the dates. Note whether a chart shows a single year or a period and whether both values come from the same time.",
+          "Open the reference supplied with the story. Look for the definitions or notes that explain the figures."
+        ]
+      },
+      {
+        "heading": "Use one comparison to test your reading",
+        "paragraphs": [
+          "Suppose an aging-population chart shows the share of residents above a specified age. A place with a larger share can still have fewer people in that age group if its total population is smaller. Read the age cutoff, the denominator and the year before deciding what the comparison says.",
+          "Write your interpretation in a sentence naming the metric, the places and the date. If the chart leaves one of these unclear, check the source before repeating the comparison."
+        ]
+      },
+      {
+        "heading": "Keep the chart date with the claim",
+        "paragraphs": [
+          "Signal & Scale stories are dated snapshots. Save the story link and its date with any notes you take. If you need a newer figure, look for it in the linked source and check whether the measurement is still defined the same way.",
+          "If two figures differ, check for a revised estimate, a different reporting period or a different group before assuming either figure is wrong."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Where can I check the source for a chart?",
+        "Open its story and look for the references and dates supplied alongside it."
+      ],
+      [
+        "Is a bigger proportion the same as a bigger total?",
+        "The total also depends on the size of the group. Compare proportions with proportions, and check the denominator if you need counts."
+      ],
+      [
+        "Are the charts a live feed?",
+        "The stories are dated snapshots. Check the date and references before using a figure."
+      ]
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "app": "sarkarijob",
+    "name": "Sarkarijob Search",
+    "slug": "shortlist-government-job-notices-in-sarkarijob",
+    "title": "Shortlist Government Job Notices in Sarkarijob Search",
+    "description": "Use Sarkarijob Search to narrow government recruitment notices and organize a shortlist by post, official reference and verified deadline.",
+    "answer": "Search Sarkarijob by post name, recruiting body or advertisement number. Use the available filters to narrow the results, then record the official reference, the relevant post and the confirmed deadline for each notice you want to keep.",
+    "sections": [
+      {
+        "heading": "Start with one search and narrow it",
+        "steps": [
+          "Enter the name of a role, recruiting body or an advertisement number you already know.",
+          "Use the available filters to narrow the results. If you find nothing, remove one filter and try a shorter search term.",
+          "Open a promising listing and use its source link to check the recruiting organization and advertisement reference.",
+          "Keep a shortlist with the reference number, exact post, source link and closing date shown by the recruiting organization."
+        ]
+      },
+      {
+        "heading": "Keep the individual post visible in your shortlist",
+        "paragraphs": [
+          "One advertisement can cover multiple posts. Record the post name alongside the advertisement number so you can return to the right section of the official document. If two listings share a reference, compare the post details and source before treating them as separate notices.",
+          "If a date is absent or unclear, mark it as unconfirmed in your shortlist. Review the issuing organization’s notice and amendments before making plans around a deadline."
+        ]
+      },
+      {
+        "heading": "Reopen the source when you are ready to apply",
+        "paragraphs": [
+          "Confirm the current application instructions and requirements for the specific post. Keep the official notification and any correction together so you know which details changed.",
+          "Use the recruiting organization’s application instructions to take the next step. Sarkarijob Search helps you find and organize notices. The recruiting organization decides eligibility and selection."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What should I search for if I know the advertisement number?",
+        "Start with the number and the recruiting organization. Compare them with the official notice linked from the listing."
+      ],
+      [
+        "What if the listing is missing a closing date?",
+        "Treat the date as unconfirmed until you find it in the official notice or an amendment from the recruiting organization."
+      ],
+      [
+        "Where do I apply?",
+        "Follow the instructions and application link provided by the recruiting organization."
+      ]
+    ],
+    "sources": [
+      {
+        "title": "Sarkarijob guide to finding and verifying vacancies",
+        "url": "https://sarkarijob.work/guides/sarkari-naukri/"
+      }
+    ]
   }
 ]

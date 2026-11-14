@@ -10,6 +10,33 @@ guides = json.loads((ROOT/'content/guides.json').read_text(encoding='utf-8'))
 esc = html.escape
 
 APP_GAMES = {
+    'craftlane': {
+        'url': 'https://craftlane.wonderworldlabs.com/',
+        'play_text': 'Open Craftlane',
+        'screenshot': '/assets/art-craftlane.svg',
+        'alt': 'Craftlane studio illustration',
+        'badge': 'Browser workspace',
+        'browser_resource': True,
+        'notice': 'Open the thumbnail tool to create and export a PNG.',
+    },
+    'signal-and-scale': {
+        'url': 'https://signal-and-scale.wonderworldlabs.com/',
+        'play_text': 'Read Signal & Scale',
+        'screenshot': '/assets/art-signal-and-scale.svg',
+        'alt': 'Signal & Scale data stories illustration',
+        'badge': 'Visual data stories',
+        'browser_resource': True,
+        'notice': 'Choose a visual story and check its chart labels, dates and references.',
+    },
+    'sarkarijob': {
+        'url': 'https://sarkarijob.work/',
+        'play_text': 'Open Sarkarijob Search',
+        'screenshot': '/assets/art-sarkarijob.svg',
+        'alt': 'Sarkarijob Search illustration',
+        'badge': 'Recruitment discovery',
+        'browser_resource': True,
+        'notice': 'Search recruitment notices and verify requirements with the recruiting organization.',
+    },
     'arrow-unleashed': {
         'url': 'https://arrow-unleashed.wonderworldlabs.com/',
         'play_text': 'Play Arrow unleashed in your browser ↗',
@@ -131,6 +158,8 @@ for g in guides:
     path='/guides/'+g['slug']+'/'
     game = APP_GAMES.get(g['app'], APP_GAMES['arrow-unleashed'])
     badge = game.get('badge', 'Android app coming soon')
+    browser_resource = game.get('browser_resource', False)
+    platform = 'Browser app' if browser_resource else 'Play in browser'
     is_game = (ROOT / 'games' / g['app']).exists()
     parent_path = f'/games/{g["app"]}/' if is_game else f'/apps/{g["app"]}/'
     play_anchor = f'/games/{g["app"]}/#play' if is_game else f'/apps/{g["app"]}/#download'
@@ -139,7 +168,7 @@ for g in guides:
     body = f'<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{parent_path}">{esc(g["name"])}</a> / <a href="/guides/">Guides</a></nav><article>'
     body += f'<div class="guide-hero-split">'
     body += f'  <div class="guide-hero-left">'
-    body += f'    <p class="eyebrow">{esc(g["name"])} guide · Play in browser</p>'
+    body += f'    <p class="eyebrow">{esc(g["name"])} guide · {platform}</p>'
     body += f'    <h1>{esc(g["title"])}</h1>'
     body += f'    <p class="meta">By Wonderworld Labs · Published <time datetime="{g["date"]}">{g["date"]}</time></p>'
     body += f'    <p class="lead">{esc(g["answer"])}</p>'
@@ -150,11 +179,15 @@ for g in guides:
     body += f'  </div>'
     body += f'  <div class="guide-hero-right">'
     body += f'    <div class="screenshot-showcase">'
-    body += f'      <a href="{esc(game["url"],quote=True)}" class="phone-mockup" title="Play {esc(g["name"])} in browser">'
+    link_class = 'art' if browser_resource else 'phone-mockup'
+    link_title = esc(game['play_text'], quote=True) if browser_resource else f'Play {esc(g["name"])} in browser'
+    body += f'      <a href="{esc(game["url"],quote=True)}" class="{link_class}" title="{link_title}">'
     body += f'        <img src="{esc(game["screenshot"],quote=True)}" alt="{esc(game["alt"],quote=True)}" width="280" height="560">'
-    body += f'        <span class="play-overlay-badge">▶ Play in Browser</span>'
+    if not browser_resource:
+        body += f'        <span class="play-overlay-badge">▶ Play in Browser</span>'
     body += f'      </a>'
-    body += f'      <span class="mockup-caption">Playable right now in your browser</span>'
+    caption = 'Original illustration' if browser_resource else 'Playable right now in your browser'
+    body += f'      <span class="mockup-caption">{caption}</span>'
     body += f'    </div>'
     body += f'  </div>'
     body += f'</div>'
@@ -173,9 +206,14 @@ for g in guides:
     if related:
         body += '<section class="faq"><h2>Related guides</h2><ul>'+''.join(guide_link(item) for item in related)+'</ul></section>'
     body += f'<section class="notice"><h2>Explore {esc(g["name"])}</h2><p>Play free directly in your web browser with no download or setup required.</p><div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:18px 0"><a class="button" href="{esc(game["url"],quote=True)}">{esc(game["play_text"])}</a><span class="badge-coming-soon">{esc(badge)}</span></div><p><a href="{play_anchor}">Explore {esc(g["name"])} details ↗</a></p><p>Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.</p></section></article>'
-    parent_type = 'VideoGame' if is_game else 'SoftwareApplication'
+    if browser_resource:
+        body = body.replace('Play free directly in your web browser with no download or setup required.', esc(game['notice']))
+        body = body.replace('Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.', 'Use the linked browser app to follow the steps in this guide.')
+    parent_type = 'VideoGame' if is_game else ('WebApplication' if browser_resource else 'SoftwareApplication')
     parent_url = BASE + parent_path
     graph = [{'@type':'Article','@id':BASE+path+'#article','headline':g['title'],'description':g['description'],'datePublished':g['date'],'dateModified':g.get('updated',g['date']),'mainEntityOfPage':BASE+path,'author':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'publisher':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'about':{'@type':parent_type,'name':g['name'],'url':parent_url,'operatingSystem':'Web browser, Android'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Guides','item':BASE+'/guides/'},{'@type':'ListItem','position':2,'name':g['title'],'item':BASE+path}]}]
+    if browser_resource:
+        graph[0]['about']['operatingSystem'] = 'Web browser'
     page(path,g['title'],g['description'],body,graph)
 
 # Keep every guide discoverable from its parent app or game without copying article bodies.
