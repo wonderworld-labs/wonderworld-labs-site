@@ -70,12 +70,12 @@ for guide in json.loads((ROOT / 'content/guides.json').read_text(encoding='utf-8
     is_game = (ROOT / 'games' / guide['app']).exists()
     parent_path = (ROOT / 'games' / guide['app'] / 'index.html') if is_game else (ROOT / 'apps' / guide['app'] / 'index.html')
     catalog_game = guide.get('catalog_game', False)
-    parent = pages[ROOT / 'games' / 'index.html' if catalog_game else parent_path]
+    parent = pages[ROOT / 'guides' / 'index.html' if catalog_game else parent_path]
     assert '/guides/' + guide['slug'] + '/' in parent.links, ('Guide missing from parent home', guide['slug'])
     article = pages[ROOT / 'guides' / guide['slug'] / 'index.html']
     target_link = ('/games/' + guide['app'] + '/#play') if is_game else ('/apps/' + guide['app'] + '/#download')
     if catalog_game:
-        target_link = '/games/#' + guide['app']
+        target_link = '/guides/#game-' + guide['app']
         assert 'https://duhgames.com/' + guide['app'] + '/' in article.links, guide['slug']
     assert target_link in article.links, guide['slug']
 

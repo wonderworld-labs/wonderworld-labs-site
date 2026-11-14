@@ -169,11 +169,11 @@ for g in guides:
     browser_resource = game.get('browser_resource', False)
     platform = 'Browser app' if browser_resource else 'Play in browser'
     is_game = (ROOT / 'games' / g['app']).exists()
-    parent_path = '/games/' if catalog_game else (f'/games/{g["app"]}/' if is_game else f'/apps/{g["app"]}/')
-    play_anchor = f'/games/#{g["app"]}' if catalog_game else (f'/games/{g["app"]}/#play' if is_game else f'/apps/{g["app"]}/#download')
+    parent_path = '/guides/#games' if catalog_game else (f'/games/{g["app"]}/' if is_game else f'/apps/{g["app"]}/')
+    play_anchor = f'/guides/#game-{g["app"]}' if catalog_game else (f'/games/{g["app"]}/#play' if is_game else f'/apps/{g["app"]}/#download')
 
     # Top Region: Left half has blog heading, metadata & text; Right half has game screenshot mockup & direct play link!
-    parent_label = 'Games' if catalog_game else g['name']
+    parent_label = 'Game guides' if catalog_game else g['name']
     body = f'<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{parent_path}">{esc(parent_label)}</a> / <a href="/guides/">Guides</a></nav><article>'
     hero_class = 'hero' if catalog_game else 'guide-hero-split'
     body += f'<div class="{hero_class}">'
@@ -231,11 +231,9 @@ for g in guides:
     page(path,g['title'],g['description'],body,graph)
 
 # Keep every guide discoverable from its parent app or game without copying article bodies.
-catalog_groups = []
 for app in sorted({g['app'] for g in guides}):
     group=[g for g in guides if g['app']==app]
     if group[0].get('catalog_game'):
-        catalog_groups.append(group)
         continue
     is_game = (ROOT / 'games' / app).exists()
     target = (ROOT / 'games' / app / 'index.html') if is_game else (ROOT / 'apps' / app / 'index.html')
@@ -253,22 +251,6 @@ for app in sorted({g['app'] for g in guides}):
             content = content.replace('<section class="download"', block + '<section class="download"')
     target.write_text(content, encoding='utf-8')
 
-if catalog_groups:
-    catalog = ROOT / 'games' / 'index.html'
-    content = catalog.read_text(encoding='utf-8')
-    resources = '<section id="duh-games-guides" class="faq"><h2>More games on Duh Games</h2>'
-    for group in catalog_groups:
-        app = group[0]['app']
-        name = esc(group[0]['name'])
-        resources += f'<article id="{app}"><h3>{name}</h3><a href="https://duhgames.com/{app}/">Play {name}</a><ul>'
-        resources += ''.join(guide_link(guide) for guide in group) + '</ul></article>'
-    block = '<!-- catalog-guides:start -->' + resources + '</section><!-- catalog-guides:end -->'
-    if '<!-- catalog-guides:start -->' in content:
-        content = re.sub(r'<!-- catalog-guides:start -->.*?<!-- catalog-guides:end -->', lambda m: block, content, flags=re.S)
-    else:
-        content = content.replace('</main>', block + '</main>', 1)
-    catalog.write_text(content, encoding='utf-8')
-
 # Render guides hub index
 body = '<div class="hero"><p class="eyebrow">Practical help</p><h1>App &amp; game guides</h1><p class="lead">Learn how to use our apps, or find tips for your next game.</p></div>'
 body += '<nav class="guide-hero-actions" aria-label="Guide sections"><a class="button" href="#apps">App guides</a><a class="button" href="#games">Game guides</a></nav>'
@@ -279,9 +261,10 @@ for app in sorted({g['app'] for g in guides}):
     # These two games also have Android landing pages under /apps/.
     catalog_game = group[0].get('catalog_game', False)
     is_game = has_game_landing or catalog_game or app in {'arrow-unleashed', 'block-blasting'}
-    landing = f'/games/#{app}' if catalog_game else (f'/games/{app}/' if has_game_landing else f'/apps/{app}/')
+    landing = f'https://duhgames.com/{app}/' if catalog_game else (f'/games/{app}/' if has_game_landing else f'/apps/{app}/')
+    anchor = f' id="game-{app}"' if catalog_game else ''
     groups['games' if is_game else 'apps'].append(
-        f'<article><h3><a href="{landing}">{esc(group[0]["name"])}</a></h3>'
+        f'<article{anchor}><h3><a href="{landing}">{esc(group[0]["name"])}</a></h3>'
         + '<ul>' + ''.join(guide_link(guide) for guide in group) + '</ul></article>'
     )
 for category, title in [('apps', 'App guides'), ('games', 'Game guides')]:
