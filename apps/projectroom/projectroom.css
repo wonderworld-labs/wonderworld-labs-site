@@ -132,6 +132,11 @@ select {padding:6px 8px}
 .section-top {margin-top:10px}
 .section-top .field {max-width:180px}
 .measurements {margin-top:0}
+.dimension {min-width:0;font-size:.84rem;font-weight:700}
+.dimension > div {display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px}
+.dimension .field > span:first-child {display:contents}
+.dimension .input-wrap input {padding-inline:6px 2px}
+.dimension .input-wrap > span:not(.sr-only) {padding-right:5px}
 #quick-result {display:none}
 .assumptions summary,.breakdown summary {cursor:pointer;font-weight:700}
 .assumptions[open] summary,.breakdown[open] summary {margin-bottom:10px}

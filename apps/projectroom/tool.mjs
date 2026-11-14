@@ -87,6 +87,16 @@ function numericField(label, key, unit, value, minimum = 0) {
     displayInput(value, unit) + '"><span aria-hidden="true">' + suffix + '</span><span class="sr-only"> ' +
     suffix + '</span></span></label>';
 }
+function dimensionField(label, key, value) {
+  if (model.unit !== 'us') return numericField(label, key, 'large', value);
+  const totalInches = value == null ? null : Number((value / INCH).toPrecision(12));
+  const feet = totalInches == null ? null : Math.floor(totalInches / 12);
+  const inches = totalInches == null ? null : Number((totalInches - feet * 12).toPrecision(10));
+  return '<div class="dimension"><span>' + label + '</span><div>' +
+    numericField('<span class="sr-only">' + label + ' in feet</span>', key, 'large', feet == null ? null : feet * FOOT) +
+    numericField('<span class="sr-only">' + label + ' in inches</span>', key, 'small', inches == null ? null : inches * INCH) +
+    '</div></div>';
+}
 function options(list, selected) {
   return Object.entries(list).map(([key, label]) =>
     '<option value="' + key + '"' + (key === selected ? ' selected' : '') + '>' + label + '</option>').join('');
@@ -99,8 +109,8 @@ function renderInputs() {
     return '<fieldset class="section" data-section="' + index + '"><legend>' +
       (multiple ? (section.subtract ? 'Cutout ' : 'Section ') + (index + 1) : 'Room or area') +
       '</legend><div class="measurements">' +
-      numericField(names[0], 'a', 'large', section.a) +
-      (names[1] ? numericField(names[1], 'b', 'large', section.b) : '') +
+      dimensionField(names[0], 'a', section.a) +
+      (names[1] ? dimensionField(names[1], 'b', section.b) : '') +
       (isVolume ? numericField('Depth', depthKey, 'small', sectionDepth(section)) : '') +
       '</div><div class="section-top"><label class="field"><span>Shape</span><select data-shape>' +
       options({ rectangle: 'Rectangle', triangle: 'Triangle', circle: 'Circle' }, section.shape) +
@@ -252,7 +262,13 @@ root.addEventListener('input', event => {
   if (!input.matches('input[data-key]')) return;
   const group = input.closest('[data-section]');
   const target = group ? model.sections[Number(group.dataset.section)] : settings;
-  target[input.dataset.key] = valueFrom(input);
+  const dimension = input.closest('.dimension');
+  const inputs = dimension ? [...dimension.querySelectorAll('input')] : [input];
+  const invalid = inputs.some(field => field.validity.badInput || field.validity.rangeUnderflow);
+  const values = inputs.map(valueFrom);
+  target[input.dataset.key] = dimension
+    ? (invalid || values.every(value => value == null) ? null : values.reduce((sum, value) => sum + (value ?? 0), 0))
+    : values[0];
   input.setAttribute('aria-invalid', String(input.validity.badInput || input.validity.rangeUnderflow));
   update();
 });
