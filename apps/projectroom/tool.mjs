@@ -274,3 +274,7 @@ document.querySelector('#copy-fallback').addEventListener('blur', event => { eve
 
 renderInputs();
 update();
+
+window.addEventListener('pageshow', event => {
+  if (event.persisted) window.location.reload();
+});
