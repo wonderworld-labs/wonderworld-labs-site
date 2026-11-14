@@ -126,6 +126,60 @@ APP_GAMES = {
         'screenshot': '/assets/wonderworld-icon-512.png',
         'alt': 'Photo and File Vault',
         'badge': 'Android app coming soon'
+    },
+    'asteroid-launcher': {
+        'url': 'https://duhgames.com/asteroid-launcher/',
+        'play_text': 'Play Asteroid Launcher on Duh Games ↗',
+        'heading': 'Play Asteroid Launcher in your browser',
+        'lead': 'Simulate asteroid impacts, crater sizes, shock waves, and thermal radiation directly in your browser.',
+        'screenshot': '/assets/gameplay-asteroid-launcher.png',
+        'alt': 'Asteroid Launcher mobile impact simulator gameplay in action',
+        'badge': 'Browser game'
+    },
+    'element-lab': {
+        'url': 'https://duhgames.com/element-lab/',
+        'play_text': 'Play Infinite Craft on Duh Games ↗',
+        'heading': 'Play Infinite Craft in your browser',
+        'lead': 'Combine basic elements to discover thousands of items and recipes in your browser.',
+        'screenshot': '/assets/gameplay-element-lab.png',
+        'alt': 'Infinite Craft mobile recipe discovery gameplay in action',
+        'badge': 'Browser game'
+    },
+    'password-panic': {
+        'url': 'https://duhgames.com/password-panic/',
+        'play_text': 'Play The Password Game on Duh Games ↗',
+        'heading': 'Play The Password Game in your browser',
+        'lead': 'Navigate escalating and conflicting password rules directly in your browser.',
+        'screenshot': '/assets/gameplay-password-panic.png',
+        'alt': 'The Password Game mobile rule checklist gameplay in action',
+        'badge': 'Browser game'
+    },
+    'perfect-circle': {
+        'url': 'https://duhgames.com/perfect-circle/',
+        'play_text': 'Play Draw a Perfect Circle on Duh Games ↗',
+        'heading': 'Play Draw a Perfect Circle in your browser',
+        'lead': 'Test your drawing precision and score your circle accuracy instantly in your browser.',
+        'screenshot': '/assets/gameplay-perfect-circle.png',
+        'alt': 'Draw a Perfect Circle precision score mobile gameplay',
+        'badge': 'Browser game'
+    },
+    'fortune-frenzy': {
+        'url': 'https://duhgames.com/fortune-frenzy/',
+        'play_text': "Play Spend Bill Gates' Money on Duh Games ↗",
+        'heading': "Play Spend Bill Gates' Money in your browser",
+        'lead': 'Explore spending a hundred-billion-dollar fortune on real-world items and luxury assets.',
+        'screenshot': '/assets/gameplay-fortune-frenzy.png',
+        'alt': "Spend Bill Gates' Money receipt mobile gameplay in action",
+        'badge': 'Browser game'
+    },
+    'trolley-problems': {
+        'url': 'https://duhgames.com/trolley-problems/',
+        'play_text': 'Play Absurd Trolley Problems on Duh Games ↗',
+        'heading': 'Play Absurd Trolley Problems in your browser',
+        'lead': 'Delve into moral quandaries and hilarious hypothetical scenarios in your browser.',
+        'screenshot': '/assets/gameplay-trolley-problems.png',
+        'alt': 'Absurd Trolley Problems moral dilemma mobile gameplay',
+        'badge': 'Browser game'
     }
 }
 
@@ -157,14 +211,7 @@ for g in guides:
     seen.add(g['slug'])
     path='/guides/'+g['slug']+'/'
     catalog_game = g.get('catalog_game', False)
-    if catalog_game:
-        game = {
-            'url': 'https://duhgames.com/' + g['app'] + '/',
-            'play_text': 'Play ' + g['name'] + ' on Duh Games',
-            'badge': 'Browser game',
-        }
-    else:
-        game = APP_GAMES.get(g['app'], APP_GAMES['arrow-unleashed'])
+    game = APP_GAMES.get(g['app'], APP_GAMES['arrow-unleashed'])
     badge = game.get('badge', 'Android app coming soon')
     browser_resource = game.get('browser_resource', False)
     platform = 'Browser app' if browser_resource else 'Play in browser'
@@ -175,7 +222,7 @@ for g in guides:
     # Top Region: Left half has blog heading, metadata & text; Right half has game screenshot mockup & direct play link!
     parent_label = 'Game guides' if catalog_game else g['name']
     body = f'<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{parent_path}">{esc(parent_label)}</a> / <a href="/guides/">Guides</a></nav><article>'
-    hero_class = 'hero' if catalog_game else 'guide-hero-split'
+    hero_class = 'guide-hero-split'
     body += f'<div class="{hero_class}">'
     body += f'  <div class="guide-hero-left">'
     body += f'    <p class="eyebrow">{esc(g["name"])} guide · {platform}</p>'
@@ -187,20 +234,19 @@ for g in guides:
     body += f'      <span class="badge-coming-soon">{esc(badge)}</span>'
     body += f'    </div>'
     body += f'  </div>'
-    if not catalog_game:
-        body += f'  <div class="guide-hero-right">'
-        body += f'    <div class="screenshot-showcase">'
-        link_class = 'art' if browser_resource else 'phone-mockup'
-        link_title = esc(game['play_text'], quote=True) if browser_resource else f'Play {esc(g["name"])} in browser'
-        body += f'      <a href="{esc(game["url"],quote=True)}" class="{link_class}" title="{link_title}">'
-        body += f'        <img src="{esc(game["screenshot"],quote=True)}" alt="{esc(game["alt"],quote=True)}" width="280" height="560">'
-        if not browser_resource:
-            body += f'        <span class="play-overlay-badge">▶ Play in Browser</span>'
-        body += f'      </a>'
-        caption = 'Original illustration' if browser_resource else 'Playable right now in your browser'
-        body += f'      <span class="mockup-caption">{caption}</span>'
-        body += f'    </div>'
-        body += f'  </div>'
+    body += f'  <div class="guide-hero-right">'
+    body += f'    <div class="screenshot-showcase">'
+    link_class = 'art' if browser_resource else 'phone-mockup'
+    link_title = esc(game['play_text'], quote=True) if browser_resource else f'Play {esc(g["name"])} in browser'
+    body += f'      <a href="{esc(game["url"],quote=True)}" class="{link_class}" title="{link_title}">'
+    body += f'        <img src="{esc(game["screenshot"],quote=True)}" alt="{esc(game["alt"],quote=True)}" width="280" height="560">'
+    if not browser_resource:
+        body += f'        <span class="play-overlay-badge">▶ Play in Browser</span>'
+    body += f'      </a>'
+    caption = 'Original illustration' if browser_resource else 'Playable right now in your browser'
+    body += f'      <span class="mockup-caption">{caption}</span>'
+    body += f'    </div>'
+    body += f'  </div>'
     body += f'</div>'
 
     body += '<nav aria-label="On this page"><ul>'+''.join(f'<li><a href="#section-{i}">{esc(s["heading"])}</a></li>' for i,s in enumerate(g['sections']))+'</ul></nav>'

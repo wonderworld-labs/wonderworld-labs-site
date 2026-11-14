@@ -1798,5 +1798,431 @@
         "Compare the two situations and identify the detail that changed. Use that detail to explain the difference between your answers."
       ]
     ]
+  },
+  {
+    "app": "asteroid-launcher",
+    "name": "Asteroid Launcher",
+    "slug": "asteroid-launcher-crater-size-and-impact-zones",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Asteroid Launcher: How Crater Size and Impact Zones are Calculated",
+    "description": "Understand how kinetic energy, impact angle and projectile diameter shape crater size, fireball radius and shockwave damage in Asteroid Launcher.",
+    "answer": "Crater size and impact damage scale primarily with kinetic energy, impact velocity, and trajectory angle. Shallow angles transfer more energy into atmospheric airbursts, while steep impacts maximize direct crater excavation and ground shockwaves.",
+    "sections": [
+      {
+        "heading": "Kinetic energy and diameter scaling",
+        "paragraphs": [
+          "In the simulation, kinetic energy scales with projectile mass and the square of entry velocity. Doubling the diameter of an iron or stone asteroid increases mass eightfold, dramatically widening the initial cavity diameter and vaporization zone."
+        ]
+      },
+      {
+        "heading": "Impact angles and atmospheric disruption",
+        "paragraphs": [
+          "Steep 90-degree impacts direct kinetic energy straight into the ground, maximizing crater depth and central peak uplift. In contrast, shallow 20-to-45-degree angles prolong atmospheric transit, increasing the fireball envelope and thermal radiation zone."
+        ]
+      },
+      {
+        "heading": "Reading the tiered destruction zones",
+        "paragraphs": [
+          "Check the map rings outward from Ground Zero: the vaporized excavation rim, the thermal radiation perimeter where combustible materials ignite, and the atmospheric shockwave boundary where overpressure causes structural damage."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Why does asteroid composition change the crater size?",
+        "Dense iron and gold asteroids experience less atmospheric ablation and retain higher terminal velocity at ground level compared to porous comet or carbonaceous stone projectiles."
+      ]
+    ]
+  },
+  {
+    "app": "element-lab",
+    "name": "Infinite Craft",
+    "slug": "infinite-craft-first-discovery-combination-guide",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Infinite Craft: Strategies for Reaching First Discoveries",
+    "description": "Learn combination patterns, branch depth management, and keyword association techniques to craft unique First Discoveries in Infinite Craft.",
+    "answer": "To unlock First Discoveries in Infinite Craft, branch beyond common cultural references into deep compound concepts, rare historical figures, specialized scientific terminology, and multi-word semantic hybrids.",
+    "sections": [
+      {
+        "heading": "Branch away from popular base elements",
+        "paragraphs": [
+          "Starting elements like Water, Fire, Earth, and Wind quickly converge on universal concepts like Steam, Mud, and Planet. To discover uncrafted items, chain specialized nouns with abstract descriptors, geological eras, or composite mythology."
+        ]
+      },
+      {
+        "heading": "Pair high-tier modifiers with narrow subjects",
+        "paragraphs": [
+          "Once you craft rare elements such as Cyberpunk, Quantum, Renaissance, or specific country names, combine them with niche professions, mythical creatures, or architectural styles to generate unexplored recipe branches."
+        ]
+      },
+      {
+        "heading": "Organize your active canvas by category",
+        "paragraphs": [
+          "Keep your workspace tidy by grouping candidate items along the left border. Testing pairings methodically against a dedicated modifier prevents redundant combinations and accelerates your path to a First Discovery badge."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What qualifies as a First Discovery?",
+        "A First Discovery occurs when you are the first player globally to combine two elements into a completely new recipe result, permanently recording your discovery."
+      ]
+    ]
+  },
+  {
+    "app": "password-panic",
+    "name": "The Password Game",
+    "slug": "password-game-rule-sequencing-and-roman-numerals",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "The Password Game: Managing Rule Sequencing and Roman Numerals",
+    "description": "Step-by-step tactics for balancing Roman numeral arithmetic, atomic elements, leap years, and Paul the chicken in The Password Game.",
+    "answer": "Balance the Roman numeral sum early using subtractive notation like IV or IX, protect Paul's food count continuously, and isolate digits in your password to avoid accidentally triggering Roman letter evaluation.",
+    "sections": [
+      {
+        "heading": "Keep Roman numeral sums exact",
+        "paragraphs": [
+          "Rule 9 requires Roman numerals to multiply or add to an exact total (such as 35). Remember that capital letters like V, X, L, C, D, and M are automatically parsed as Roman numerals. Choose lowercase characters elsewhere in your password to prevent unwanted sums."
+        ]
+      },
+      {
+        "heading": "Shield Paul the chicken and worm rations",
+        "paragraphs": [
+          "Once Paul hatches, three caterpillar emojis must remain in the text input at all times. Do not edit near Paul's section quickly or paste over him, as any disruption to his food supply results in an instant game over."
+        ]
+      },
+      {
+        "heading": "Plan periodic atomic symbol placements",
+        "paragraphs": [
+          "When adding two-letter atomic symbols whose atomic numbers sum to a target value, pick low-number elements like He (2) or Li (3) to fine-tune your total without disturbing existing sponsor names and captcha strings."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How do I prevent new rules from breaking the digit sum?",
+        "When a new rule forces you to add digits (like a leap year or chess move), compensate immediately by lowering existing filler digits elsewhere in the string to keep the Rule 5 total constant."
+      ]
+    ]
+  },
+  {
+    "app": "perfect-circle",
+    "name": "Draw a Perfect Circle",
+    "slug": "perfect-circle-technique-speed-and-smoothness-score",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Draw a Perfect Circle: Balancing Speed, Radius and Smoothness",
+    "description": "Master drawing ergonomics, consistent arm radius rotation, and perimeter closure to push your Draw a Perfect Circle score past 95%.",
+    "answer": "Achieve high scores by pivoting smoothly from your elbow or shoulder rather than your wrist, maintaining a steady moderate drawing speed, and closing the perimeter loop without overshooting the start coordinate.",
+    "sections": [
+      {
+        "heading": "Pivot from the elbow instead of the wrist",
+        "paragraphs": [
+          "The human wrist has an elliptical range of motion that introduces flattening on top and bottom arcs. By anchoring your elbow and rotating your entire forearm, you trace a natural circular sweep with consistent radial distance."
+        ]
+      },
+      {
+        "heading": "Avoid hesitation and jerky speed changes",
+        "paragraphs": [
+          "The grading algorithm evaluates both perimeter deviation and contour smoothness. Drawing too slowly creates micro-jitters, while drawing too fast leads to angular drift. Aim for a confident single-stroke completion in 1.5 to 2.5 seconds."
+        ]
+      },
+      {
+        "heading": "Focus on the closure seam",
+        "paragraphs": [
+          "A common score penalty comes from overlapping the start point or leaving an open gap. Watch the starting coordinate as you round the final quadrant and feather your finger gently to meet the initial pixel."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "What score threshold unlocks the Smooth bonus?",
+        "Consistently maintaining less than 3% variance in radial distance while completing the loop in under 3 seconds earns the Smooth evaluation badge and scores above 90%."
+      ]
+    ]
+  },
+  {
+    "app": "fortune-frenzy",
+    "name": "Spend Bill Gates’ Money",
+    "slug": "spend-bill-gates-money-receipt-strategies-and-big-ticket-runs",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Spend Bill Gates’ Money: High-Value Portfolios and Fast Purchasing Runs",
+    "description": "How to assemble mega-yacht fleets, sports franchises, and skyscraper portfolios to rapidly allocate $100 billion in Spend Bill Gates' Money.",
+    "answer": "To spend $100 billion efficiently, prioritize multi-billion dollar mega-assets like NBA franchises, cruise ships, and luxury skyscrapers, then fine-tune your final balance with everyday consumer items to reach a perfect zero balance.",
+    "sections": [
+      {
+        "heading": "Target the largest capital outlays first",
+        "paragraphs": [
+          "Even buying 1,000,000 Big Macs barely dents a $100,000,000,000 fortune. To make rapid progress, buy high-ticket assets first: NFL teams ($3B each), Super Bowls ($5M each), and modern aircraft carriers ($10B each)."
+        ]
+      },
+      {
+        "heading": "Build a themed ultra-luxury portfolio",
+        "paragraphs": [
+          "Challenge yourself with realistic high-net-worth scenarios: buy 50 private islands, endow 20 university hospitals, fund 10 space rockets, and furnish 100 beachfront mansions with supercars and fine art."
+        ]
+      },
+      {
+        "heading": "Execute precision receipt trimming to reach $0",
+        "paragraphs": [
+          "Once your remaining bank balance drops below $10,000, use smaller items like iPhones, gaming PCs, and flip-flops to exhaust every single dollar and trigger the 100% spent completion receipt."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Can you sell assets back to recover cash?",
+        "Yes, the Sell button lets you liquidate any purchased item instantly at full value to rebalance your portfolio and experiment with different spending allocations."
+      ]
+    ]
+  },
+  {
+    "app": "trolley-problems",
+    "name": "Absurd Trolley Problems",
+    "slug": "absurd-trolley-problems-philosophical-scenarios-and-community-stats",
+    "date": "2026-11-14",
+    "catalog_game": true,
+    "title": "Absurd Trolley Problems: Navigating Moral Dilemmas and Community Consensus",
+    "description": "Examine utilitarian vs deontological decision paths and compare your switch choices against global player statistics in Absurd Trolley Problems.",
+    "answer": "Each scenario forces a choice between passive consequence and active intervention. Analyze whether your instinct favors saving the maximum number of lives or avoiding direct moral culpability, then compare your verdict against the percentage of other players.",
+    "sections": [
+      {
+        "heading": "The classic five-versus-one switch",
+        "paragraphs": [
+          "The baseline scenario tests classic utilitarian ethics: pulling the switch sacrifices one worker on the sidetrack to spare five on the main track. Over 70% of global players consistently choose to pull the lever in this pure numerical trade-off."
+        ]
+      },
+      {
+        "heading": "Factoring identity and absurd complications",
+        "paragraphs": [
+          "As rounds progress, the game introduces sentient robots, your worst enemy, historical figures, clones, and inanimate objects like your original Mona Lisa painting. These factors test whether your moral calculus shifts when personal affection or identity is at stake."
+        ]
+      },
+      {
+        "heading": "Reviewing your end-of-run moral summary",
+        "paragraphs": [
+          "At the end of a round set, the game tabulates how many total lives you spared, how many times you pulled the lever, and where your ethics align with or diverge from the global player majority."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Does the game save your statistics across sessions?",
+        "Player choices contribute anonymously to global crowd statistics and your personal scorecard is displayed at the end of each completed run in your browser."
+      ]
+    ]
+  },
+  {
+    "app": "arrow-unleashed",
+    "name": "Arrow unleashed",
+    "slug": "arrow-unleashed-daily-challenge-color-priority-tactics",
+    "date": "2026-11-14",
+    "title": "Arrow Unleashed: Daily Challenge Color Priority and Bottleneck Tactics",
+    "description": "Identify interlocking paths, clear exit bottlenecks, and solve daily challenge puzzles with zero collision penalties in Arrow Unleashed.",
+    "answer": "Scan the grid perimeter for unblocked arrows first to open initial clearance channels, trace reverse paths from blocked tips back to their heads, and prioritize clearing outer loops before moving tightly nested interior arrows.",
+    "sections": [
+      {
+        "heading": "Find free perimeter arrows on first glance",
+        "paragraphs": [
+          "Before tapping any central arrows, inspect the four borders of the puzzle board. Any arrow pointing directly off-screen with an open corridor can be launched immediately, widening maneuvering room for overlapping paths."
+        ]
+      },
+      {
+        "heading": "Trace reverse path dependencies",
+        "paragraphs": [
+          "When an arrow appears trapped behind multiple perpendicular lines, trace its trajectory forward to see which specific arrow blocks its nose. Solve that blocker first, establishing a clear reverse dependency chain."
+        ]
+      },
+      {
+        "heading": "Avoid hasty taps to protect streak milestones",
+        "paragraphs": [
+          "Arrow collisions reset your clean-solve bonus. Take a deliberate 5-second pause to verify the entire escape corridor before releasing an arrow, especially on high-density daily challenge boards."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How often do new daily challenge boards refresh?",
+        "A fresh daily challenge board unlocks every 24 hours at midnight local device time, complete with milestone tracking and streak counters."
+      ]
+    ]
+  },
+  {
+    "app": "block-blasting",
+    "name": "Block Blasting",
+    "slug": "block-blasting-adventure-mode-gem-collection-tactics",
+    "date": "2026-11-14",
+    "title": "Block Blasting: Adventure Mode Gem Collection and Streak Multipliers",
+    "description": "Target gem-embedded grid cells, maintain combo streaks, and master shape inventory conservation across 24 Adventure levels in Block Blasting.",
+    "answer": "In Adventure Mode, focus directly on clearing lines containing embedded gems, preserve open 3x3 zones for bulky square pieces, and alternate between row and column clears to maintain an active combo multiplier.",
+    "sections": [
+      {
+        "heading": "Prioritize gem lines over general board clearing",
+        "paragraphs": [
+          "Unlike Classic endless mode where survival score is king, Adventure Mode requires collecting a specific quota of gems within your moves. Always place pieces where they advance a row or column that contains sparkling gems."
+        ]
+      },
+      {
+        "heading": "Reserve corner space for 3x3 blocks",
+        "paragraphs": [
+          "The three upcoming pieces shown at the bottom of the screen can include large 3x3 blocks or long 5-cell bars. Keep at least one quadrant of the 8x8 grid relatively flat to absorb large shapes without triggering an emergency game over."
+        ]
+      },
+      {
+        "heading": "Chain multi-line combo clears for bonus points",
+        "paragraphs": [
+          "Clearing two lines in a single placement or clearing lines on consecutive turns triggers a combo streak that awards exponential points, accelerating your level goal progress."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Can pieces be rotated in Block Blasting?",
+        "Pieces cannot be rotated. You must evaluate each piece in its given orientation and place all three pieces from your tray before three new shapes appear."
+      ]
+    ]
+  },
+  {
+    "app": "ladderday",
+    "name": "Ladderday",
+    "slug": "ladderday-practice-mode-vocabulary-and-four-letter-traps",
+    "date": "2026-11-14",
+    "title": "Ladderday: Four-Letter Word Transitions and Avoiding Dead-End Traps",
+    "description": "Discover vowel-shift patterns, bridge words, and branching paths to reach your destination word in optimal moves in Ladderday.",
+    "answer": "Progress through four-letter word ladders by identifying common consonant bridges, swapping vowels systematically (A-E-I-O-U), and avoiding rare terminal letters that severely restrict your next step choices.",
+    "sections": [
+      {
+        "heading": "Shift vowels before tackling tricky consonants",
+        "paragraphs": [
+          "Four-letter English words have dense vowel substitution clusters (e.g., DIME to DAME, DOME, DORE, DARE). Shifting the central vowel often unlocks multiple flexible consonant pathways toward your destination word."
+        ]
+      },
+      {
+        "heading": "Beware of terminal dead-end letters",
+        "paragraphs": [
+          "Steer clear of words ending in uncommon letters like J, Q, V, or Z unless they directly match your final target, as they offer few valid one-letter branches and can strand your ladder run."
+        ]
+      },
+      {
+        "heading": "Use the Route Coach to test candidate steps",
+        "paragraphs": [
+          "The in-game Route Coach shows the moves you have taken and verifies valid dictionary words instantly. If a branch starts diverging from the destination, use the Undo button to retract your step without penalty."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How is the optimal move count calculated?",
+        "The optimal path is computed using breadth-first shortest-path search through the verified lexicon, and the benchmark score is revealed upon solving the daily ladder."
+      ]
+    ]
+  },
+  {
+    "app": "scale-safari",
+    "name": "Scale Safari",
+    "slug": "scale-safari-architecture-vs-nature-estimation-strategies",
+    "date": "2026-11-14",
+    "title": "Scale Safari: Comparing Architecture, Living Creatures and Planetary Scale",
+    "description": "Calibrate your visual benchmarks across buildings, wildlife, and natural landforms to score 90%+ in Scale Safari.",
+    "answer": "Calibrate your mental ruler using standard real-world benchmarks—such as a 28-meter basketball court, a 3-meter ceiling height, or an adult human height—then scale the test subject proportionally using the responsive slider or pinch controls.",
+    "sections": [
+      {
+        "heading": "Establish known anchor dimensions",
+        "paragraphs": [
+          "Every puzzle pairs an unfamiliar subject with a verified reference object. Memorize key baselines: a standard basketball court is 28 meters long, an Olympic swimming pool is 50 meters, and a residential story is about 3 meters tall."
+        ]
+      },
+      {
+        "heading": "Use visual subdivision on the grid stage",
+        "paragraphs": [
+          "Mentally slice the larger object into multiples of the reference object. For instance, if a rocky cliff appears roughly two and a half times wider than the adjacent basketball stadium, adjust your ratio slider toward 2.4x to 2.5x."
+        ]
+      },
+      {
+        "heading": "Refine with micro-adjustment buttons",
+        "paragraphs": [
+          "Use the broad slider for coarse sizing, then tap the + Grow and - Shrink stepper buttons for precision calibration before locking in your estimate."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "How are points awarded in Scale Safari?",
+        "Points are calculated on an exponential accuracy curve based on how close your estimated scale ratio is to the actual measured physical dimension, with perfect estimates earning 100 points."
+      ]
+    ]
+  },
+  {
+    "app": "linkloom",
+    "name": "Linkloom",
+    "slug": "linkloom-compound-word-pyramid-and-number-lab-tactics",
+    "date": "2026-11-14",
+    "title": "Linkloom: Solving Phrase Pyramids and Arithmetic Connection Chains",
+    "description": "Decode 6-tier phrase pyramids, verify parent-child compound links, and balance arithmetic sum chains in Linkloom.",
+    "answer": "Solve the phrase pyramid from the apex down by checking both left and right compound combinations for each parent tile, and use the 'Check all links' feature to isolate correct branches before swapping uncertain pieces.",
+    "sections": [
+      {
+        "heading": "Evaluate parent-child dual connections",
+        "paragraphs": [
+          "In a phrase pyramid, each node must form a legitimate compound word or common phrase with both of its children below it. For example, SIDE above GREEN and BERRY must validly satisfy both 'SIDE-GREEN' or 'SIDE-BERRY' connections."
+        ]
+      },
+      {
+        "heading": "Swap tiles methodically across tiers",
+        "paragraphs": [
+          "Tap any two tiles to swap their positions, or drag one tile directly onto another. If a tile clearly belongs in a compound phrase with two bottom nodes (like FIRE, WOOD, BACK), anchor that tile in tier 2 first."
+        ]
+      },
+      {
+        "heading": "Conserve check opportunities",
+        "paragraphs": [
+          "You are allotted a limited number of checks per puzzle (typically 4). Arrange all six tiles into a plausible candidate pyramid before pressing 'Check all links' to maximize the feedback gained per check."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Can I switch between Phrase Pyramids and Number Lab?",
+        "Yes, the top mode pills allow you to toggle seamlessly between Phrases, Numbers arithmetic pyramids, and word Fragments at any time."
+      ]
+    ]
+  },
+  {
+    "app": "hinthunt",
+    "name": "HintHunt",
+    "slug": "hinthunt-ten-dart-conservation-and-embedding-clusters",
+    "date": "2026-11-14",
+    "title": "HintHunt: 10-Dart Management and Semantic Cluster Analysis",
+    "description": "Use broad conceptual darts to triangulate semantic distance and home in on the daily bullseye secret word in HintHunt.",
+    "answer": "Start with four conceptually distinct anchor words (such as an animal, a tool, a location, and an abstract emotion) to discover which domain lights up warmer, then cast narrower synonyms to hit the bullseye within 10 darts.",
+    "sections": [
+      {
+        "heading": "Cast four broad cardinal darts first",
+        "paragraphs": [
+          "Don't guess randomly on turn 1. Fire four diverse probes across nature, physical objects, human actions, and conceptual states. Orbit the guide bot will immediately indicate whether a guess is cold, warm, or hot."
+        ]
+      },
+      {
+        "heading": "Interpret the bullseye concentric rings",
+        "paragraphs": [
+          "Each dart lands on a visual target ring representing cosine similarity calculated privately on-device using trained MiniLM semantic embeddings. Outer blue rings indicate distant concepts; central yellow rings indicate close semantic cousins."
+        ]
+      },
+      {
+        "heading": "Zoom in on warm clusters",
+        "paragraphs": [
+          "If a word like 'ocean' or 'swimming' lands inside the middle ring, test related aquatic creatures, marine geography, or coastal nouns (like 'dolphin', 'coral', 'whale') to zero in on the exact bullseye word."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Are guesses processed online on a cloud server?",
+        "No, HintHunt computes semantic embeddings entirely on your device using a lightweight client model, keeping your guesses completely private."
+      ]
+    ]
   }
 ]
