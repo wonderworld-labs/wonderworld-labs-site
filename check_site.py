@@ -53,6 +53,8 @@ for p, page in pages.items():
         target = ((ROOT / u.path.lstrip('/')) if u.path.startswith('/') else (p.parent / u.path)).resolve() if u.path else p
         if target.is_dir():
             target /= 'index.html'
+        elif not target.exists() and not target.suffix:
+            target = target.with_suffix('.html')
         assert target.exists(), (p, link)
         if u.fragment:
             assert u.fragment in pages[target].ids, (p, link)
@@ -68,6 +70,8 @@ for url in urls:
     target = ROOT / urlsplit(url.text).path.lstrip('/')
     if target.is_dir():
         target /= 'index.html'
+    elif not target.exists() and not target.suffix:
+        target = target.with_suffix('.html')
     assert target in pages and pages[target].canonical == [url.text], url.text
 
 for guide in json.loads((ROOT / 'content/guides.json').read_text(encoding='utf-8')):
