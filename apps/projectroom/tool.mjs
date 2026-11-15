@@ -15,6 +15,12 @@ const details = document.querySelector('#breakdown');
 const announcer = document.querySelector('#notice');
 const quickResult = document.querySelector('#quick-result');
 const projectStatus = document.querySelector('#project-status');
+const restoreButton = document.createElement('button');
+restoreButton.type = 'button';
+restoreButton.className = 'inline-action';
+restoreButton.textContent = 'Restore previous project';
+restoreButton.hidden = true;
+projectStatus.before(restoreButton);
 const quickHandoff = document.querySelector('[data-handoff]');
 const actionButtons = [...document.querySelectorAll('[data-output]')];
 const format = new Intl.NumberFormat('en', { maximumFractionDigits: 3 });
@@ -72,6 +78,7 @@ try {
   }
 } catch {}
 let settings = { ...defaults(), ...model.settings[mode] };
+let previousProject;
 let printText = '';
 
 function save() {
@@ -331,13 +338,34 @@ root.addEventListener('click', async event => {
     update();
   }
   if (button.hasAttribute('data-sample') || button.hasAttribute('data-clear')) {
+    const initialSettings = defaults();
+    const baseline = previousProject && model.example ? exampleSection() : newSection();
+    const hasMeasurements = model.sections.length > 1 || Object.keys(model.sections[0]).some(key =>
+      model.sections[0][key] !== baseline[key]);
+    const hasCustomSettings = Object.entries(settings).some(([key, value]) =>
+      (value ?? null) !== (initialSettings[key] ?? null));
+    if (hasMeasurements || hasCustomSettings) {
+      previousProject = { sections: model.sections, example: model.example, settings };
+      restoreButton.hidden = false;
+    }
     model.example = button.hasAttribute('data-sample');
     model.sections = [model.example ? exampleSection() : newSection()];
-    settings = defaults();
+    settings = initialSettings;
     renderInputs();
     update();
     sectionList.querySelector('input').focus();
     announcer.textContent = model.example ? 'Example loaded.' : 'Measurements cleared.';
+  }
+  if (button === restoreButton && previousProject) {
+    model.sections = previousProject.sections;
+    model.example = previousProject.example;
+    settings = previousProject.settings;
+    previousProject = undefined;
+    restoreButton.hidden = true;
+    renderInputs();
+    update();
+    sectionList.querySelector('input').focus();
+    announcer.textContent = 'Previous project restored.';
   }
   if (button.dataset.output === 'print') window.print();
   if (button.dataset.output === 'copy') {
