@@ -120,12 +120,11 @@ APP_GAMES = {
     },
     'photo-file-vault': {
         'url': '/apps/photo-file-vault/',
-        'play_text': 'Explore Photo & File Vault ↗',
-        'heading': 'Photo & File Vault',
-        'lead': 'Encrypted on-device storage for photos and sensitive files. Android app coming soon.',
-        'screenshot': '/assets/wonderworld-icon-512.png',
-        'alt': 'Photo and File Vault',
-        'badge': 'Android app coming soon'
+        'play_text': 'Photo & File Vault app details',
+        'screenshot': '/assets/art-photo-file-vault.svg',
+        'alt': '',
+        'badge': 'Android app coming soon',
+        'android_only': True,
     },
     'asteroid-launcher': {
         'url': 'https://duhgames.com/asteroid-launcher/',
@@ -214,7 +213,7 @@ for g in guides:
     game = APP_GAMES.get(g['app'], APP_GAMES['arrow-unleashed'])
     badge = game.get('badge', 'Android app coming soon')
     browser_resource = game.get('browser_resource', False)
-    platform = 'Browser app' if browser_resource else 'Play in browser'
+    android_only = game.get('android_only', False)
     is_game = (ROOT / 'games' / g['app']).exists()
     parent_path = '/guides/#games' if catalog_game else (f'/games/{g["app"]}/' if is_game else f'/apps/{g["app"]}/')
     play_anchor = f'/guides/#game-{g["app"]}' if catalog_game else (f'/games/{g["app"]}/#play' if is_game else f'/apps/{g["app"]}/#download')
@@ -225,7 +224,7 @@ for g in guides:
     hero_class = 'guide-hero-split'
     body += f'<div class="{hero_class}">'
     body += f'  <div class="guide-hero-left">'
-    body += f'    <p class="eyebrow">{esc(g["name"])} guide · {platform}</p>'
+    body += f'    <p class="eyebrow">{esc(g["name"])} guide</p>'
     body += f'    <h1>{esc(g["title"])}</h1>'
     body += f'    <p class="meta">By Wonderworld Labs · Published <time datetime="{g["date"]}">{g["date"]}</time></p>'
     body += f'    <p class="lead">{esc(g["answer"])}</p>'
@@ -236,14 +235,15 @@ for g in guides:
     body += f'  </div>'
     body += f'  <div class="guide-hero-right">'
     body += f'    <div class="screenshot-showcase">'
-    link_class = 'art' if browser_resource else 'phone-mockup'
-    link_title = esc(game['play_text'], quote=True) if browser_resource else f'Play {esc(g["name"])} in browser'
+    illustration = browser_resource or android_only
+    link_class = 'art' if illustration else 'phone-mockup'
+    link_title = esc(game['play_text'], quote=True)
     body += f'      <a href="{esc(game["url"],quote=True)}" class="{link_class}" title="{link_title}">'
     body += f'        <img src="{esc(game["screenshot"],quote=True)}" alt="{esc(game["alt"],quote=True)}" width="280" height="560">'
-    if not browser_resource:
+    if not illustration:
         body += f'        <span class="play-overlay-badge">▶ Play in Browser</span>'
     body += f'      </a>'
-    caption = 'Original illustration' if browser_resource else 'Playable right now in your browser'
+    caption = 'Original illustration' if illustration else 'Browser edition'
     body += f'      <span class="mockup-caption">{caption}</span>'
     body += f'    </div>'
     body += f'  </div>'
@@ -262,18 +262,22 @@ for g in guides:
     related = [item for item in guides if item['app']==g['app'] and item['slug']!=g['slug']][:3]
     if related:
         body += '<section class="faq"><h2>Related guides</h2><ul>'+''.join(guide_link(item) for item in related)+'</ul></section>'
-    body += f'<section class="notice"><h2>Explore {esc(g["name"])}</h2><p>Play free directly in your web browser with no download or setup required.</p><div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:18px 0"><a class="button" href="{esc(game["url"],quote=True)}">{esc(game["play_text"])}</a><span class="badge-coming-soon">{esc(badge)}</span></div><p><a href="{play_anchor}">Explore {esc(g["name"])} details ↗</a></p><p>Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.</p></section></article>'
-    if browser_resource:
-        body = body.replace('Play free directly in your web browser with no download or setup required.', esc(game['notice']))
-        body = body.replace('Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.', 'Use the linked browser app to follow the steps in this guide.')
+    notice = game.get('notice', '')
     if catalog_game:
-        body = body.replace('Play free directly in your web browser with no download or setup required.', 'Open the game on Duh! Games to try the exercises in this guide.')
-        body = body.replace('Game details in this guide are based on current web and mobile releases. Suggested strategies and routines are editorial guidance.', '')
+        notice = 'Open the game on Duh! Games to try the exercises in this guide.'
+    elif android_only:
+        notice = 'Check the Android app page for availability and privacy details.'
+    body += f'<section class="notice"><h2>Explore {esc(g["name"])}</h2>'
+    if notice:
+        body += f'<p>{esc(notice)}</p>'
+    body += f'<div class="guide-hero-actions"><a class="button" href="{esc(game["url"],quote=True)}">{esc(game["play_text"])}</a><span class="badge-coming-soon">{esc(badge)}</span></div><p><a href="{play_anchor}">Explore {esc(g["name"])} details ↗</a></p></section></article>'
     parent_type = 'VideoGame' if is_game or catalog_game else ('WebApplication' if browser_resource else 'SoftwareApplication')
     parent_url = game['url'] if catalog_game else BASE + parent_path
     graph = [{'@type':'Article','@id':BASE+path+'#article','headline':g['title'],'description':g['description'],'datePublished':g['date'],'dateModified':g.get('updated',g['date']),'mainEntityOfPage':BASE+path,'author':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'publisher':{'@type':'Organization','name':'Wonderworld Labs','url':BASE+'/'},'about':{'@type':parent_type,'name':g['name'],'url':parent_url,'operatingSystem':'Web browser, Android'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Guides','item':BASE+'/guides/'},{'@type':'ListItem','position':2,'name':g['title'],'item':BASE+path}]}]
     if browser_resource or catalog_game:
         graph[0]['about']['operatingSystem'] = 'Web browser'
+    if android_only:
+        graph[0]['about']['operatingSystem'] = 'Android'
     page(path,g['title'],g['description'],body,graph)
 
 # Keep every guide discoverable from its parent app or game without copying article bodies.

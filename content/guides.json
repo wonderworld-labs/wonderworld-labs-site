@@ -1624,6 +1624,7 @@
     "name": "Draw a Perfect Circle",
     "slug": "perfect-circle-practice-one-arc",
     "date": "2026-11-14",
+    "updated": "2026-11-15",
     "catalog_game": true,
     "title": "Draw a Perfect Circle: A Three-Attempt Practice Routine",
     "description": "Use the score and trace in Draw a Perfect Circle to work on radius, speed and the closing arc.",
@@ -1645,6 +1646,18 @@
         "heading": "Practice returning to the start",
         "paragraphs": [
           "On your third attempt, look ahead to your starting point before you reach the final quarter. Let the curve bring the line back around. Compare the closing arc and your score with your first attempt."
+        ]
+      },
+      {
+        "heading": "Log three attempts and choose what to practice",
+        "steps": [
+          "Attempt 1. Record the score, the part of the circle that drifted most, and whether the stroke met the starting point.",
+          "Attempt 2. Keep the same start and circle size. Change your pace on the drifting arc and record the same three observations.",
+          "Attempt 3. Keep the pace from attempt 2 and look ahead to the start on the final quarter. Compare the arc and the join with your first attempt."
+        ],
+        "paragraphs": [
+          "For example, suppose the first trace bulges between 3 and 6 o’clock. On the second trace, that arc stays closer to the center but the stroke finishes short. Keep the second attempt’s pace through the lower-right arc and work on closing the gap next. A single higher score can hide which part of your drawing improved.",
+          "The Duh! Games version measures how much the stroke’s distance from the center varies and applies a penalty for a gap between the first and last points. Use the trace to choose what to work on and the score to compare completed attempts of roughly the same size."
         ]
       }
     ],

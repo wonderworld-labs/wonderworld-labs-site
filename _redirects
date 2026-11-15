@@ -1,9 +1,9 @@
 /apps/craftlane/index.html https://craftlane.wonderworldlabs.com/ 301
 /apps/craftlane/tools/* https://craftlane.wonderworldlabs.com/tools/:splat 301
-/games https://games.wonderworldlabs.com/ 301
-/games/ https://games.wonderworldlabs.com/ 301
-/games/index.html https://games.wonderworldlabs.com/ 301
-/games/ladderday/ https://games.wonderworldlabs.com/ladderday/ 301
-/games/scale-safari/ https://games.wonderworldlabs.com/scale-safari/ 301
-/games/linkloom/ https://games.wonderworldlabs.com/linkloom/ 301
-/games/hinthunt/ https://games.wonderworldlabs.com/hinthunt/ 301
+/games https://duhgames.com/ 301
+/games/ https://duhgames.com/ 301
+/games/index.html https://duhgames.com/ 301
+/games/ladderday/ https://duhgames.com/ladderday/ 301
+/games/scale-safari/ https://duhgames.com/scale-safari/ 301
+/games/linkloom/ https://duhgames.com/linkloom/ 301
+/games/hinthunt/ https://duhgames.com/hinthunt/ 301

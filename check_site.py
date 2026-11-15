@@ -32,7 +32,7 @@ class Page(HTMLParser):
 
 pages = {}
 for p in ROOT.rglob('*.html'):
-    if 'games-hub' in p.parts:
+    if 'games-hub' in p.parts or p == ROOT / '404.html':
         continue
     text = p.read_text(encoding='utf-8')
     page = pages[p] = Page(text)
@@ -59,7 +59,11 @@ for p, page in pages.items():
 
 urls = ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')
 assert len(urls) == len({url.text for url in urls}), 'Duplicate sitemap URL'
-assert {url.text for url in urls} == {page.canonical[0] for page in pages.values()}, 'Sitemap coverage differs from canonical pages'
+# The legacy game pages are kept in the source tree and redirect in production.
+assert {url.text for url in urls} == {
+    page.canonical[0] for path, page in pages.items()
+    if path.relative_to(ROOT).parts[0] != 'games'
+}, 'Sitemap coverage differs from canonical pages'
 for url in urls:
     target = ROOT / urlsplit(url.text).path.lstrip('/')
     if target.is_dir():

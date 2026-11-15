@@ -17,7 +17,7 @@ class Meta(HTMLParser):
   if tag=='meta' and a.get('property')=='og:image':self.image.append(a.get('content'))
 urls=set();total=0
 for p in ROOT.rglob('*.html'):
- if 'games-hub' in p.parts:
+ if 'games-hub' in p.parts or p == ROOT/'404.html':
   continue
  s=p.read_text(encoding='utf8');a=Meta();a.feed(s);total+=1
  assert a.h1==1,(p,'h1');assert len(a.canonical)==1,(p,'canonical');assert len(a.desc)==1,(p,'description')
@@ -31,7 +31,8 @@ for p in ROOT.rglob('*.html'):
   assert 'id="app-overview"' in s,(p,'answer summary')
   assert any(g.get('@type')=='SoftwareApplication' and g.get('applicationCategory') for g in graph),(p,'app schema')
   assert any(g.get('@type')=='BreadcrumbList' for g in graph),(p,'breadcrumbs')
- urls.add(a.canonical[0])
+ if p.relative_to(ROOT).parts[0]!='games':
+  urls.add(a.canonical[0])
 # Guide discovery coverage: every published article must be linked from the guide hub
 # and its parent app, and supply visible, matching Article metadata.
 guide_index=(ROOT/'guides/index.html').read_text(encoding='utf8')
