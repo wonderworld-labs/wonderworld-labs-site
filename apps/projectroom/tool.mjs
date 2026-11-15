@@ -187,9 +187,15 @@ function compareQuotes(area) {
   const rows = [];
   const quotes = ['A', 'B'].map(label => {
     const key = 'quote' + label;
-    const quote = tileQuote(area, settings[key + 'Coverage'], settings[key + 'Price'], settings[key + 'Delivery'] ?? 0);
-    if (quote) rows.push(['Product ' + label, format.format(quote.boxes) +
-      (quote.boxes === 1 ? ' box · ' : ' boxes · ') + money.format(quote.total)]);
+    const price = settings[key + 'Price'];
+    const delivery = settings[key + 'Delivery'] ?? 0;
+    const quote = tileQuote(area, settings[key + 'Coverage'], price, delivery);
+    if (quote) {
+      const boxes = format.format(quote.boxes) + (quote.boxes === 1 ? ' box' : ' boxes');
+      rows.push(['Product ' + label + ' delivered total', money.format(quote.total)],
+        ['Product ' + label + ' cost breakdown', boxes + ' × ' + money.format(price) +
+          ' + ' + money.format(delivery) + ' delivery']);
+    }
     return quote;
   });
   const [a, b] = quotes;
