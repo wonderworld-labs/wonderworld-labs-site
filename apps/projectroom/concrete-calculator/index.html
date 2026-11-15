@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Concrete calculator | Projectroom</title>
-  <meta name="description" content="Combine slabs and round or rectangular footings in one estimate. Compare whole bags with ready-mix volume.">
+  <title>Concrete Slab Calculator: Bags vs. Ready-Mix Cost | Projectroom</title>
+  <meta name="description" content="Combine slabs and footings in one estimate. Compare bagged concrete with your supplier’s ready-mix price and delivery fees.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://wonderworldlabs.com/apps/projectroom/concrete-calculator/">
   <meta property="og:title" content="Concrete calculator">
-  <meta property="og:description" content="Combine slabs and round or rectangular footings in one estimate. Compare whole bags with ready-mix volume.">
+  <meta property="og:description" content="Combine slabs and footings in one estimate. Compare bagged concrete with your supplier’s ready-mix price and delivery fees.">
   <meta property="og:url" content="https://wonderworldlabs.com/apps/projectroom/concrete-calculator/">
   <meta property="og:image" content="https://wonderworldlabs.com/assets/wonderworld-icon-512.png">
   <link rel="icon" href="/favicon.svg">
   <link rel="stylesheet" href="/assets/theme.css">
   <link rel="stylesheet" href="/apps/projectroom/projectroom.css?v=4">
   <script src="/assets/theme.js"></script>
-  <script type="module" src="/apps/projectroom/tool.mjs?v=4"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Concrete calculator","url":"https://wonderworldlabs.com/apps/projectroom/concrete-calculator/","description":"Combine slabs and round or rectangular footings in one estimate. Compare whole bags with ready-mix volume."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Apps","item":"https://wonderworldlabs.com/apps/"},{"@type":"ListItem","position":2,"name":"Projectroom","item":"https://wonderworldlabs.com/apps/projectroom/"},{"@type":"ListItem","position":3,"name":"Concrete","item":"https://wonderworldlabs.com/apps/projectroom/concrete-calculator/"}]},{"@type":"WebApplication","name":"Concrete calculator","url":"https://wonderworldlabs.com/apps/projectroom/concrete-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}}]}</script>
+  <script type="module" src="/apps/projectroom/tool.mjs?v=5"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Concrete calculator","url":"https://wonderworldlabs.com/apps/projectroom/concrete-calculator/","description":"Combine slabs and footings in one estimate. Compare bagged concrete with your supplier’s ready-mix price and delivery fees."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Apps","item":"https://wonderworldlabs.com/apps/"},{"@type":"ListItem","position":2,"name":"Projectroom","item":"https://wonderworldlabs.com/apps/projectroom/"},{"@type":"ListItem","position":3,"name":"Concrete","item":"https://wonderworldlabs.com/apps/projectroom/concrete-calculator/"}]},{"@type":"WebApplication","name":"Concrete calculator","url":"https://wonderworldlabs.com/apps/projectroom/concrete-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":0,"priceCurrency":"USD"}}]}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
     <nav class="crumb" aria-label="Breadcrumb"><a href="/apps/">Apps</a><span aria-hidden="true">/</span><a href="/apps/projectroom/">Projectroom</a><span aria-hidden="true">/</span><span aria-current="page">Concrete</span></nav>
     <div class="tool-intro">
       <h1>Concrete calculator</h1>
-      <p>Combine slabs and round or rectangular footings in one estimate. Compare whole bags with ready-mix volume.</p>
+      <p>Combine slabs and footings in one estimate. Compare bagged concrete with your supplier’s ready-mix price and delivery fees.</p>
     </div>
     <nav class="tool-tabs" aria-label="Projectroom calculators"><a href="/apps/projectroom/square-footage-calculator/">Square footage</a><a href="/apps/projectroom/tile-calculator/">Tile</a><a href="/apps/projectroom/gravel-calculator/">Gravel</a><a href="/apps/projectroom/concrete-calculator/" aria-current="page">Concrete</a></nav>
     <noscript><p class="noscript">Enable JavaScript to use the calculator. The worked example below shows how to calculate by hand.</p></noscript>
@@ -55,6 +55,11 @@
         <div class="assumptions">
           <h3>Material settings</h3>
           <div class="settings" id="settings"></div>
+          <details class="assumptions">
+            <summary>Ready-mix minimums and delivery fees</summary>
+            <p class="hint">Use your supplier’s quote. Leave unused terms blank. The short-load fee applies if the billed volume is below the threshold you enter.</p>
+            <div id="ready-mix-settings" class="settings"></div>
+          </details>
           <p class="hint">Replace the sample bag yield with the mixed volume shown on the label. Enter bag and bulk prices in the same currency.</p>
         </div>
       </section>
@@ -88,7 +93,9 @@
     <section class="how">
       <h2>How the estimate works</h2>
       <p>Multiply each section’s area by its depth, then add their volumes and your allowance. A 10 × 10 ft slab at 4 in deep comes to about 1.235 yd³ before allowance. Use the mixed yield printed on the bag to convert the total to whole bags.</p>
-      <p>For ready-mix, confirm delivery minimums, fees, and ordering increments with the supplier. Use project specifications for slab and footing dimensions.</p>
+      <h3>Compare bagged concrete with ready-mix delivery</h3>
+      <p>Enter both prices in the same currency. Bag cost uses whole bags. The ready-mix cost uses the larger of your estimated volume and the supplier’s billed minimum, rounded up to the supplier’s order increment. It includes any delivery and applicable short-load fee you enter. Labor, equipment, and taxes are outside this estimate.</p>
+      <p>For a 0.8 yd³ order at $150 per yd³, a 1 yd³ billed minimum makes the material cost $150. With $75 delivery and a $50 fee on billed orders below 2 yd³, the ready-mix total is $275. Use project specifications for slab and footing dimensions.</p>
     </section>
   </main>
   <footer class="site-end">

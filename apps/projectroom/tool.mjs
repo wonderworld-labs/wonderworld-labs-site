@@ -1,4 +1,4 @@
-import { estimate, shapes, tileQuote, FOOT, INCH, SQFT, CUFT, CUYD, SHORT_TON } from './math.mjs?v=3';
+import { estimate, shapes, tileQuote, readyMixOrder, FOOT, INCH, SQFT, CUFT, CUYD, SHORT_TON } from './math.mjs?v=5';
 
 const root = document.querySelector('[data-tool]');
 const mode = root.dataset.tool;
@@ -8,6 +8,7 @@ const sectionList = document.querySelector('#sections');
 const settingsPanel = document.querySelector('#settings');
 const quoteInputs = document.querySelector('#quote-inputs');
 const quoteResult = document.querySelector('#quote-result');
+const readyMixSettings = document.querySelector('#ready-mix-settings');
 const errorMessage = document.querySelector('#estimate-error');
 const resultOutput = document.querySelector('#result-output');
 const details = document.querySelector('#breakdown');
@@ -41,7 +42,14 @@ const fields = {
   density: ['Bulk density', 'density'],
   bagSize: [mode === 'concrete' ? 'Mixed yield per bag' : 'Volume per bag', 'bag'],
   bagPrice: ['Price per bag (optional)', 'money'],
-  bulkPrice: ['Bulk price (optional)', 'bulkPrice'],
+  bulkPrice: [mode === 'concrete' ? 'Ready-mix price (optional)' : 'Bulk price (optional)', 'bulkPrice'],
+};
+const readyMixFields = {
+  minimum: ['Minimum billed volume', 'volume'],
+  increment: ['Order increment', 'volume'],
+  delivery: ['Delivery fee', 'money'],
+  shortLoadThreshold: ['Short-load fee applies below', 'volume'],
+  shortLoadFee: ['Short-load fee', 'money'],
 };
 const settingNames = ['waste', ...(mode === 'tile' ? ['tileLength', 'tileWidth', 'gap', 'perBox'] : []),
   ...(mode === 'gravel' ? ['density'] : []), ...(isVolume ? ['bagSize', 'bagPrice', 'bulkPrice'] : [])];
@@ -123,6 +131,10 @@ function renderInputs() {
         : '') + '</div></fieldset>';
   }).join('');
   settingsPanel.innerHTML = settingNames.map(key => numericField(...[fields[key][0], key, fields[key][1], settings[key]])).join('');
+  if (readyMixSettings) {
+    readyMixSettings.innerHTML = Object.entries(readyMixFields).map(([key, [label, unit]]) =>
+      numericField(label, key, unit, settings[key])).join('');
+  }
   if (quoteInputs) {
     quoteInputs.innerHTML = ['A', 'B'].map(label => {
       const key = 'quote' + label;
@@ -238,7 +250,23 @@ function update() {
       ['Whole bags', format.format(result.bags)]);
     if (result.weight != null) rows.push(['Estimated bulk weight', quantity(result.weight, 'weight')]);
     if (result.bagCost != null) rows.push(['Bagged material cost', money.format(result.bagCost)]);
-    if (result.bulkCost != null) rows.push(['Bulk material cost', money.format(result.bulkCost)]);
+    if (mode === 'gravel' && result.bulkCost != null) rows.push(['Bulk material cost', money.format(result.bulkCost)]);
+    if (mode === 'concrete' && settings.bulkPrice != null) {
+      const terms = Object.fromEntries(Object.keys(readyMixFields).map(key => [key, settings[key] ?? 0]));
+      const order = readyMixOrder(result.volumeToBuy, { ...terms, bulkPrice: settings.bulkPrice });
+      if (order) {
+        rows.push(['Ready-mix billed volume', quantity(order.billed, 'volume')],
+          ['Ready-mix with fees', money.format(order.total)]);
+        if (order.surcharge > 0) rows.push(['Short-load fee included', money.format(order.surcharge)]);
+        if (result.bagCost != null) {
+          const difference = Math.round((order.total - result.bagCost) * 100) / 100;
+          rows.push(['Price difference', difference === 0 ? 'Same total' :
+            (difference > 0 ? 'Bags' : 'Ready-mix') + ' cost ' + money.format(Math.abs(difference)) + ' less']);
+        }
+      } else {
+        rows.push(['Ready-mix cost', 'Check the supplier quote terms.']);
+      }
+    }
   }
   document.querySelector('#result-label').textContent = main[0];
   document.querySelector('#total').textContent = main[1];

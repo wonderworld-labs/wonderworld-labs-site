@@ -24,6 +24,18 @@ export function measureArea(shape, a, b) {
   return a * b * (shape === 'triangle' ? 0.5 : 1);
 }
 
+export function readyMixOrder(volume, { bulkPrice, minimum = 0, increment = 0, delivery = 0,
+  shortLoadThreshold = 0, shortLoadFee = 0 }) {
+  if (!Number.isFinite(volume) || volume <= 0 || ![bulkPrice, minimum, increment, delivery,
+    shortLoadThreshold, shortLoadFee].every(value => Number.isFinite(value) && value >= 0)) return null;
+  const required = Math.max(volume, minimum);
+  const billed = increment > 0 ? roundUp(required / increment) * increment : required;
+  const surcharge = shortLoadThreshold > 0 && billed / shortLoadThreshold < 1 - Number.EPSILON * 8 ? shortLoadFee : 0;
+  const total = billed * bulkPrice + delivery + surcharge;
+  if (!Number.isFinite(billed) || !Number.isFinite(total) || total > Number.MAX_SAFE_INTEGER) return null;
+  return { billed, surcharge, total };
+}
+
 export function tileQuote(area, coverage, price, delivery = 0) {
   if (![area, coverage].every(value => Number.isFinite(value) && value > 0)
       || ![price, delivery].every(value => Number.isFinite(value) && value >= 0)) return null;
